@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {%include "html/include.html"%}
+    <style>{%include "app/manage/manage.css"%}</style>
+    <script>{%include "app/manage/manage.js"%}</script>
+</head>
+<body class="">
+<div class="msg-box-tem bg-warning"
+     style="font-size:1.5em;position:fixed;top:40%;left:40%;padding:0.5em 2em 0.5em 2em;z-index:10"></div>
+<div class="row fixed-fillscreen">
+    <div class="sidebar col-xs-0 col-md-2 bg-book h-p100 pad-0">
+        <div class="bg-green text-align-center " style="padding:0.2em;"><h1 class="">Ablog</h1></div>
+        <div style="width:100%;" id="app-menu">
+            <div id="btn-editor" class="bg-danger menu-item" url="/manage/editor">
+                <a href="#editor"> Editor</a>
+            </div>
+            <div id="btn-alter" class="bg-danger menu-item"><a href="#alter"> Alter</a></div>
+
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-10 pad-0" style="overflow:auto;height:100%;">
+        <div id="ctrl-bar" style="">
+            <div style="width:100%;" class="">
+                <button class="cmd-btn f-right" id="cmd-btn" >Command</button>
+                <input type="text" class="cmd-input f-right" placeholder="input something">
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="app-box">
+            {%include "app/manage/home.html"%}
+            {%include "app/manage/editor.html"%}
+            {%include "app/manage/alter.html"%}
+        </div>
+    </div>
+</div>
+</body>
+</html>

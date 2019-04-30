@@ -1,0 +1,10 @@
+<style>{%include "app/manage/alter.css"%}</style>
+<div class="editor bg-black c-white" id="alter" style="min-height:34rem;width:100%;">
+    <div id="blog" style="width:100%;padding:20px;">{%if blogs%}
+        {%for blog in blogs%}
+        <div id="{{blog.id}}"><div class="blog-title">{{blog.title}}</div><button onclick="deleteBlog('{{blog.id}}')">delete</button> </div>
+        {%endfor%}
+        {%endif%}
+    </div>
+</div>
+<script>{%include "app/manage/alter.js"%}</script>

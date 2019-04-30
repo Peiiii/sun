@@ -1,0 +1,38 @@
+<style>{%include "app/manage/editor.css"%}</style>
+<div class="editor bg-black c-white" id="editor" style="min-height:34rem;width:100%;">
+    <div style="width:100%;height:calc(100% - 1rem);">
+        <div status="off">
+
+            <div class="f-right" id="edit-toolbar" style="padding:0.1rem;border:gray solid 1px;width:100%;">
+                <button class="f-right" id="submit-btn">Submit</button>
+                <button class="switch-doubleview f-right" easy-switch="true" off-msg="Single View" on-msg="Double View"
+                        status="on" tar-sel1="#editable" tar-sel2="#source-code-box">Exitview
+                </button>
+                 <button id="btn-editable" class="switch-editable f-right" easy-switch="true" off-msg="Make Uneditable"
+                        on-msg="Make Editable" status="on" tar-sel1="#text-input" tar-sel2="#html-input">Swicth
+                </button>
+            </div>
+            <div class="f-right" id="info-bar" style="padding:0.1rem;border:gray solid 1px;width:100%;">
+               <label>Title:</label><input id="title-input" type="text" placeholder="input title...">
+                <label>Category:</label><input id="category-input" placeholder="input category...">
+                <label>Tags</label><input id="tags-input" placeholder="input tags...">
+            </div>
+
+        </div>
+        <div id="changeable" style="width:100%;height:29.2rem;">
+            <textarea id="text-input" class="f-left" style="width:50%;height:29.2rem;background:inherit;color:inherit;padding:0.5em;">
+            {%if content%}
+            {{content}}
+            {%endif%}
+                </textarea>
+            <div id="html-input" contenteditable="true" class="f-left"
+                 style="padding: 0.5em; border: 1px solid gray; width: 50%; height: 100%;">
+                {%if content%}
+                {{content}}
+                {%endif%}
+            </div>
+
+        </div>
+    </div>
+</div>
+<script>{%include "app/manage/editor.js"%}</script>

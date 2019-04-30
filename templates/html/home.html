@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {%include "html/include.html"%}
+    <style>
+.article-body p,.article-body div{
+    margin-block-start:0.6em;
+    margin-block-end:0.6em;
+    font-weight:400;
+    font-size:0.9em;
+}
+.article-head h3{
+    font-weight:200;
+    font-size:0.85em;
+    display:inline-block;
+    margin-block-start:0.6em;
+    margin-block-end:0.6em;
+}
+
+
+    </style>
+</head>
+<body style="background:#3c3939;">
+<div class="article-list-container" style="padding-top:1rem;">
+{%for blog in blogs%}
+{%include "lib/html/poem.html"%}
+{%endfor%}
+</div>
+<table>
+    <tr>
+        <th>title</th>
+        <th>archieve</th>
+        <th>tags</th>
+        <th>md</th>
+
+    </tr>
+    {%for b in blogs%}
+    <tr>
+        <td>{{b.title}}</td>
+        <td>{{b.archieve}}</td>
+        <td>{{b.tags}}</td>
+        <td>{{b.md}}</td>
+    </tr>
+    {%endfor%}
+</table>
+
+</body>
+</html>
