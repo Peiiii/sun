@@ -9,7 +9,7 @@ loop=asyncio.get_event_loop()
 app=Application(loop=loop)
 blman=BlogManger()
 
-base_link='http://127.0.0.1'
+base_link='http://127.0.0.1:'+str(net.port)
 quik_links=['/','/manage']
 ##---------------------Make handlers------------------
 @app.get2(paths.root)
