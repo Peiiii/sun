@@ -72,6 +72,47 @@ class Application(web.Application):
             self.router.add_route('GET',path,wrapper)
             return wrapper
         return decorator
+    def get3(self,path,wrap=False,cookies=False,headers=False,request=False):  ## 与get1不同，get2的没有对返回值的包装，因此原函数需自己返回一个web.Responce对象
+        def decorator(func):
+            args=inspect.getargspec(func).args
+            @functools.wraps(func)
+            async def wrapper(req):
+
+                logging.info('run %s' % func.__name__)
+                args2=args.copy()
+                data = {}
+                fdata = await req.post()
+                cdata = req.cookies
+                hdata = req.headers
+                if headers:
+                    data.update(hdata)
+                if cookies:
+                    data.update(cdata)
+                if 'request' in args:
+                    data['request'] = req
+                if 'form' in args:
+                    data['form'] = fdata
+                if 'cookies' in args:
+                    data['cookies'] = cdata
+                if 'headers' in args:
+                    data['headers'] = hdata
+                data.update(fdata)
+                data.update(req.match_info)
+                params = []
+                for arg in args:
+                    param = data.get(arg, 'not_find')
+                    if param == 'not_find':
+                        logging.warning('参数%s未找到,将以None替代' % arg)
+                        params.append(None)
+                    else:
+                        params.append(param)
+                ret = await func(*params)
+                if wrap:  ##函数返回值还需进行包装
+                    ret = self.wrapAsResponse(ret)
+                return ret
+            self.router.add_route('GET',path,wrapper)
+            return wrapper
+        return decorator
     def post2(self,path):
         def decorator(func):
             args=inspect.getargspec(func).args  ##获取原函数参数

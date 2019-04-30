@@ -1,4 +1,7 @@
-
+function alterEditBlog(id){
+    var blog=getBlog(id);
+    if(blog)editor_app.editBlog(blog);
+}
 function deleteBlog(id){
     var msg_box=$('.msg-box-tem');
     var title=$('#'+id).find('.blog-title').text();

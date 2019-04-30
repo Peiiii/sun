@@ -4,9 +4,10 @@ from config import dirs
 
 
 class Blog:
-    def __init__(self, title, md, created_at, category, tags=[], id=None):
+    def __init__(self, title, text , html, created_at, category, tags=[], id=None):
         self.title = title
-        self.md = md
+        self.text=text
+        self.html=html
         self.created_at = created_at
         t = time.localtime(created_at)
         self.archieve = str(t.tm_year) + '年' + str(t.tm_mon) + '月'
@@ -16,6 +17,12 @@ class Blog:
             self.id = uuid.uuid4().hex
         else:
             self.id = id
+    def toJson(self):
+        dic=self.__dict__
+        json={}
+        for k in dic:
+            json[k]=self.__getattribute__(k)
+        return json
 
 
 class BlogManger:
@@ -27,6 +34,7 @@ class BlogManger:
         if(not os.path.exists(self.workpath)):
             os.mkdir(self.workpath)
         self.mapfile=self.workpath+'/'+'mapfile.map'
+
 
 
     def _load(self, file):
@@ -48,7 +56,7 @@ class BlogManger:
                 return True
             return False
     def _getBlogByTitle(self,title):
-        return self.load(self.workpath+'/'+title+'.blog')
+        return self._load(self.workpath+'/'+title+'.blog')
     async def getBlogByTitle(self,title):
         if not await self.exsist(title=title):
             return False
@@ -61,19 +69,17 @@ class BlogManger:
        if not await self.exsist(id=id):
            return False
        return self._getBlogByID(id)
-
-    async def saveBlog(self, blog):
-        if await self.exsist(blog.title):
-            b=await self.getBlogByTitle(blog.title)
-            blog.id=b.id
+    def _saveBlog(self,blog):
         fname = self.workpath + '/' + blog.title + '.blog'
         f = open(fname, 'wb')
         pickle.dump(blog, f)
-        map=self.getMap()
+        map = self.getMap()
         print(map)
-        map[blog.id]=blog.title
+        map[blog.id] = blog.title
         self.saveMap(map)
         return True
+    async def saveBlog(self, blog):
+        return self._saveBlog(blog)
 
 
     async def loadBlogs(self):
@@ -123,6 +129,9 @@ class BlogManger:
         for b in blogs:
             map[b.id]=b.title
         self.saveMap(map)
+    async def update(self,id,**kws):
+        pass
+
 
 
 

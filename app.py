@@ -16,7 +16,6 @@ quik_links=['/','/manage']
 async def do_root():
     await blman.rebuild()
     blogs=await blman.loadBlogs()
-    print(blogs)
     return pageResponse(template=pages.root,blogs=blogs)
 @app.get2(paths.about)
 async def do_about():
@@ -49,14 +48,13 @@ import  time
 async def do_editor_get():
     return pageResponse(template=pages.editor)
 @app.post4(paths.editor,json=True)
-async def do_editor_get(title,md,category,tags):
-
+async def do_editor_post(title,md,category,tags,opr_type,id):
     created_at=time.time()
-    md=tools.textToHTML(md)
+    text=md
+    html=tools.textToHTML(text)
     b=Blog(
-        title=title,md=md,created_at=created_at,category=category,tags=tags
+        title=title,text=text,html=html,created_at=created_at,category=category,tags=tags,id=id
     )
-    # log(md)
     status=await blman.saveBlog(b)
     return jsonResponse(success=status,message='上传成功！')
 
@@ -70,10 +68,14 @@ async def do_manage_alter(json,opr_type):
         if s:
             return jsonResponse(message='删除成功')
         return apiError(message='删除失败')
-
+@app.post5('/manage/get_blog')
+async def do_get_blog(blog_id):
+    blog=await blman.getBlogByID(blog_id)
+    if blog:
+        return jsonResponse(data=blog.toJson())
+    return apiError(message='blog not found.')
 ##------------------Make Handlers Details----------------##
-async def getMds():
-    pass
+
 ##---------------------End Make Handlers---------------------------##
 app.router.add_static('/', 'static', show_index=True)
 async def init(loop):
