@@ -24,6 +24,8 @@ class BlogManger:
             self.workpath=config.dirs.blogs
         else:
             self.workpath=path
+        if(not os.path.exists(self.workpath)):
+            os.mkdir(self.workpath)
         self.mapfile=self.workpath+'/'+'mapfile.map'
 
 
