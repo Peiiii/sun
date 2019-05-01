@@ -58,6 +58,7 @@ class Switch{ //el: jquery object
     }
 //-----------NormalSwitch-----------//
     doNormalSwicth(){
+
         this.on_el=this.el.find('.switch-on');
         this.off_el=this.el.find('.switch-off');
 
@@ -69,6 +70,7 @@ class Switch{ //el: jquery object
     }
 //-------EasySwitch-----------------//
     doEasySwitch(){
+
         this.on_msg=this.el.attr('on-msg');
         this.off_msg=this.el.attr('off-msg');
 

@@ -89,7 +89,10 @@ def getHeadAndBody(text):
 
 from markdown import markdown
 def mdToHTML(md):
-    return markdown(md)
+    log(md)
+    md=markdown(md)
+    log(md)
+    return md
 def renderDocument(text):
     head,body=getHeadAndBody(text)
     if not head:

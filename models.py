@@ -182,6 +182,5 @@ def hasAttr(obj, attr):
 
 
 def checkID(blog):
-    print(dir(blog))
     if not hasAttr(blog, 'id'):
         blog.id = uuid.uuid4().hex

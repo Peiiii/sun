@@ -20,13 +20,62 @@
 }
 
 
+
+
     </style>
+    <style>{%include "app/home/home.css"%}</style>
+    <script>{%include "app/home/home.js"%}</script>
 </head>
 <body style="background:#3c3939;">
-<div class="article-list-container" style="padding-top:1rem;">
-{%for blog in blogs%}
-{%include "lib/html/poem.html"%}
-{%endfor%}
+<div>
+    <header class="">
+        <div class="fixed-top " id="home-header-wrapper" style="">
+            <div class="nav-header text-align-center" style="">
+                <button class="f-left list-btn" id="blog-list-menu-toggle" data-toggle="collapse"
+                        data-target="#blog-list-menu" style="background:inherit;color:inherit;">
+                    <span style="display:inline-block;width:2em;line-height:1px;">
+                        <div style="display:inline-block;width:1.5em;height:1px;background:white;margin:0px;"></div>
+                        <div style="display:inline-block;width:1.5em;height:1px;background:white;margin:0px;"></div>
+                        <div style="display:inline-block;width:1.5em;height:1px;background:white;margin:0px;"></div>
+                    </span>
+                </button>
+                <button class="bg-black c-white f-right list-btn" id="nav-menu-toggle" data-toggle="collapse"
+                        data-target="#nav-menu" style="">
+                    <span style="display:inline-block;width:2em;line-height:1px;">
+                        <div style="display:inline-block;width:1.5em;height:1px;background:white;margin:0px;"></div>
+                        <div style="display:inline-block;width:1.5em;height:1px;background:white;margin:0px;"></div>
+                        <div style="display:inline-block;width:1.5em;height:1px;background:white;margin:0px;"></div>
+                    </span>
+                </button>
+                <h4 class="d-inline-block">Welcome Friend!</h4>
+                <div class="clear"></div>
+            </div>
+            <div class=" collapse " id="nav-menu">
+                <div class="btn-group-vertical" style="display:inline-block;width:100%;">
+                    <a class="btn btn-lg btn-primary mode" href="/">Home Page</a>
+                    <a class="btn btn-lg btn-warning mode" href="/manage">Magage</a>
+                    <a class="btn btn-lg btn-danger mode" href="/manage#editor">Create Blog</a>
+                    <a href="/manage#alter" class="btn btn-lg btn-info mode">Edit Blog</a>
+                    <a class="btn btn-lg btn-success mode" href="#">Sign In</a>
+                    <a class="btn btn-lg btn-dark mode" href="#">Sign up</a>
+                </div>
+            </div>
+            <div class=" collapse " id="blog-list-menu">
+
+                <div style="height:5em;"></div>
+                {%for blog in blogs%}
+                <div><a href="#blog-{{blog.id}}" onclick="$('#blog-list-menu-toggle').click();">{{blog.title}}</a></div>
+                {%endfor%}
+
+            </div>
+        </div>
+
+    </header>
+</div>
+<div id="article-list-container">
+    {%for blog in blogs%}
+    {%include "lib/html/article.html"%}
+    {%endfor%}
 </div>
 <table>
     <tr>
@@ -34,7 +83,6 @@
         <th>archieve</th>
         <th>tags</th>
         <th>md</th>
-
     </tr>
     {%for b in blogs%}
     <tr>
