@@ -1,14 +1,50 @@
 function log(text){console.log(text);}
+editor_config={
 
+}
+class FaceManager{
+    constructor(selector){
+        this.selector=selector;
+        this.el=$(selector);
+        this.mode='none';
+    }
+    setMode(mode){
+        this.mode=mode;
+    }
+    closeMode(){
+        this.el.removeClass('mode-dark');
+    }
+    executeMode(){
+        this.el.addClass(this.mode);
+    }
+}
 function copyHtml(src,tar){
+    var head=getHead(tar.val());
+    if(head=='md'||head=='markdown')return;
     var html=src.html();
     tar.val(html);
 }
+function renderText(text){
+    var text2=text.split('\n');
+    var head=text2[0].trim().toLowerCase();
+    var body=text2.slice(1,text.length).join('\n');
+    if(head[0]!='@')return text;
+    head=head.slice(1,head.length);
+    if(head=='markdown' || head=='md')return marked(body);
+    return text;
+}
+function getHead(text){
+    var text2=text.split('\n');
+    var head=text2[0].trim().toLowerCase();
+    if(head[0]!='@')return null;
+    head=head.slice(1,head.length);
+    return head;
+}
 function copyText(src,tar){
     var text=src.val();
+    text=renderText(text);
     tar.html(text);
 }
-
 class Editor{
     constructor(selector){
         var el=$(selector);
@@ -95,6 +131,12 @@ function executeCmd(cmd){
         case ":exit":
             sw.easyTurnOff();
             return true;
+        case ":mode dark":
+            fman.setMode('mode-dark');
+            return true;
+        case ":mode close":
+            fman.closeMode();
+            return true;
         case "#editor":
             location.href='#editor';
             return true;
@@ -135,6 +177,7 @@ function initSwitchTest(){
 }
 function initEditor(){
     editor_app=new Editor('#editor');
+    fman=new FaceManager('#editor');
     var app=editor_app;
     var b=$('body');
     var chg=$('#changeable');

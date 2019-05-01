@@ -55,12 +55,28 @@ def encrypt(*args):
     encrypted=hashlib.sha1(text.encode('utf-8')).hexdigest()
     return encrypted
 def textToHTML(text):
-    text=text.split('\n')
-    new_text=[]
-    for i in text:
-        new_text.append('<p>'+i+'</p>')
-    return '\n'.join(new_text)
+    text,tags=renderDocument(text)
+    if 'text/plain' in tags :
+        text=text.split('\n')
+        new_text = []
+        for i in text:
+            new_text.append('<p>' + i + '</p>')
+        return '\n'.join(new_text)
+    elif 'md' in tags or 'markdown' in tags:
+        return mdToHTML(text)
 
+from markdown import markdown
+def mdToHTML(md):
+    return markdown(md)
+def renderDocument(text):
+    text_split = text.split('\n')
+    head=text_split[0].strip().lower()
+    if head[0]!='@':
+        return text,['text/plain']
+    text_split.pop(0)
+    tags=head.split(';')
+    tags=[i.strip().strip('@') for i in tags]
+    return '\n'.join(text_split),tags
 class PathType:
     def __init__(self):
         self.F = 'FILE'

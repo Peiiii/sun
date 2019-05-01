@@ -1,5 +1,5 @@
 <style>{%include "app/manage/editor.css"%}</style>
-<div class="editor bg-black c-white" id="editor" style="min-height:34rem;width:100%;">
+<div class="editor " id="editor" style="min-height:34rem;width:100%;">
     <div style="width:100%;height:calc(100% - 1rem);">
         <div status="off">
 
@@ -19,20 +19,22 @@
             </div>
 
         </div>
-        <div id="changeable" style="width:100%;height:29.2rem;">
+        <div id="changeable" style="width:100%;">
             <textarea id="text-input" class="f-left" style="width:50%;height:29.2rem;background:inherit;color:inherit;padding:0.5em;">
             {%if content%}
             {{content}}
             {%endif%}
                 </textarea>
             <div id="html-input" contenteditable="true" class="f-left"
-                 style="padding: 0.5em; border: 1px solid gray; width: 50%; height: 100%;">
+                 style="padding: 0.5em; border: 1px solid gray; width: 50%; height:29.2em;">
                 {%if content%}
                 {{content}}
                 {%endif%}
             </div>
+            <div class="clear"></div>
 
         </div>
     </div>
 </div>
+<script src="/js/marked.min.js"></script>
 <script>{%include "app/manage/editor.js"%}</script>

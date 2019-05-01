@@ -3,3 +3,7 @@
     background:inherit;
     color:inherit;
 }
+.mode-dark#editor{
+    background:black;
+    color:white;
+}

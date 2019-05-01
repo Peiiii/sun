@@ -71,6 +71,10 @@ function getLastLine(text){
     text=text.split('\n');
     return text[text.length-1];
 }
+function getFirstLine(text){
+    text=text.split('\n');
+    return text[0];
+}
 function getLine(text,n){
     num=0;
     for(var i=0;i<n;i++){
