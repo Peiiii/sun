@@ -50,12 +50,12 @@ String.prototype.mul=function(num){
     };
     return str;
 }
-String.prototype.toDict= function(divider){
+String.prototype.toDict= function(divider=';'){
 //类似于对cookies的解析函数，将纯字符串的键=值对集合解析成集合，divider为分隔符。
 //例如 对 "name=nick&&key=123&&code=345" 进行解析，divider="&&",返回结果 { name:nick',key:'123',code:'345'}
-    text=strip(this,divider);
-    arr=text.split(divider);
-    dic={};
+    var text=this.strip(divider);
+    var arr=text.split(divider);
+    var dic={};
     for(var i=0;i<arr.length;i++){
         [name,value]=arr[i].split('=');
         dic[name]=value;
@@ -83,6 +83,15 @@ function getLine(text,n){
     line =text.split('\n')[num];
     //log(line);
     return line;
+}
+function getHeadAndBody(text,from_start=true){
+    text=text.trim();
+    var pat=new RegExp('^\\/\\*[\\s\\S]*\\*\\/');
+    var m=text.match(pat);
+    if(!m)return [null,text];
+    var body=text.replace(pat,'');
+    var head=m[0];
+    return [head,body];
 }
 //----------------------------------------------//
 // document format conversion

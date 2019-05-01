@@ -21,25 +21,28 @@ class FaceManager{
 }
 function copyHtml(src,tar){
     var head=getHead(tar.val());
-    if(head=='md'||head=='markdown')return;
+    var format=head.format;
+    if(format=='md'||format=='markdown')return;
     var html=src.html();
     tar.val(html);
 }
 function renderText(text){
-    var text2=text.split('\n');
-    var head=text2[0].trim().toLowerCase();
-    var body=text2.slice(1,text.length).join('\n');
-    if(head[0]!='@')return text;
-    head=head.slice(1,head.length);
-    if(head=='markdown' || head=='md')return marked(body);
-    return text;
+    var head;var body;
+    [head,body]=getHeadAndBody(text);
+    if(!head)return text;
+    var dic=head.strip('/*').strip('*/').toDict(';');
+    if(!dic.hasOwnProperty('format'))dic.format='text/plain';
+    var format=dic.format;
+    if(format='markdown' || format=='md')return marked(body);
 }
+
 function getHead(text){
-    var text2=text.split('\n');
-    var head=text2[0].trim().toLowerCase();
-    if(head[0]!='@')return null;
-    head=head.slice(1,head.length);
-    return head;
+    var head;var body;
+    [head,body]=getHeadAndBody(text);
+    if(!head)return {};
+    var dic=head.strip('/*').strip('*/').toDict(';');log(dic);
+    if(!dic.hasOwnProperty('format'))dic.format='text/plain';
+    return dic;
 }
 function copyText(src,tar){
     var text=src.val();

@@ -1,4 +1,4 @@
-import os, time,hashlib
+import os, time,hashlib,markdown,re
 import asyncio
 
 
@@ -55,28 +55,48 @@ def encrypt(*args):
     encrypted=hashlib.sha1(text.encode('utf-8')).hexdigest()
     return encrypted
 def textToHTML(text):
-    text,tags=renderDocument(text)
-    if 'text/plain' in tags :
+    text,dic=renderDocument(text)
+    format=dic.get('format',None)
+    format=format or 'text/plain'
+
+    if format=='text/plain' :
         text=text.split('\n')
         new_text = []
         for i in text:
             new_text.append('<p>' + i + '</p>')
         return '\n'.join(new_text)
-    elif 'md' in tags or 'markdown' in tags:
+    elif format=='md' or format=='markdown':
         return mdToHTML(text)
+def textToDic(text,divider=';',equal_char='='):
+    text=text.strip().strip(divider)
+    fields=text.split(divider)
+    dic={}
+    for f in fields:
+        [name,value]=f.strip().split(equal_char)
+        name=name.strip()
+        value=value.strip()
+        dic[name]=value
+    return dic
+def getHeadAndBody(text):
+    text=text.strip()
+    pat=re.compile('^/\*.*\*/',re.DOTALL)
+    m=re.match(pat,text)
+    if not m:
+        return None,text
+    body=re.sub(pat,'',text,count=1)
+    head=m.group(0).strip('/*').strip('*/')
+    return head,body
 
 from markdown import markdown
 def mdToHTML(md):
     return markdown(md)
 def renderDocument(text):
-    text_split = text.split('\n')
-    head=text_split[0].strip().lower()
-    if head[0]!='@':
-        return text,['text/plain']
-    text_split.pop(0)
-    tags=head.split(';')
-    tags=[i.strip().strip('@') for i in tags]
-    return '\n'.join(text_split),tags
+    head,body=getHeadAndBody(text)
+    if not head:
+        return body,{}
+    dic=textToDic(head)
+    return body,dic
+
 class PathType:
     def __init__(self):
         self.F = 'FILE'
