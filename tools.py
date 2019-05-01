@@ -83,7 +83,7 @@ def getHeadAndBody(text):
     m=re.match(pat,text)
     if not m:
         return None,text
-    body=re.sub(pat,'',text,count=1)
+    body=re.sub(pat,'',text,count=1).strip()
     head=m.group(0).strip('/*').strip('*/')
     return head,body
 
