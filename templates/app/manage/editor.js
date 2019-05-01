@@ -10,6 +10,7 @@ class FaceManager{
     }
     setMode(mode){
         this.mode=mode;
+        this.executeMode();
     }
     closeMode(){
         this.el.removeClass('mode-dark');
