@@ -5,8 +5,28 @@
 
 
 
+//base: jquery, easyJS(show and hide)
 
+function showMsg(msg_box,msg){
+    show(msg_box);
+    msg_box.html(msg);
+}
+function hideMsg(msg_box){
+    hide(msg_box);
+}
+function initMessageShow(){
+    var boxes=$('.msg-box-tem');
+    boxes.map((n,box)=>{
+        var box=$(box);
+        box.click(()=>{hide(box);});
+        box.click();
+    })
+}
+$(document).ready(()=>{
+    initMessageShow();
+})
 
+//------------------Switches--------------//
 switches={};
 //---------------Supporting Functions-------------------//
 function getSource(el){
@@ -227,7 +247,58 @@ function initDoubleViewSwitch(){
     })
 }
 //--------------------End DoubleViewSwitch-----------------------//
+//------------------Commander------------------//
+class Commander{
+    constructor(cmd_input,btn,funcs,msg_box){
+        this.cmd_input=cmd_input;
+        this.btn=btn;
+        this.funcs=funcs;
+        this.local_funcs=this.getLocalFuncs();
+        this.msg_box=msg_box;
+        var self=this;
+        this.btn.click(()=>{
+            self.executeCmd();
+        });
+        this.cmd_input.keydown((e)=>{
+            if(e.keyCode==13){hideMsg(self.msg_box);self.btn.click();}
+        });
+    }
+    getCmd(){
+        var cmd=this.cmd_input.val();
+        return cmd;
+    }
+    parseCmd(cmd){
+        var cmd=cmd.split(' ');
+        cmd=cmd.wash();
+        return [cmd[0],cmd.slice(1,cmd.length)];
+    }
+    executeCmd(){
+        var cmd=this.getCmd();
+        if(cmd=='')return null;
+        var func_name;var params;
+        [func_name,params]=this.parseCmd(cmd);
+        var func=this.funcs[func_name];
+        if(!func) {
+            func=this.local_funcs[func_name];
+            if(!func){showMsg(this.msg_box,'命令错误！');return null;}
+        }
+        var p1=params.shift();
+        var ret=func(p1,params);
+        this.cmd_input.val('');
+        return ret;
+    }
+    getLocalFuncs(){
+        var funcs={
+            "alert":(text)=>{
+                alert(text);return true;
+            },
+            "js":(code)=>{
 
+            }
+        }
+        return funcs;
+    }
+}
 //---------------SwitchInitializer---------------------//
 class SwitchInitializer{
     constructor(btn){
@@ -240,7 +311,6 @@ class SwitchInitializer{
         var tars=this.btn.attr('tar-sels');
         this.tars=[];
         if(tars){
-//            log(tars)
             tars=tars.split();
             tars.map((n,ta)=>{
                 this.tars.push($(ta));

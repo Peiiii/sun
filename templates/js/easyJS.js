@@ -101,6 +101,14 @@ function escapeToHTML(str) {
 }
 
 //-------------------------------------------------------//
+Array.prototype.wash=function(){
+    var new_arr=[]
+    for(var i=0;i<this.length;i++ ){
+        var s=this[i].trim();
+        if(s)new_arr.push(s);
+    }
+    return new_arr;
+}
 
 //------------------------------------------------//
 //常用函数

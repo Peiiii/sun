@@ -7,6 +7,8 @@
 #html-input{
     overflow:auto;
     padding:2em;
+    border:none;
+    border-bottom:1px solid gray;
 }
 .screen-md #text-input{
     width:50%;
@@ -16,9 +18,12 @@
     color:inherit;
     padding:0.5em;
     float:left;
+    border:none;
+    border-bottom: 1px solid gray;
 }
 .screen-md #html-input{
-    border: 1px solid gray;
+    border:none;
+    border-bottom: 1px solid gray;
     width: 50%;
     height:29.2em;
     float:left;

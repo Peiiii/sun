@@ -1,6 +1,20 @@
 function log(text){console.log(text);}
-editor_config={
-
+function initMarked(){
+  var myMarked = marked;
+  myMarked.setOptions({
+  renderer: new myMarked.Renderer(),
+  highlight: function(code) {
+    return hljs.highlightAuto(code).value;
+  },
+  pedantic: false,
+  gfm: true,
+  tables: true,
+  breaks: false,
+  sanitize: false,
+  smartLists: true,
+  smartypants: false,
+  xhtml: false
+    });
 }
 class FaceManager{
     constructor(selector){
@@ -121,56 +135,40 @@ function initEditableSwitch(){
 //-----------------insert blog and edit-----------//
 
 //----------------cmd---------------//
-function checkCmd(text){
-    text=text.toLowerCase();
-    return text;
-}
-function executeCmd(cmd){
-    var sw=switches.editable[0];
-    var btn=$('#btn-editable');
-    switch(cmd){
-        case ":edit":
-            show(btn);
-            sw.easyTurnOn();
-            return true;
-        case ":exit":
-            sw.easyTurnOff();
-            return true;
-        case ":mode dark":
-            fman.setMode('mode-dark');
-            return true;
-        case ":mode close":
-            fman.closeMode();
-            return true;
-        case "#editor":
-            location.href='#editor';
-            return true;
-        case "#alter":
-            location.href="#alter";
-            return true;
-        default:
-            return false;
-    }
-}
+
 function initCommandButton(){
     var btn=$('.cmd-btn');
     var input=$('.cmd-input');
     var msg_box=$('.msg-box-tem');
-    btn.unbind().click((e)=>{
-        var cmd=input.val();
-        cmd=checkCmd(cmd);
-        if(! cmd){showMsg(msg_box,'命令错误')}
-        else {
-            success=executeCmd(cmd);
-            if(success){
-               input.val('');
+    var funcs={
+        "edit":()=>{
+            var sw=switches.editable[0];
+            var btn=$('#btn-editable');
+            show(btn);
+            sw.easyTurnOn();
+            return true;
+        },
+        "exit":()=>{
+            var sw=switches.editable[0];
+            sw.easyTurnOff();
+            return true;
+        },
+        "mode":(param)=>{
+            if(param=='close'){
+                fman.closeMode();
+                return true;
             }
-            else showMsg(msg_box,'命令错误');
-        };
-    });
-    input.keydown((e)=>{
-        if(e.keyCode==13){hideMsg(msg_box);btn.click();}
-    })
+            else if(param=='dark'){
+                fman.setMode('mode-dark');
+            return true;
+            }
+            return false;
+        },
+        "#":(param)=>{
+            location.href="#" + param;
+        }
+    }
+    new Commander(input,btn,funcs,msg_box);
 }
 //--------------gather blog info-----------------//
 
@@ -192,6 +190,7 @@ function initEditor(){
     var sw=$('#exitview-switch');
     var msg_box=$('.msg-box-tem');
     initSwitchTest();
+    initMarked();
     copyText(text_input,html_input);
     text_input.unbind().on("propertychange focus input",()=>{
         copyText(text_input,html_input);
@@ -202,7 +201,6 @@ function initEditor(){
     sub.click((e)=>{
         editor_app.submit();
     });
-
 
 }
 $(document).ready(()=>{

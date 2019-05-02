@@ -18,6 +18,7 @@
     right:0em;
     width:83.3333%;
     z-index:1;
+    padding-right:0.5em;
 }
 .screen-xs #ctrl-bar{
     width:100%;
