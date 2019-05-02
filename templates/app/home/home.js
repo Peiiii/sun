@@ -13,7 +13,7 @@ class SwitchFold extends Switch{
     }
 }
 function initBlog(blog){
-    var mask=blog.find('.wrapper3');
+    var mask=blog.find('.wrapper1');
     var unfold=blog.find('.switch-fold');
     if(mask.height()>300){new SwitchFold(unfold,mask);show(unfold);}
     else{hide(unfold);}
