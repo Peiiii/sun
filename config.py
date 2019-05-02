@@ -18,15 +18,17 @@ net=Config(
     port=8003,
     domain='localhost'
 )
-database=Config(
-    user='root',
-    password='password',
-    db='webapp2'
-)
+
 dirs=Config(
-    mds='mds,',
     blogs='../blogs'
 )
+other_config=Config(
+    blogs_dir='../blogs',
+    templates_dir='templates',
+    mapfile_name='mapfile.map',
+    show_index=True
+)
+
 paths=Config(
     root='/',
     about='/about',
@@ -36,51 +38,16 @@ paths=Config(
     search='/search',
     manage='/manage',
     editor='/manage/editor',
-
-
-    board='/papers',
-    test='/test',
-    home='/home',
-    visit_blog='/blog/{blog_id}',
-    visit_user='/user/{user_id}',
-    my_home='/me',
-    create_my_blog_get='/me/editor',
-    create_my_blog_post='/me/post_blog',
-    edit_my_blog_get='/me/editor/{blog_id}',
-    edit_my_blog_post='/me/editor/{blog_id}',
-    delete_my_blog='/me/delete_blog/{blog_id}',
-    view_my_blog='/me/blog/{blog_id}',
-    sign_up_get='/sign-up',
-    sign_up_post='/sign-up',
-    sign_in_get='/sign-in',
-    sign_in_post='/sign-in',
-    post_comment='/blog/{blog_id}/comment'
 )
-hrefs=Config(
 
-)
 pages=Config(
-    root='html/home.html',
-    about='/about',
-    tags='/tags',
-    categories='/categories',
-    archieves='/archieves',
-    search='/search',
-    manage='/html/manage.html',
-    editor='/app/manage/editor.html',
-
-
-    board='html/board.html',
-    base='html/_base.html',
-    sign_up_in='html/sign_up_in.html',
-    user_home='html/_new_user_home.html',
-    home='html/home.html',
-    user_manage='html/user_manage.html',
-    article_display='html/_feedlist.html',
-    comment_show='html/_comment_show.html',
-    error='html/error.html',
-    visit_blog='html/_new_visit_blog.html',
-    read_my_blog='html/_new_read_my_blog.html',
-    test='html/test.html'
+    root='pages/home/home.html',
+    about='pages/about/about.html',
+    tags='pages/tags/tags.html',
+    categories='pages/categrories/categories.html',
+    archieves='pages/archieves/archieves.html',
+    search='pages/search/search.html',
+    manage='pages/manage/manage.html',
+    error='pages/error/error.html'
 )
 

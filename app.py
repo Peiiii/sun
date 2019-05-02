@@ -1,7 +1,7 @@
 import logging;logging.basicConfig(level=logging.INFO)
-import asyncio,uuid,tools
+import asyncio,uuid,tools,config
 from framework import Application,jsonResponse,apiError,pageResponse
-from config import net,paths,dirs,pages
+from config import net,paths,dirs,pages,other_config
 from models import Blog,loadBlog,saveBlog,loadBlogs,BlogManger
 from tools import log
 
@@ -19,24 +19,19 @@ async def do_root():
     return pageResponse(template=pages.root,blogs=blogs)
 @app.get2(paths.about)
 async def do_about():
-    ''' '''
-    pass
+    return pageResponse(template=pages.about)
 @app.get2(paths.tags)
 async def do_tags():
-    ''' '''
-    pass
+    return pageResponse(template=pages.tags)
 @app.get2(paths.categories)
 async def do_categories():
-    ''' '''
-    pass
+    return pageResponse(template=pages.categories)
 @app.get2(paths.archieves)
 async def do_archieves():
-    ''' '''
-    pass
+   return pageResponse(template=pages.archieves)
 @app.get2(paths.search)
 async def do_search():
-    ''' '''
-    pass
+    return pageResponse(template=pages.search)
 @app.get2(paths.manage)
 async def do_manage_get():
     blogs=await blman.loadBlogs()
@@ -47,8 +42,8 @@ import  time
 @app.get2(paths.editor)
 async def do_editor_get():
     return pageResponse(template=pages.editor)
-@app.post4(paths.editor,json=True)
-async def do_editor_post(title,md,category,tags,opr_type,id):
+@app.post5(paths.editor)
+async def do_editor_post(title,md,html,description,author,info,category,tags,opr_type,id):
     created_at=time.time()
     text=md
     html=tools.textToHTML(text)
@@ -64,7 +59,6 @@ async def do_manage_alter(json,opr_type):
     id=json['id']
     if opr_type=='delete':
         s=await blman.deleteBlog(id)
-        print(s,id)
         if s:
             return jsonResponse(message='删除成功')
         return apiError(message='删除失败')
@@ -77,7 +71,7 @@ async def do_get_blog(blog_id):
 ##------------------Make Handlers Details----------------##
 
 ##---------------------End Make Handlers---------------------------##
-app.router.add_static('/', 'static', show_index=True)
+app.router.add_static('/', 'static', show_index=other_config.show_index)
 async def init(loop):
     server = await loop.create_server(app.make_handler(), net.ip, net.port)
     return server

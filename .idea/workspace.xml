@@ -2,34 +2,50 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55766798-c559-4d56-8b78-5c6b69ffb9d3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/static/imgs/icons/close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/lib/html/blog.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/app/home/home.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/app/home/home.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/app/manage/alter.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/app/manage/alter.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/app/manage/alter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/app/manage/editor.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/app/manage/editor.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/app/manage/editor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/app/manage/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/app/manage/manage.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/app/manage/manage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/app/manage/request.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/css/basic.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/html/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/html/include.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/html/manage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/js/easyJS.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/js/message_show.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/js/switch.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/imgs/icons/list-32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/imgs/icons/list-48.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/imgs/icons/list-64.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/imgs/icons/list2-32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/imgs/icons/list2-48.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/imgs/icons/list2-64.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/imgs/icons/list3-20.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/imgs/icons/list3-24.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/imgs/icons/list3-32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/imgs/icons/list4-24.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/imgs/icons/list5-24.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/imgs/icons/list5-32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/imgs/icons/list6-16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/imgs/icons/list6-24.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/imgs/icons/list6-32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/imgs/icons/listb-16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/imgs/icons/listb-20.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/imgs/icons/listb-24.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/imgs/icons/listb-32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/imgs/icons/lsit5-48.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/imgs/icons/新年快乐.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/app/home/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/app/home/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/app/home/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/app/home/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/html/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/html/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/lib/html/article.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/lib/html/article.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework.py" beforeDir="false" afterPath="$PROJECT_DIR$/framework.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/app/home/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/home/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/app/home/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/home/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/app/manage/alter.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/manage/alter.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/app/manage/alter.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/manage/alter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/app/manage/alter.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/manage/alter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/app/manage/editor.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/manage/editor.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/app/manage/editor.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/manage/editor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/app/manage/editor.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/manage/editor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/app/manage/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/manage/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/app/manage/manage.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/manage/manage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/app/manage/manage.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/manage/manage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/app/manage/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/manage/request.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/css/basic.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/lib/css/basic.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/html/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/home/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/html/include.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/lib/html/include.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/html/manage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/manage/manage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/js/easyJS.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/lib/js/easyJS.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/js/message_show.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/lib/js/message_show.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/js/switch.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/lib/js/switch.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,100 +56,101 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/html/home.html">
+        <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="62">
-              <caret line="36" column="82" lean-forward="true" selection-start-line="36" selection-start-column="82" selection-end-line="36" selection-end-column="82" />
+            <state relative-caret-position="366">
+              <caret line="55" column="8" lean-forward="true" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/pages/manage/manage.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="494">
+              <caret line="26" column="50" lean-forward="true" selection-start-line="26" selection-start-column="50" selection-end-line="26" selection-end-column="50" />
               <folding>
-                <element signature="n#style#0;n#span#0;n#button#1;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#span#0;n#button#1;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#span#0;n#button#1;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#span#0;n#button#1;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#1;n#div#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#button#1;n#div#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#span#0;n#button#1;n#div#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#span#0;n#button#1;n#div#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#span#0;n#button#1;n#div#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/app/manage/alter.html">
+        <entry file="file://$PROJECT_DIR$/templates/pages/manage/alter.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" column="84" lean-forward="true" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="84" />
+            <state relative-caret-position="437">
+              <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2413">
+              <caret line="127" column="25" selection-start-line="127" selection-start-column="25" selection-end-line="127" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#46#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/framework.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2964">
+              <caret line="156" column="36" lean-forward="true" selection-start-line="156" selection-start-column="36" selection-end-line="156" selection-end-column="36" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/pages/manage/home.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/pages/manage/editor.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="7" column="33" lean-forward="true" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#td#1;n#tr#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#1;n#td#1;n#tr#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/app/home/home.js">
+        <entry file="file://$PROJECT_DIR$/templates/lib/html/include.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+            <state relative-caret-position="152">
+              <caret line="8" column="51" lean-forward="true" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/lib/html/blog.html">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="33" column="168" selection-start-line="33" selection-start-column="168" selection-end-line="33" selection-end-column="168" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h3#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="76">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/lib/html/article.html">
+        <entry file="file://$PROJECT_DIR$/config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-19">
-              <caret line="11" column="66" selection-start-line="11" selection-start-column="66" selection-end-line="11" selection-end-column="66" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h3#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/css/basic.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="54" column="19" lean-forward="true" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/app/home/home.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="36" selection-start-line="36" selection-end-line="49" selection-end-column="1" />
+            <state relative-caret-position="109">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -165,14 +182,10 @@
         <option value="$PROJECT_DIR$/templates/library/html/poem.html" />
         <option value="$PROJECT_DIR$/templates/app/manage/aler.js" />
         <option value="$PROJECT_DIR$/templates/html/include.html" />
-        <option value="$PROJECT_DIR$/config.py" />
-        <option value="$PROJECT_DIR$/framework.py" />
         <option value="$PROJECT_DIR$/templates/app/manage/request.js" />
         <option value="$PROJECT_DIR$/templates/app/manage/alter.js" />
-        <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/templates/lib/html/poem.html" />
         <option value="$PROJECT_DIR$/tools.py" />
-        <option value="$PROJECT_DIR$/models.py" />
         <option value="$PROJECT_DIR$/templates/app/manage/alter.html" />
         <option value="$PROJECT_DIR$/templates/js/message_show.js" />
         <option value="$PROJECT_DIR$/templates/js/easyJS.js" />
@@ -188,6 +201,16 @@
         <option value="$PROJECT_DIR$/templates/lib/html/article.html" />
         <option value="$PROJECT_DIR$/templates/html/home.html" />
         <option value="$PROJECT_DIR$/templates/lib/html/blog.html" />
+        <option value="$PROJECT_DIR$/config.py" />
+        <option value="$PROJECT_DIR$/framework.py" />
+        <option value="$PROJECT_DIR$/templates/pages/home/home.html" />
+        <option value="$PROJECT_DIR$/templates/pages/manage/manage.html" />
+        <option value="$PROJECT_DIR$/templates/pages/manage/editor.html" />
+        <option value="$PROJECT_DIR$/templates/pages/manage/alter.html" />
+        <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/models.py" />
+        <option value="$PROJECT_DIR$/templates/lib/html/include.html" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
       </list>
     </option>
   </component>
@@ -212,80 +235,6 @@
               <item name="www" type="b2602c69:ProjectViewProjectNode" />
               <item name="www" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="www" type="b2602c69:ProjectViewProjectNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="www" type="b2602c69:ProjectViewProjectNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="imgs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="www" type="b2602c69:ProjectViewProjectNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="imgs" type="462c0819:PsiDirectoryNode" />
-              <item name="icons" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="www" type="b2602c69:ProjectViewProjectNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="www" type="b2602c69:ProjectViewProjectNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="www" type="b2602c69:ProjectViewProjectNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="www" type="b2602c69:ProjectViewProjectNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="manage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="www" type="b2602c69:ProjectViewProjectNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="www" type="b2602c69:ProjectViewProjectNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="html" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="www" type="b2602c69:ProjectViewProjectNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="www" type="b2602c69:ProjectViewProjectNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="www" type="b2602c69:ProjectViewProjectNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="html" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -300,15 +249,18 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\ablog\www\templates\app\manage" />
-      <recent name="E:\ablog\www\templates\app" />
+      <recent name="E:\sun\www\trash" />
+      <recent name="E:\sun\www\templates\lib\html" />
+      <recent name="E:\sun\www\templates\lib" />
+      <recent name="E:\sun\www\templates\pages\manage" />
+      <recent name="E:\sun\www\templates\pages\home" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\sun\www\static\imgs\icons" />
-      <recent name="E:\sun\www\static" />
-      <recent name="E:\sun\www\static\js" />
-      <recent name="E:\sun\www\static\css" />
-      <recent name="E:\ablog\www\templates\app\manage" />
+      <recent name="E:\sun\www\templates\pages\manage" />
+      <recent name="E:\sun\www\templates\pages\home" />
+      <recent name="E:\sun\www\templates\js" />
+      <recent name="E:\sun\www\templates\lib" />
+      <recent name="E:\sun\www\templates\pages" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -439,48 +391,31 @@
     <entry file="file://$PROJECT_DIR$/static/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/html/include.html">
+    <entry file="file://$PROJECT_DIR$/trash/html/include.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
           <caret line="3" column="53" lean-forward="true" selection-start-line="3" selection-start-column="53" selection-end-line="3" selection-end-column="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="33" column="29" lean-forward="true" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/app/manage/request.js">
+    <entry file="file://$PROJECT_DIR$/trash/app/manage/request.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="7" column="5" lean-forward="true" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/framework.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1444">
-          <caret line="78" column="35" selection-start-line="78" selection-start-column="35" selection-end-line="78" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/marked.min.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/app/manage/home.html">
+    <entry file="file://$PROJECT_DIR$/trash/app/manage/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/app/manage/alter.js">
+    <entry file="file://$PROJECT_DIR$/trash/app/manage/alter.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
@@ -507,23 +442,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3439">
-          <caret line="183" column="18" selection-start-line="183" selection-start-column="18" selection-end-line="183" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#46#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tools.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -531,34 +449,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/js/message_show.js">
+    <entry file="file://$PROJECT_DIR$/trash/js/message_show.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/js/easyJS.js">
+    <entry file="file://$PROJECT_DIR$/trash/js/easyJS.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
           <caret line="111" lean-forward="true" selection-start-line="111" selection-end-line="111" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/app/manage/editor.css">
+    <entry file="file://$PROJECT_DIR$/trash/app/manage/editor.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
           <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/js/switch.js">
+    <entry file="file://$PROJECT_DIR$/trash/js/switch.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="267">
           <caret line="284" column="30" lean-forward="true" selection-start-line="284" selection-start-column="30" selection-end-line="284" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/app/manage/alter.css">
+    <entry file="file://$PROJECT_DIR$/trash/app/manage/alter.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/html/manage.html">
+    <entry file="file://$PROJECT_DIR$/trash/html/manage.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="81">
           <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
@@ -571,7 +489,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/app/manage/editor.html">
+    <entry file="file://$PROJECT_DIR$/trash/app/manage/editor.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="855">
           <caret line="45" column="7" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
@@ -584,42 +502,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/app/manage/manage.js">
+    <entry file="file://$PROJECT_DIR$/trash/app/manage/manage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret lean-forward="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/app/manage/editor.js">
+    <entry file="file://$PROJECT_DIR$/trash/app/manage/editor.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="2" column="24" lean-forward="true" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/app/manage/manage.css">
+    <entry file="file://$PROJECT_DIR$/trash/app/manage/manage.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="229">
           <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/app/home/home.css">
+    <entry file="file://$PROJECT_DIR$/trash/app/home/home.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
           <caret line="36" selection-start-line="36" selection-end-line="49" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/css/basic.css">
+    <entry file="file://$PROJECT_DIR$/trash/css/basic.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="54" column="19" lean-forward="true" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/app/manage/alter.html">
+    <entry file="file://$PROJECT_DIR$/trash/app/manage/alter.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
           <caret line="3" column="84" lean-forward="true" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="84" />
@@ -632,7 +550,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/app/home/home.js">
+    <entry file="file://$PROJECT_DIR$/trash/app/home/home.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
@@ -655,7 +573,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/html/home.html">
+    <entry file="file://$PROJECT_DIR$/templates/lib/js/easyJS.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/lib/css/basic.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pages/manage/home/home.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pages/home/home.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="12" lean-forward="true" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trash/html/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="62">
           <caret line="36" column="82" lean-forward="true" selection-start-line="36" selection-start-column="82" selection-end-line="36" selection-end-column="82" />
@@ -678,7 +612,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/lib/html/blog.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
+        <state relative-caret-position="176">
           <caret line="33" column="168" selection-start-line="33" selection-start-column="168" selection-end-line="33" selection-end-column="168" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
@@ -687,6 +621,96 @@
             <element signature="n#style#0;n#h3#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pages/home/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-774">
+          <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pages/manage/request.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pages/manage/manage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="26" column="50" lean-forward="true" selection-start-line="26" selection-start-column="50" selection-end-line="26" selection-end-column="50" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pages/manage/alter.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="55" column="8" lean-forward="true" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pages/manage/home.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pages/manage/editor.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="33" lean-forward="true" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/lib/html/include.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="51" lean-forward="true" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2413">
+          <caret line="127" column="25" selection-start-line="127" selection-start-column="25" selection-end-line="127" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2964">
+          <caret line="156" column="36" lean-forward="true" selection-start-line="156" selection-start-column="36" selection-end-line="156" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>

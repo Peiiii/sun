@@ -4,7 +4,7 @@ import logging;logging.basicConfig(level=logging.INFO)
 from aiohttp import web
 from  jinja2 import  Template,Environment, PackageLoader
 
-templates_dir='templates'
+templates_dir=config.other_config.templates_dir
 env = Environment(loader=PackageLoader(templates_dir,''))
 
 
@@ -113,76 +113,8 @@ class Application(web.Application):
             self.router.add_route('GET',path,wrapper)
             return wrapper
         return decorator
-    def post2(self,path):
-        def decorator(func):
-            args=inspect.getargspec(func).args  ##获取原函数参数
-            @functools.wraps(func)
-            async def wrapper(request):
-                logging.info('run %s' % func.__name__)
-                form= await request.post()
-                if args!=[]:
-                    params = []
-                    req=False
-                    if args[-1]=='request':
-                        req=args.pop()  ##args只包含除request以外的参数， request 参数需要单独处理
-                    for i in args:
-                        try:
-                            params.append(form[i])
-                        except:
-                            raise Exception('函数%s参数%s定义不匹配' % (func.__name__,i))
-                    if req:
-                        params.append(request)
-                    response =await func(*params)
-                else:
-                    response =await func()
-                return response
-            self.router.add_route('POST',path,wrapper)
-            return wrapper
-        return decorator
 
-    def post3(self,path,req=False,json=False,form=True,cookies=False,headers=False,wrap=False): ##req,json,form同时只能有一个为True
-        def decorator(func):
-            args1=inspect.getargspec(func).args  ##获取原函数参数            @functools.wraps(func)
-            async def wrapper(request):
-                logging.info('run %s'%func.__name__)
-                args=args1.copy()
-                if cookies:
-                    last=args.pop()
-                    if last!='cookies':
-                        raise Exception('函数%s最后一个参数应为cookies,而非%s'%(func.__name__,last))
-                elif headers:
-                    last=args.pop()
-                    if last!='headers':
-                        raise Exception('函数%s最后一个参数应为headers,而非%s'%(func.__name__,last))
-                if req:  ##  直接将request作为参数
-                    if len(args)!=1:
-                        raise Exception('函数%s参数个数应为一个'%func.__name__)
-                    ret=await func(request)
-                else:
-                    if form: ## 参数来源：表单
-                        data = await request.post()
-                    if json:  ##参数来源： json
-                        data = await request.json()
-                        logging.info('json data:%s'%(data))
-                    params = []
-                    for i in args:
-                        try:
-                            params.append(data[i])
-                        except:
-                            raise Exception('函数%s参数%s定义不匹配' % (func.__name__, i))
-                    if cookies:
-                        co= request.cookies
-                        params.append(co)
-                    elif headers:
-                        co= request.headers
-                        params.append(co)
-                    ret = await func(*params)
-                if wrap: ##函数返回值还需进行包装
-                    return self.wrapAsResponse(wrap)
-                return ret
-            self.router.add_route('POST',path,wrapper)
-            return wrapper
-        return decorator
+
     def post4(self,path,request=False,json=False,form=False,cookies=False,headers=False,wrap=False): ##req,json,form同时只能有一个为True
         def decorator(func):
             args1=inspect.getargspec(func).args  ##获取原函数参数            @functools.wraps(func)

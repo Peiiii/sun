@@ -1,10 +1,18 @@
 import asyncio, config, pickle, os, time, uuid
 from tools import loadText, writeFile, getLine,log
 from config import dirs
+'''
+config here
+'''
+blogs_dir=config.other_config.blogs_dir
+mapfile_name=config.other_config.mapfile_name
 
+class MyDict(dict):
+    def __getattr__(self, item):
+        return self[item]
 
 class Blog:
-    def __init__(self, title, text , html, created_at, category, tags=[], id=None):
+    def __init__(self, title, text , html, created_at, category, tags=[],author='',description='', id=None,info=''):
         self.title = title
         self.text=text
         self.html=html
@@ -13,6 +21,9 @@ class Blog:
         self.archieve = str(t.tm_year) + '年' + str(t.tm_mon) + '月'
         self.category = category
         self.tags = tags
+        self.author=author
+        self.description=description
+        self.info=info
         if not id:
             self.id = uuid.uuid4().hex
         else:
@@ -23,18 +34,21 @@ class Blog:
         for k in dic:
             json[k]=self.__getattribute__(k)
         return json
+    def shortCut(self):
+        return MyDict(
+            title=self.title,id=self.id,archieve=self.archieve,author=self.author,description=self.description
+        )
 
 
 class BlogManger:
     def __init__(self,path=None):
         if not path:
-            self.workpath=config.dirs.blogs
+            self.workpath=blogs_dir
         else:
             self.workpath=path
         if(not os.path.exists(self.workpath)):
             os.mkdir(self.workpath)
-        self.mapfile=self.workpath+'/'+'mapfile.map'
-
+        self.mapfile=self.workpath+'/'+mapfile_name
 
 
     def _load(self, file):
@@ -74,17 +88,16 @@ class BlogManger:
         f = open(fname, 'wb')
         pickle.dump(blog, f)
         map = self.getMap()
-        print(map)
         map[blog.id] = blog.title
         self.saveMap(map)
         return True
     async def saveBlog(self, blog):
+        log('saving blog:',blog.shortCut())
         return self._saveBlog(blog)
 
 
     async def loadBlogs(self):
         map=self.getMap()
-        print(map)
         bug=False
         blogs = []
         for f in map.values():
@@ -106,7 +119,6 @@ class BlogManger:
             f=open(self.mapfile,'wb')
             map={}
         f.close()
-        print('map:',map)
         return map
     def saveMap(self,map):
         f=open(self.mapfile,'wb+')
@@ -114,7 +126,6 @@ class BlogManger:
         f.close()
     async def deleteBlog(self,id):
         map=self.getMap()
-        print(map)
         fname=map.get(id,'notfound')
         if fname=='notfound':
             return False
@@ -122,6 +133,7 @@ class BlogManger:
         fname=self.workpath+'/'+fname+'.blog'
         os.remove(fname)
         self.saveMap(map)
+        log('delete blog: id= %s ,fname=%s'%(id,fname))
         return True
     async def rebuild(self):
         blogs= await loadBlogs()
@@ -129,6 +141,7 @@ class BlogManger:
         for b in blogs:
             map[b.id]=b.title
         self.saveMap(map)
+        log('rebuild success. map:',map)
     async def update(self,id,**kws):
         pass
 
