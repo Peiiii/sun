@@ -201,15 +201,14 @@ function initShowSwitch(){
 //-------------------End ShowSwitch-----------------//
 //---------------DoubleViewSwitch----------------//
 function doubleViewSwitchTurnOn(btn,tar1,tar2){
-        tar1.css({width:'50%'});
-        tar2.css({width:'50%'});
+        tar1.removeClass('dbview-switch-off');
+        tar1.addClass('dbview-switch-on');
         show(tar2);
-        log('on')
     }
  function doubleViewSwitchTurnOff(btn,tar1,tar2){
-            tar1.css({width:'100%'});
-            hide(tar2);
-            log('off')
+         tar1.removeClass('dbview-switch-on');
+         tar1.addClass('dbview-switch-off');
+         hide(tar2);
     }
 class DoubleViewSwitch extends Switch{
     constructor(btn,tar1,tar2){

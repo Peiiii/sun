@@ -1,32 +1,41 @@
 <style>{%include "app/manage/editor.css"%}</style>
 <div class="editor " id="editor" style="min-height:34rem;width:100%;">
     <div style="width:100%;height:calc(100% - 1rem);">
-        <div status="off">
+        <div status="off" style="border-top:1px solid gray;">
 
-            <div class="f-right" id="edit-toolbar" style="padding:0.1rem;border:gray solid 1px;width:100%;">
-                <button class="f-right" id="submit-btn">Submit</button>
-                <button class="switch-doubleview f-right" easy-switch="true" off-msg="Single View" on-msg="Double View"
-                        status="on" tar-sel1="#text-input" tar-sel2="#html-input">Exitview
+            <div class=" btn-group btn-group-sm f-right" id="edit-toolbar" >
+                <button class="btn btn-primary" id="submit-btn ">Submit</button>
+                <button class="switch-doubleview btn btn-success " easy-switch="true" off-msg="Single View" on-msg="Double View"
+                        status="on" tar-sel1="#changeable" tar-sel2="#html-input">Exitview
                 </button>
-                 <button id="btn-editable" class="switch-editable f-right" easy-switch="true" off-msg="Make Uneditable"
+                 <button id="btn-editable" class="switch-editable btn btn-warning" easy-switch="true" off-msg="Make Uneditable"
                         on-msg="Make Editable" status="on" tar-sel1="#text-input" tar-sel2="#html-input">Swicth
                 </button>
             </div>
-            <div class="f-right" id="info-bar" style="padding:0.1rem;border:gray solid 1px;width:100%;">
-               <label>Title:</label><input id="title-input" type="text" placeholder="input title...">
-                <label>Category:</label><input id="cate-input" placeholder="input category...">
-                <label>Tags</label><input id="tags-input" placeholder="input tags...">
+            <div class="" id="info-bar" >
+                <div class="input-group">
+                    <div class="input-group-prepend"> <span class="input-group-text">Title:</span></div>
+                    <input id="title-input" class=" form-control input" type="text" placeholder="input title...">
+                </div>
+                <div class="input-group">
+                    <div class="input-group-prepend"> <span class="input-group-text">Category:</span></div>
+                    <input id="cate-input" class=" form-control input" type="text" placeholder="input category...">
+                </div>
+                <div class="input-group">
+                    <div class="input-group-prepend"> <span class="input-group-text">Tags</span></div>
+                    <input id="tags-input" class=" form-control input" type="text" placeholder="input tags...">
+                </div>
             </div>
 
         </div>
         <div id="changeable" style="width:100%;">
-            <textarea id="text-input" class="f-left" style="width:50%;height:29.2rem;background:inherit;color:inherit;padding:0.5em;">
+            <textarea id="text-input" >
             {%if content%}
             {{content}}
             {%endif%}
                 </textarea>
-            <div id="html-input" contenteditable="true" class="f-left"
-                 style="padding: 0.5em; border: 1px solid gray; width: 50%; height:29.2em;">
+            <div id="html-input" contenteditable="true"
+                 style="">
                 {%if content%}
                 {{content}}
                 {%endif%}

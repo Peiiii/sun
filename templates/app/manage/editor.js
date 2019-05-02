@@ -33,7 +33,8 @@ function renderText(text){
     var dic=head.strip('/*').strip('*/').toDict(';');
     if(!dic.hasOwnProperty('format'))dic.format='text/plain';
     var format=dic.format;
-    if(format='markdown' || format=='md')return marked(body);
+    if(format=='markdown' || format=='md')return marked(body);
+    return body;
 }
 
 function getHead(text){
@@ -111,7 +112,7 @@ function initEditableSwitch(){
     },
     ()=>{
         tar1.attr('contenteditable','false');
-        var sw_dv=switches.doubleview[0];log(switches)
+        var sw_dv=switches.doubleview[0];
         sw_dv.easyTurnOff();
     });
     switches['editable']=[];

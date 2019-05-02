@@ -60,19 +60,19 @@
                     <a class="btn btn-lg btn-dark mode" href="#">Sign up</a>
                 </div>
             </div>
-            <div class=" collapse " id="blog-list-menu">
-
+            <div class=" collapse " id="blog-list-menu" >
+                <div class="d-inline-block">
                 <div style="height:5em;"></div>
                 {%for blog in blogs%}
-                <div><a href="#blog-{{blog.id}}" onclick="$('#blog-list-menu-toggle').click();">{{blog.title}}</a></div>
+                <div class="blog-list-menu-item"><a href="#blog-{{blog.id}}" onclick="$('#blog-list-menu-toggle').click();">{{blog.title}}</a></div>
                 {%endfor%}
-
+                </div>
             </div>
         </div>
 
     </header>
 </div>
-<div id="article-list-container">
+<div id="article-list-container" class="text-align-center">
     {%for blog in blogs%}
     {%include "lib/html/article.html"%}
     {%endfor%}
