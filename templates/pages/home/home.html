@@ -65,7 +65,7 @@
 
     <div id="article-list-container" class="text-align-center">
         {%for blog in blogs%}
-        {%include "lib/html/blog.html"%}
+        {%include blog.display_template%}
         {%endfor%}
     </div>
     <div id="nav-page" class="fixed-fillscreen" style="display:none;" >

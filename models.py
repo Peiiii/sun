@@ -6,14 +6,17 @@ config here
 '''
 blogs_dir=config.other_config.blogs_dir
 mapfile_name=config.other_config.mapfile_name
-
+defalut_blog_template=config.other_config.defalut_blog_template
 class MyDict(dict):
     def __getattr__(self, item):
         return self[item]
 
 
 class Blog:
-    def __init__(self, title, text , html, created_at, category, tags=[],id=None,author='',description='',length=None,views=None,stars=None, info=''):
+    def __init__(self,
+                 title, text , html, created_at, category, tags=[],id=None,author='',
+                 description='',length=None,views=None,stars=None, info='',fields={},display_template=defalut_blog_template
+                 ):
         self.title = title
         self.text=text
         self.html=html
@@ -25,6 +28,8 @@ class Blog:
         self.author=author
         self.description=description
         self.info=info
+        self.fields=fields
+        self.display_template=display_template
         if not id:
             self.id = uuid.uuid4().hex
         else:
