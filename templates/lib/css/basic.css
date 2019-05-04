@@ -53,3 +53,14 @@
 .fixed-fillscreen{position:fixed;top:0rem;bottom:0rem;left:0rem;right:0rem;}
 /*other*/
 .clear{clear:both;}
+
+
+/*临时添加*/
+blockquote{
+    padding: 0 15px;
+    color: #777;
+    border-left: 4px solid #ddd;
+    margin-top:0px;
+    margin-bottom:16px;
+
+}

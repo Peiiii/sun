@@ -9,10 +9,10 @@ function initMarked(){
   pedantic: false,
   gfm: true,
   tables: true,
-  breaks: false,
-  sanitize: false,
+  breaks: true,
+  sanitize: true,
   smartLists: true,
-  smartypants: false,
+  smartypants: true,
   xhtml: false
     });
 }
