@@ -37,7 +37,7 @@ class User:
 
 class Blog:
     def __init__(self,
-                 title, text , html, created_at, category, tags=[],id=None,author='',
+                 title, text , html, created_at, category, tags=[],id=None,author='',visible=True,
                  description='',length=None,views=None,stars=None, info='',fields={},display_template=defalut_blog_template
                  ):
         self.title = title
@@ -49,7 +49,11 @@ class Blog:
         self.category = category
         self.tags = tags
         self.author=author
+        self.visible=visible
         self.description=description
+        self.length=length
+        self.views=views
+        self.stars=stars
         self.info=info
         self.fields=fields
         self.display_template=display_template
@@ -67,6 +71,28 @@ class Blog:
         return MyDict(
             title=self.title,id=self.id,archieve=self.archieve,author=self.author,description=self.description
         )
+
+class BlogManager2(Table):
+    def __init__(self,path,primary_key=None,searchable_keys=None):
+        if not primary_key:
+            primary_key='id'
+        if not searchable_keys:
+            searchable_keys=['id','title','author','created_at','archieve','category','description',
+                                           'tags','info','visible','views','stars']
+        super().__init__(path,primary_key,searchable_keys)
+    async def loadBlogs(self):
+        blogs=await self.findAll()
+        return blogs
+    async def saveBlog(self,blog):
+        if not await self.exsist(blog.id):
+            return await self.insert(blog)
+        return self.replace(blog.id,blog)
+    async def deleteBlog(self,id):
+        return await self.delete(id)
+    async def getBlogByID(self,id):
+        return self.find(id)
+    async def rebuild(self):
+        pass
 
 
 class BlogManger:

@@ -1,7 +1,13 @@
 import os,pickle
 class MyDict(dict):
     def __getattr__(self, item):
-        return self[item]
+        try:
+            return getattr(self,item)
+        except:
+            try:
+                return self[item]
+            except:
+                raise AttributeError('MyDict object has no attribute %s'%item)
 
 
 class Map:
@@ -14,6 +20,10 @@ class Map:
         else:
             self.dic={}
             self.save()
+    def _rebuild(self):
+        if(os.path.exists(self.path)):
+            os.remove(self.path)
+        self.initialize()
     def save(self):
         f=open(self.path,'wb')
         pickle.dump(self.dic,f)
@@ -105,6 +115,9 @@ class Table:
             raise Exception('Failed:  record you want to delete width primary_key:%s not found .'%pkey)
         self.map.delete(pkey)
         self._removeRecord(pkey)
+    async def replace(self,pk,obj):
+        await self.delete(pk)
+        return await self.insert(obj)
     async def update(self,pk,**kws):
         if not self.map.exsist(pk):
             raise Exception('update failed: record not found. primary_key: %s'%pk)
@@ -112,7 +125,8 @@ class Table:
         record=self._getRecord(pk)
         record=self._updateObj(record,**kws)
         return self._writePickleFile(record,self._abspath(pk+'.rcd'))
-
+    async def exsist(self,pk):
+        return self.map.exsist(pk)
     async def find(self,pk):
         if not self.map.exsist(pk):
             return False

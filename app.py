@@ -2,12 +2,12 @@ import logging;logging.basicConfig(level=logging.INFO)
 import asyncio,uuid,tools,config
 from framework import Application,jsonResponse,apiError,pageResponse
 from config import net,paths,dirs,pages,other_config
-from models import Blog,loadBlog,saveBlog,loadBlogs,BlogManger
+from models import Blog,loadBlog,saveBlog,loadBlogs,BlogManger,BlogManager2
 from tools import log
 
 loop=asyncio.get_event_loop()
 app=Application(loop=loop)
-blman=BlogManger()
+blman=BlogManager2(path='../Myblogs')
 
 base_link='http://127.0.0.1:'+str(net.port)
 quik_links=['/','/manage']
