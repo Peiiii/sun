@@ -1,16 +1,39 @@
 import asyncio, config, pickle, os, time, uuid
 from tools import loadText, writeFile, getLine,log
 from config import dirs
+from orm import Table
 '''
 config here
 '''
 blogs_dir=config.other_config.blogs_dir
 mapfile_name=config.other_config.mapfile_name
 defalut_blog_template=config.other_config.defalut_blog_template
+users_dir=config.other_config.users_dir
+tableUser=Table(path=users_dir,primary_key='id',searchable_keys=['email','nick_name','id','password','image','admin','info','description'])
 class MyDict(dict):
     def __getattr__(self, item):
         return self[item]
 
+class User:
+    __table__=tableUser
+    def __init__(self,id,email,password,nick_name,image='ablout:blank',
+                 description='',signature='',admin=False,info='',fields=[]):
+        self.id=id
+        self.email=email
+        self.password=password,
+        self.nick_name=nick_name,
+        self.image=image,
+        self.description=description
+        self.signature=signature
+        self.admin=admin
+        self.info=info
+        self.fields=fields
+    def toJson(self):
+        dic=self.__dict__
+        json={}
+        for k in dic:
+            json[k]=self.__getattribute__(k)
+        return json
 
 class Blog:
     def __init__(self,

@@ -74,6 +74,7 @@ class Editor{
         this.title_input=el.find('#title-input');
         this.cate_input=el.find('#cate-input');
         this.tags_input=el.find('#tags-input');
+        this.author_input=el.find('#author-input');
         this.msg_box=$('.msg-box-tem');
         this.mode='create';this.submit_url='/manage/editor';
     }
@@ -84,6 +85,7 @@ class Editor{
         this.title_input.val(blog.title);
         this.cate_input.val(blog.category);
         this.tags_input.val(blog.tags.join(';'));
+        this.author_input.val(blog.author);
         this.blog_id=blog.id;
         this.display();
     }
@@ -106,10 +108,14 @@ class Editor{
         var cate=this.cate_input.val();
         var tags=this.tags_input.val().split(';');
         var md=this.text_input.val();
+        var author=this.author_input.val();
         if(title.trim()==''){showMsg(this.msg_box,'标题不能为空！');return false;}
         if(cate.trim()==''){showMsg(this.msg_box,'目录不能为空！');return false;}
         if(md.trim()==''){showMsg(this.msg_box,'文章不能为空');return false;}
-        var json={title:title,category:cate,tags:tags,md:md};
+        var json={
+            title:title,category:cate,tags:tags,md:md,
+            author:author
+        };
         return json;
     }
 

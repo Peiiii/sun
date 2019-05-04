@@ -15,8 +15,22 @@
                  <button id="btn-editable" class="switch-editable btn btn-warning" easy-switch="true" off-msg="Make Uneditable"
                         on-msg="Make Editable" status="on" tar-sel1="#text-input" tar-sel2="#html-input">Swicth
                 </button>
+                <button class="bg-primary" id="blog-list-menu-toggle" data-toggle="collapse"
+                    data-target="#more-input-list">
+                    <span style="display:inline-block;width:2em;line-height:1px;">
+                        <div style="display:inline-block;width:1.5em;height:1px;background:white;margin:0px;"></div>
+                        <div style="display:inline-block;width:1.5em;height:1px;background:white;margin:0px;"></div>
+                        <div style="display:inline-block;width:1.5em;height:1px;background:white;margin:0px;"></div>
+                    </span>
+            </button>
             </div>
             <div class="" id="info-bar" >
+                <div class="collapse" id="more-input-list">
+                    <div class="input-group">
+                        <div class="input-group-prepend"> <span class="input-group-text">Author:</span></div>
+                        <input id="author-input" class=" form-control input" type="text" placeholder="input author..." value="ZERO">
+                    </div>
+                </div>
                 <div class="input-group">
                     <div class="input-group-prepend"> <span class="input-group-text">Title:</span></div>
                     <input id="title-input" class=" form-control input" type="text" placeholder="input title...">
@@ -29,7 +43,6 @@
                     <div class="input-group-prepend"> <span class="input-group-text">Tags</span></div>
                     <input id="tags-input" class=" form-control input" type="text" placeholder="input tags...">
                 </div>
-            </div>
 
         </div>
         <div id="changeable" style="width:100%;">

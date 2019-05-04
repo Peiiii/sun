@@ -48,7 +48,7 @@ async def do_editor_post(title,md,html,description,author,info,category,tags,opr
     text=md
     html=tools.textToHTML(text)
     b=Blog(
-        title=title,text=text,html=html,created_at=created_at,category=category,tags=tags,id=id
+        title=title,text=text,html=html,created_at=created_at,category=category,tags=tags,id=id,author=author
     )
     status=await blman.saveBlog(b)
     return jsonResponse(success=status,message='上传成功！')

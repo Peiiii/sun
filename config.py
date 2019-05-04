@@ -27,7 +27,8 @@ other_config=Config(
     templates_dir='templates',
     mapfile_name='mapfile.map',
     show_index=True,
-    defalut_blog_template='lib/html/blog.html'
+    defalut_blog_template='lib/html/blog.html',
+    users_dir='../users'
 )
 
 paths=Config(
