@@ -11,8 +11,9 @@ class MyDict(dict):
     def __getattr__(self, item):
         return self[item]
 
+
 class Blog:
-    def __init__(self, title, text , html, created_at, category, tags=[],author='',description='', id=None,info=''):
+    def __init__(self, title, text , html, created_at, category, tags=[],id=None,author='',description='',length=None,views=None,stars=None, info=''):
         self.title = title
         self.text=text
         self.html=html
