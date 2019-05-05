@@ -1,11 +1,51 @@
 
 <style>
+
+
 body{
     font-family:'PT Sans', sans-serif;
     background:white;
 }
+
+
 .blog{
     border-bottom:#175199 dotted 1px;
+    margin-top:-1.5em;
+    font-family: "Georgia",Cambria,"Garamond","Times New Roman",Times,serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 1.2rem;
+    line-height: 1.58;
+    letter-spacing: -.003em;
+
+}
+.article-head{
+    padding:0.26rem;
+    padding-left:1.2em;
+    padding-right:1.2em;
+    font-weight:200;
+    color:#757575;
+}
+
+.article-head .title{
+    font-weight:700;
+    font-size:1.4rem;
+    color:black;
+    display:inline-block;
+    margin-block-start:0.6em;
+    margin-block-end:0.6em;
+    text-transform: capitalize;
+    margin:0em;
+}
+.article-head .title-description{
+    display:inline-block;
+    font-size:0.7rem;
+}
+.article-body p,.article-body div{
+    margin-block-start:0.6em;
+    margin-block-end:0.6em;
+    font-weight:400;
+    font-size:0.9em;
 }
 .fold-ctrl{
     position:relative;
@@ -25,15 +65,19 @@ body{
     margin-bottom:-3em;
     padding-top:0.5em;
 }
+
 </style>
 <div class="col-xs-12 col-md-8 blog" style="margin-bottom:20px;display:inline-block;text-align:left;"  id="blog-{{blog.id}}">
 
                 <div class="wrapper1" style="padding-bottom:3em;overflow-x:auto;">
-                    <div class="article-head" style="padding:0.3em;padding-left:1.2em;padding-right:1.2em;">
-                        <h3>{{blog.title}}</h3>
-                        <h3 style="float:right">{{blog.author}}</h3>
+                    <div class="article-head" style="">
+                        <p class="title">
+                            {{blog.title}}
+                        </p>
+                        <p class="title-description" style="float:right">{{blog.author}}</p>
+
                     </div>
-                    <hr>
+                    <hr style="">
                     <div class="article-body" style="padding:0.3em;padding-left:0.5em;padding-right:0.5em;">
                         {{blog.html}}
                     </div>

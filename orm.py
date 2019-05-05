@@ -2,12 +2,10 @@ import os,pickle
 class MyDict(dict):
     def __getattr__(self, item):
         try:
-            return getattr(self,item)
+            return self[item]
         except:
-            try:
-                return self[item]
-            except:
-                raise AttributeError('MyDict object has no attribute %s'%item)
+            raise AttributeError('MyDict object has no attribute %s' % item)
+
 
 
 class Map:
