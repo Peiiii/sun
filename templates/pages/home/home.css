@@ -4,6 +4,18 @@
     color:inherit;
     border:none;
 }
+.list-icon{
+    display:inline-block;
+    width:2em;
+    line-height:2px;
+}
+.list-icon i{
+    display:inline-block;
+    width:1.5em;
+    height:2px;
+    background:white;
+    margin:0px;
+}
 .nav-header{
     position:fixed;
     z-index:1;
@@ -12,7 +24,7 @@
     background:#175199;
     color:white;
     padding-top:1em;
-    padding-bottom:1em;
+    padding-bottom:0.5em;
 }
 #nav-menu{
     margin-top:4.2em;

@@ -10,26 +10,33 @@ body{
 
 .blog{
     border-bottom:#175199 dotted 1px;
-    margin-top:-1.5em;
+    margin-top:0em;
+    margin-bottom:0em;
     font-family: "Georgia",Cambria,"Garamond","Times New Roman",Times,serif;
     font-weight: 200;
     font-style: normal;
     font-size: 1.2rem;
     line-height: 1.58;
     letter-spacing: -.003em;
+    display:inline-block;text-align:left;
 
 }
+.wrapper1{
+    padding-bottom:0em;
+    overflow-x:auto;
+}
 .article-head{
-    padding:0.26rem;
+    padding-top:0.5rem ;
     padding-left:1.2em;
     padding-right:1.2em;
+    margin-bottom:-0.5rem;
     font-weight:200;
     color:#757575;
 }
 
 .article-head .title{
     font-weight:700;
-    font-size:1.4rem;
+    font-size:1.3rem;
     color:black;
     display:inline-block;
     margin-block-start:0.6em;
@@ -38,6 +45,7 @@ body{
     margin:0em;
 }
 .article-head .title-description{
+    float:right;
     display:inline-block;
     font-size:0.7rem;
 }
@@ -47,9 +55,13 @@ body{
     font-weight:400;
     font-size:0.9em;
 }
+.fold-ctrl-wrapper{
+    height:3em;
+}
 .fold-ctrl{
-    position:relative;
-    top:-3em;
+    position:static;
+    width:100%;
+    text-align:center;
     /*
     color:#175199;
     */
@@ -62,19 +74,19 @@ body{
     background: linear-gradient(top, rgba(255, 255, 255, 0), #fff);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00ffffff, endColorstr=#ffffff, GradientType=0);
     height:3em;
-    margin-bottom:-3em;
+    margin-bottom:0em;
     padding-top:0.5em;
 }
 
 </style>
-<div class="col-xs-12 col-md-8 blog" style="margin-bottom:20px;display:inline-block;text-align:left;"  id="blog-{{blog.id}}">
+<div class="col-xs-12 col-md-8 blog" style=""  id="blog-{{blog.id}}">
 
-                <div class="wrapper1" style="padding-bottom:3em;overflow-x:auto;">
+                <div class="wrapper1" style="">
                     <div class="article-head" style="">
                         <p class="title">
                             {{blog.title}}
                         </p>
-                        <p class="title-description" style="float:right">{{blog.author}}</p>
+                        <p class="title-description" >{{blog.author}}</p>
 
                     </div>
                     <hr style="">
@@ -82,5 +94,7 @@ body{
                         {{blog.html}}
                     </div>
                 </div>
+        <div class="fold-ctrl-wrapper">
         <center class="fold-ctrl switch-fold" easy-switch="true" status="on" on-msg="Pull Up" off-msg="Read All"><span  tar-sel="#{{blog.id}}" folded-height="">Read All</span></center>
+        </div>
     </div>
