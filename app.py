@@ -50,8 +50,8 @@ async def do_editor_post(title,md,html,description,author,info,category,tags,opr
     b=Blog(
         title=title,text=text,html=html,created_at=created_at,category=category,tags=tags,id=id,author=author
     )
-    status=await blman.saveBlog(b)
-    return jsonResponse(success=status,message='上传成功！')
+    await blman.saveBlog(b)
+    return jsonResponse(success=True,message='上传成功！')
 
 ## alter
 @app.post5('/manage/alter')
