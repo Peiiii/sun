@@ -25,6 +25,11 @@ function initMessageShow(){
 $(document).ready(()=>{
     initMessageShow();
 })
+//--------------------Easy-to-use api which act like switches------------//
+function changeVisibility(el){
+    if(el.hasClass('hidden')) el.removeClass('hidden');
+    else el.addClass('hidden');
+}
 
 //------------------Switches--------------//
 switches={};

@@ -64,11 +64,11 @@
 
 }
 
-#nav-page{
+.dark-page{
     background: rgba(14,16,15,0.95);
     text-align:center;
 }
-#nav-page #link-box{
+.dark-page .link-box{
     width:100%;
     position:absolute;
     top:30%;
@@ -76,7 +76,7 @@
     margin-right:auto;
     text-align:center;
 }
-.nav-page-item{
+.dark-page-item{
     font-size:1.6em;
     font-weight:100;
     padding:0.2em 0.3em;
@@ -85,7 +85,7 @@
     border-radius:0.8em;
     margin:0.2em 1em;
 }
-#nav-page .close-icon{
+.dark-page .close-icon{
     position:fixed;
     top:20%;
     display:inline-block;
