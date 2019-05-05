@@ -86,7 +86,7 @@ class BlogManager2(Table):
     async def saveBlog(self,blog):
         if not await self.exsist(blog.id):
             return await self.insert(blog)
-        return self.replace(blog.id,blog)
+        return await self.replace(blog.id,blog)
     async def deleteBlog(self,id):
         return await self.delete(id)
     async def getBlogByID(self,id):
