@@ -90,7 +90,7 @@ class BlogManager2(Table):
     async def deleteBlog(self,id):
         return await self.delete(id)
     async def getBlogByID(self,id):
-        return self.find(id)
+        return await self.find(id)
     async def rebuild(self):
         pass
 
