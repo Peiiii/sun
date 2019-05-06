@@ -1,5 +1,10 @@
 
 var home={};
+function initScreen(){
+    var width=screen.width;
+    var body=$('body');
+    if(width<=500)body.addClass('screen-sm');
+}
 function switch_fold_on(tar){
     tar.addClass('blog-mask');
 }
