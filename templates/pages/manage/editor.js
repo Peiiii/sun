@@ -214,6 +214,17 @@ function initEditor(){
     sub.click((e)=>{
         editor_app.submit();
     });
+    text_input.keydown((e)=>{
+        if(e.keyCode==9){
+            if (e.preventDefault) {
+                e.preventDefault();
+            }
+            else {
+                window.event.returnValue = false;
+            }
+            text_input.val(text_input.val()+'    ');
+        }
+    })
 
 }
 $(document).ready(()=>{

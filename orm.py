@@ -57,6 +57,7 @@ class Map:
             return re
     def exsist(self,key):
         self.load()
+        print(self.dic.keys())
         re = self.dic.get(key, 'notfound')
         if re != 'notfound':
             return True
@@ -66,8 +67,8 @@ class Map:
         re = self.dic.get(key, 'notfound')
         if re!='notfound':
             o=self.dic.pop(key)
-        self.save()
-        return
+            self.save()
+            return True
     def findAll(self,**kws):
         all=[]
         self.load()
@@ -121,6 +122,7 @@ class Table:
             raise Exception('Failed:  record you want to delete width primary_key:%s not found .'%pkey)
         self.map.delete(pkey)
         self._removeRecord(pkey)
+        return True
     async def replace(self,pk,obj):
         await self.delete(pk)
         return await self.insert(obj)
