@@ -13,6 +13,9 @@ tableUser=Table(path=users_dir,primary_key='id',searchable_keys=['email','nick_n
 class MyDict(dict):
     def __getattr__(self, item):
         return self[item]
+class InfoBody:
+    def __init__(self):
+        pass
 
 class User:
     __table__=tableUser

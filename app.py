@@ -7,7 +7,7 @@ from tools import log
 
 loop=asyncio.get_event_loop()
 app=Application(loop=loop)
-blman=BlogManager2(path='../Myblogs')
+blman=BlogManager2(path='../db/Myblogs')
 
 base_link='http://127.0.0.1:'+str(net.port)
 quik_links=['/','/manage']

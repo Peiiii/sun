@@ -6,7 +6,14 @@ class MyDict(dict):
         except:
             raise AttributeError('MyDict object has no attribute %s' % item)
 
-
+class InfoBody(dict):
+    def __getattr__(self, item):
+        try:
+            return self[item]
+        except:
+            raise Exception('InfoBody object has no attribute %s'%item)
+    def __setattr__(self, key, value):
+        self[key]=value
 
 class Map:
     def __init__(self,path):
@@ -101,7 +108,8 @@ class Table:
         self.map=Map(self.path+os.sep+os.path.basename(self.path)+'.map')
     def _checkDirectory(self):
         if not os.path.exists(self.path):
-            os.mkdir(self.path)
+            os.makedirs(self.path)
+
     def initialize(self):
         pass
     async def insert(self,obj):
@@ -125,6 +133,8 @@ class Table:
         return self._writePickleFile(record,self._abspath(pk+'.rcd'))
     async def exsist(self,pk):
         return self.map.exsist(pk)
+    async def select(self,fields,**kws):
+        pass
     async def find(self,pk):
         if not self.map.exsist(pk):
             return False
@@ -134,6 +144,14 @@ class Table:
         pks=[getattr(obj,self.primary_key) for obj in all]
         all=[self._getRecord(pk) for pk in pks]
         return all
+    async def findAllLikeThis(self,func):
+        all=self.map.findAll()
+        new_all=[]
+        for obj in all:
+            if(func(obj)):
+                new_all.append(self._getRecordByObj(obj))
+        return new_all
+
     def _updateObj(self,obj,**kws):
         ## obj.update()
         for k,v in kws:
@@ -144,6 +162,10 @@ class Table:
         for k in self.searchable_keys:
             dic[k]=getattr(obj,k)
         return MyDict(dic)
+    def _getObjPK(self,obj):
+        return getattr(obj,self.primary_key)
+    def _getRecordByObj(self,obj):
+        return self._getRecord(self._getObjPK(obj))
     def _getRecord(self,pk):
         return self._loadPickleFile(self._abspath(pk+'.rcd'))
     def _exsist(self,obj):

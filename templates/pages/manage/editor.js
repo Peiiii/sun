@@ -64,6 +64,7 @@ function copyText(src,tar){
     text=renderText(text);
     tar.html(text);
 }
+//---------Class Editor----------------//
 class Editor{
     constructor(selector){
         var el=$(selector);
@@ -77,6 +78,7 @@ class Editor{
         this.author_input=el.find('#author-input');
         this.msg_box=$('.msg-box-tem');
         this.mode='create';this.submit_url='/manage/editor';
+        this.defaultCate='demo';
     }
     editBlog(blog,mode='alter'){
         this.mode=mode;
@@ -87,12 +89,17 @@ class Editor{
         this.tags_input.val(blog.tags.join(';'));
         this.author_input.val(blog.author);
         this.blog_id=blog.id;
+        this.fillDefault();
         this.display();
+    }
+    fillDefault(){
+        if(this.cate_input.val().trim()=='')this.cate_input.val(this.defaultCate);
     }
     display(){
         location.href=this.selector;
     }
     submit(){
+        this.fillDefault();
         var json=this.prepareInfo();
         if(json){
             if(this.mode=='alter'){json.opr_type='alter';json.id=this.blog_id;}
@@ -121,7 +128,7 @@ class Editor{
 
 }
 
-
+//--------------------- Functions below are somewhat useless--------------------------//
 function initEditableSwitch(){
     var edit_toobar=$('#edit-toolbar');
     var btn=$('.switch-editable');

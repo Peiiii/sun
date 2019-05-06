@@ -9,7 +9,7 @@
     width:2em;
     line-height:2px;
 }
-.list-icon i{
+.list-icon .i{
     display:inline-block;
     width:1.5em;
     height:2px;
@@ -91,3 +91,27 @@
     display:inline-block;
     right:10%;
 }
+/*
+.blog h1,.blog h2,.blog h3,.blog h4,.blog h5,.blog h6{
+    font-weight:700;
+}
+.blog h1{
+    font-size:1.1em;
+}
+.blog h2{
+    font-size:1.03em;
+}
+.blog h3{
+    font-size:0.97em;
+}
+.blog h4{
+    font-size:0.92em;
+}
+.blog h5{
+    font-size:0.87em;
+}
+
+.blog h6{
+    font-size:0.84em;
+}
+*/

@@ -18,7 +18,9 @@ body{
     font-size: 1.2rem;
     line-height: 1.58;
     letter-spacing: -.003em;
-    display:inline-block;text-align:left;
+    display:inline-block;
+    text-align:left;
+    padding:0em;
 
 }
 .wrapper1{
@@ -27,8 +29,8 @@ body{
 }
 .article-head{
     padding-top:0.5rem ;
-    padding-left:1.2em;
-    padding-right:1.2em;
+    padding-left:1em;
+    padding-right:1em;
     margin-bottom:-0.5rem;
     font-weight:200;
     color:#757575;
@@ -48,6 +50,11 @@ body{
     float:right;
     display:inline-block;
     font-size:0.7rem;
+}
+.article-body{
+    padding:0.3em;
+    padding-left:1em;
+    padding-right:0.7em;
 }
 .article-body p,.article-body div{
     margin-block-start:0.6em;
@@ -90,7 +97,7 @@ body{
 
                     </div>
                     <hr style="">
-                    <div class="article-body" style="padding:0.3em;padding-left:0.5em;padding-right:0.5em;">
+                    <div class="article-body" style="">
                         {{blog.html}}
                     </div>
                 </div>
