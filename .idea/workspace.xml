@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55766798-c559-4d56-8b78-5c6b69ffb9d3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/lib/html/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/pages/categories/categories.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/pages/categories/categories.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/pages/categories/categories.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orm.py" beforeDir="false" afterPath="$PROJECT_DIR$/orm.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/lib/html/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/lib/html/blog.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/home/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/home/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/home/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/home/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/manage/editor.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/manage/editor.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
