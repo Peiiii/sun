@@ -2,31 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55766798-c559-4d56-8b78-5c6b69ffb9d3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/static/fonts/Sofia Pro ExtraLight.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/Sofia Pro Full font family/Fonts/sofiapro-light.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/Sofia Pro Full font family/Licenses/Desktop EULA 1.6.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/Sofia Pro Full font family/Reference/Release Notes.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/Sofia Pro Full font family/Reference/sofiapro-userguide.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/Sofia Pro Full font family/Sofia Pro Black Italic.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/Sofia Pro Full font family/Sofia Pro Black.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/Sofia Pro Full font family/Sofia Pro Bold Italic.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/Sofia Pro Full font family/Sofia Pro Bold.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/Sofia Pro Full font family/Sofia Pro ExtraLight Italic.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/Sofia Pro Full font family/Sofia Pro ExtraLight.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/Sofia Pro Full font family/Sofia Pro ExtraLight/Sofia Pro ExtraLight.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/Sofia Pro Full font family/Sofia Pro Light Italic.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/Sofia Pro Full font family/Sofia Pro Light.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/Sofia Pro Full font family/Sofia Pro Medium Italic.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/Sofia Pro Full font family/Sofia Pro Medium.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/Sofia Pro Full font family/Sofia Pro Regular Italic.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/Sofia Pro Full font family/Sofia Pro Regular.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/Sofia Pro Full font family/Sofia Pro SemiBold Italic.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/Sofia Pro Full font family/Sofia Pro SemiBold.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/Sofia Pro Full font family/Sofia Pro UltraLight Italic.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/Sofia Pro Full font family/Sofia Pro UltraLight.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/Sofia Pro Full font family/sofiapro.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/Sofia-Pro.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/sofiapro-light.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/lib/html/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/lib/html/blog.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -97,8 +73,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/lib/html/blog.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+            <state relative-caret-position="209">
+              <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -352,9 +328,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.15965052" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.15965052" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.3285968" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
@@ -362,7 +339,7 @@
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" weight="0.3285968" />
       <window_info anchor="bottom" id="Version Control" order="5" weight="0.3285968" />
-      <window_info anchor="bottom" id="Run" order="6" visible="true" weight="0.3285968" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.3285968" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -771,8 +748,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/lib/html/blog.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+        <state relative-caret-position="209">
+          <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
         </state>
       </provider>
     </entry>
