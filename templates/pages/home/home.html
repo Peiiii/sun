@@ -32,23 +32,24 @@
         </div>
 
 
-        <div id="blog-title-list-wrapper" class="fixed-fillscreen hidden dark-page" style="overflow:auto;">
-            <div class="close-icon" id="btn-close-title-list" onclick="changeVisibility($('#blog-title-list-wrapper'))"><span><img
-                    src="/imgs/icons/close4.png"></span></div>
-            <div id="blog-title-list" class="link-box">
-                {%for blog in blogs%}
-                <div class="blog-title-list-item dark-page-item"><a href="#blog-{{blog.id}}"
-                                                                    onclick="$('#btn-close-title-list').click();">{{blog.title}}</a>
-                </div>
-                {%endfor%}
-            </div>
-        </div>
+
     </header>
 
     <div id="article-list-container" class="text-align-center">
         {%for blog in blogs%}
         {%include "lib/html/blog.html"%}
         {%endfor%}
+    </div>
+    <div id="blog-title-list-wrapper" class="fixed-fillscreen hidden dark-page" style="overflow:auto;">
+            <div class="close-icon" id="btn-close-title-list" onclick="changeVisibility($('#blog-title-list-wrapper'))"><span><img
+                    src="/imgs/icons/close4.png"></span></div>
+            <div id="blog-title-list" class="link-box" style="text-align:left;font-size:1.2rem;">
+                {%for blog in blogs%}
+                <div class="blog-title-list-item dark-page-item" style="font-size:1.2rem;"><a href="#blog-{{blog.id}}"
+                                                                    onclick="$('#btn-close-title-list').click();">{{blog.title}}</a>
+                </div>
+                {%endfor%}
+            </div>
     </div>
     <div id="nav-page" class="fixed-fillscreen hidden dark-page">
         <div class="close-icon" id="btn-close-nav-page" onclick="changeVisibility($('#nav-page'))"><span><img
