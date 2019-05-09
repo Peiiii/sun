@@ -64,7 +64,7 @@
         <entry file="file://$PROJECT_DIR$/templates/lib/html/blog.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="228">
-              <caret line="111" column="17" selection-start-line="111" selection-start-column="17" selection-end-line="111" selection-end-column="17" />
+              <caret line="111" column="22" selection-start-line="111" selection-start-column="22" selection-end-line="111" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -758,7 +758,7 @@
     <entry file="file://$PROJECT_DIR$/templates/lib/html/blog.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
-          <caret line="111" column="17" selection-start-line="111" selection-start-column="17" selection-end-line="111" selection-end-column="17" />
+          <caret line="111" column="22" selection-start-line="111" selection-start-column="22" selection-end-line="111" selection-end-column="22" />
         </state>
       </provider>
     </entry>
