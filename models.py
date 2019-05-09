@@ -41,7 +41,8 @@ class User:
 class Blog:
     def __init__(self,
                  title, text , html, created_at, category, tags=[],id=None,author='',visible=True,
-                 description='',length=None,views=None,stars=None, info='',fields={},display_template=defalut_blog_template
+                 description='',length=None,views=None,stars=None, info='',digest=None,
+                 fields={},display_template=defalut_blog_template
                  ):
         self.title = title
         self.text=text
@@ -58,6 +59,7 @@ class Blog:
         self.views=views
         self.stars=stars
         self.info=info
+        self.digest=digest
         self.fields=fields
         self.display_template=display_template
         if not id:
