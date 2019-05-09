@@ -1,21 +1,23 @@
-{% extend "lib/html/base.html"%}
+{% extends "lib/html/base.html"%}
 {%block site_body%}
-{%include "pages/categories/categories.js"%}
-<div style="text-align:center;" id="#categories">
+<style>{%include "pages/categories/categories.css"%}</style>
+<div style="text-align:center;padding-top:80px;" id="#categories">
     <div style="display:inline-block;">
         <div>
 {% for cate in categories%}
-        <div class="category-item" onclick="getBlogsByCategory('{{category.name}}')">
+        <div class="category-item" >
         <span>    {{cate.name}}({{cate.length}})</span>
-            <button data-toggle="collapse" data-target="#cate-list-{{cate.name}}"><span class="btn-list">
+            <button data-toggle="collapse" data-target="#cate-list-{{cate.name}}"><span class="list-icon">
                 <span class="i"></span>
                 <span class="i"></span>
                 <span class="i"></span>
             </span></button>
-            <div class="category-children-list collapse" id="cate-list-{{cate.name}}">
+            <div class="cate-item-list collapse show" id="cate-list-{{cate.name}}">
+                <div style="display:inline-block;">
                 {%for blog in cate.blogs%}
-                <a href="/p/{{blog.id}}">{{blog.title}}</a>
+                <div class="cate-item-wrapper"><a href="/p/{{blog.id}}">{{blog.title}}</a></div>
                 {%endfor%}
+                </div>
             </div>
 
         </div>

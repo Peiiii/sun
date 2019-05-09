@@ -1,7 +1,7 @@
 import asyncio, config, pickle, os, time, uuid
 from tools import loadText, writeFile, getLine,log
 from config import dirs
-from orm import Table
+from orm import Table,InfoBody
 '''
 config here
 '''
@@ -13,9 +13,7 @@ tableUser=Table(path=users_dir,primary_key='id',searchable_keys=['email','nick_n
 class MyDict(dict):
     def __getattr__(self, item):
         return self[item]
-class InfoBody:
-    def __init__(self):
-        pass
+
 
 class User:
     __table__=tableUser
@@ -41,7 +39,7 @@ class User:
 class Blog:
     def __init__(self,
                  title, text , html, created_at, category, tags=[],id=None,author='',visible=True,
-                 description='',length=None,views=None,stars=None, info='',digest=None,
+                 description='',length=None,views=None,stars=None, year=None,month=None,info='',digest=None,
                  fields={},display_template=defalut_blog_template
                  ):
         self.title = title
@@ -58,6 +56,8 @@ class Blog:
         self.length=length
         self.views=views
         self.stars=stars
+        self.year=year or str(t.tm_year)
+        self.month=month or str(t.tm_mon)
         self.info=info
         self.digest=digest
         self.fields=fields
@@ -83,7 +83,7 @@ class BlogManager2(Table):
             primary_key='id'
         if not searchable_keys:
             searchable_keys=['id','title','author','created_at','archieve','category','description',
-                                           'tags','info','visible','views','stars']
+                                           'tags','info','visible','views','stars','year','month']
         super().__init__(path,primary_key,searchable_keys)
     async def loadBlogs(self):
         blogs=await self.findAll()
@@ -96,8 +96,27 @@ class BlogManager2(Table):
         return await self.delete(id)
     async def getBlogByID(self,id):
         return await self.find(id)
+    async def getCategory(self,cate_name):
+        blogs=await self.getBlogInfoBody(category=cate_name)
+        cate=InfoBody(name=cate_name,blogs=blogs,length=len(blogs))
+        return cate
+    async def _getCategoryNames(self):
+        cates=await self.select(['category'])
+        cates=[cate.category for cate in cates]
+        cates=list(set(cates))
+        return cates
+    async def getCategories(self):
+        cates=await self._getCategoryNames()
+        return [await self.getCategory(cate_name) for cate_name in cates]
+    async def getBlogInfoBody(self,**kws):
+        return await self.select(self.searchable_keys,**kws)
     async def rebuild(self):
         pass
+
+
+
+
+
 
 
 class BlogManger:

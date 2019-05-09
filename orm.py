@@ -74,7 +74,7 @@ class Map:
         self.load()
         for pKey,o in self.dic.items():
             found=True
-            for k,v in kws:
+            for k,v in kws.items():
                 if getattr(o,k)!=v:
                     found=False
                     break
@@ -136,7 +136,13 @@ class Table:
     async def exsist(self,pk):
         return self.map.exsist(pk)
     async def select(self,fields,**kws):
-        pass
+        all=self.map.findAll(**kws)
+        all2=[]
+        for o in all:
+            ib={ field:getattr(o,field,None) for field in fields}
+            ib=InfoBody(ib)
+            all2.append(ib)
+        return all2
     async def find(self,pk):
         if not self.map.exsist(pk):
             return False
@@ -163,7 +169,7 @@ class Table:
         dic={}
         for k in self.searchable_keys:
             dic[k]=getattr(obj,k)
-        return MyDict(dic)
+        return InfoBody(dic)
     def _getObjPK(self,obj):
         return getattr(obj,self.primary_key)
     def _getRecordByObj(self,obj):

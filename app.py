@@ -25,7 +25,8 @@ async def do_tags():
     return pageResponse(template=pages.tags)
 @app.get2(paths.categories)
 async def do_categories():
-    return pageResponse(template=pages.categories)
+    cates=await blman.getCategories()
+    return pageResponse(template=pages.categories,categories=cates)
 @app.get2(paths.archieves)
 async def do_archieves():
    return pageResponse(template=pages.archieves)
