@@ -7,11 +7,11 @@ class MyDict(dict):
             raise AttributeError('MyDict object has no attribute %s' % item)
 
 class InfoBody(dict):
-    def __getattr__(self, item):
+    def __getattr__(self, key):
         try:
-            return self[item]
-        except:
-            raise Exception('InfoBody object has no attribute %s'%item)
+            return self[key]
+        except KeyError:
+            raise AttributeError("'Model' object has no attribute '%s'" % key)
     def __setattr__(self, key, value):
         self[key]=value
 
@@ -34,6 +34,13 @@ class Map:
         pickle.dump(self.dic,f)
         f.close()
     def load(self):
+        f=open(self.path,'rb')
+        line=f.readline()
+        if not line:
+            f.close()
+            self._rebuild()
+        else:
+            f.close()
         f=open(self.path,'rb')
         obj=pickle.load(f)
         self.dic=obj

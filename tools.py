@@ -1,14 +1,12 @@
 import os, time,hashlib,markdown,re
 import asyncio
-
-
+import  utils.spider as spider
+from orm import InfoBody
+from models import  Blog,BlogManager2
+blman=BlogManager2(path='../db/Myblogs')
+articles_dir='data/articles'
 def initTools():
     pass
-
-##-------------------Specific Tools------------##
-
-
-
 
 
 ##----------------End Specific Tools----------##
@@ -24,8 +22,6 @@ def getLine(text,n):
         return False
     else:
         return text.split('\n')[n]
-
-
 def writeFile(fn, s, encoding='utf-8'):
     f = open(fn, 'wb')
     a = f.write(bytes(s, encoding=encoding))
@@ -171,6 +167,41 @@ class Path:
 # p=Path('e:/webapp/www/templates')
 # print(p.__dict__)
 ##---------------------------------------##
+
+##-------------------Specific Tools------------##
+def loadTestBlogs():
+    files=os.listdir(articles_dir)
+    articles=[]
+    for f in files:
+        art=loadBlogFromTextFile(articles_dir+os.sep+f)
+        articles.append(art)
+    return articles
+def loadBlogFromTextFile(f):
+    with open(f,'r',encoding='utf-8') as f:
+        content=f.read()
+        f.close()
+    items=content.split('<$$$$$>')
+    [title,intro,info,content]=items
+    blog=InfoBody(title=title,intro=intro,info=info,content=content)
+    # print(blog)
+    return blog
+async def addTestBlogs():
+    articles=loadTestBlogs()
+    for a in articles:
+        blog=Blog(title=a.title,description=a.intro,info=a.info,text=a.content,category='Demo',html=textToHTML(a.content),created_at=time.time())
+        await blman.saveBlog(blog,identified_by_title=True)
+def initTest():
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(addTestBlogs())
+    loop.close()
+if __name__=="__main__":
+    # spider.makeArticles()
+    initTest()
+
+
+##----------------------------------------------------------------------------##
+##----------------------------------------------------------------------------##
+
 #####专用小工具
 def parsePapers(text):
     lines=text.split('\n')
@@ -190,3 +221,5 @@ def getPaperList(pfile):
     text=loadText(pfile)
     lines=parsePapers(text)
     return lines
+
+

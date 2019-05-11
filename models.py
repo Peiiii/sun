@@ -1,5 +1,4 @@
 import asyncio, config, pickle, os, time, uuid
-from tools import loadText, writeFile, getLine,log
 from config import dirs
 from orm import Table,InfoBody
 '''
@@ -14,7 +13,10 @@ class MyDict(dict):
     def __getattr__(self, item):
         return self[item]
 
-
+def log(*args, num=20, str='*'):
+    print(str * num, end='')
+    print(*args, end='')
+    print(str * num)
 class User:
     __table__=tableUser
     def __init__(self,id,email,password,nick_name,image='ablout:blank',
@@ -39,7 +41,7 @@ class User:
 class Blog:
     def __init__(self,
                  title, text , html, created_at, category, tags=[],id=None,author='',visible=True,
-                 description='',length=None,views=None,stars=None, year=None,month=None,info='',digest=None,
+                 description='',content='',length=None,views=None,stars=None, year=None,month=None,info='',digest=None,
                  fields={},display_template=defalut_blog_template
                  ):
         self.title = title
@@ -53,6 +55,7 @@ class Blog:
         self.author=author
         self.visible=visible
         self.description=description
+        self.content=content
         self.length=length
         self.views=views
         self.stars=stars
@@ -88,7 +91,11 @@ class BlogManager2(Table):
     async def loadBlogs(self):
         blogs=await self.findAll()
         return blogs
-    async def saveBlog(self,blog):
+    async def saveBlog(self,blog,identified_by_title=False):
+        if identified_by_title:
+            b=await self.select(['id'],title=blog.title)
+            if not b==[]:
+                return await self.replace(b[0].id,blog)
         if not await self.exsist(blog.id):
             return await self.insert(blog)
         return await self.replace(blog.id,blog)

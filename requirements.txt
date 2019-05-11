@@ -2,3 +2,5 @@ jinja2
 chardet
 aiohttp
 markdown
+requests
+bs4

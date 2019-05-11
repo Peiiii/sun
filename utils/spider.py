@@ -57,7 +57,8 @@ class Site:
             self.saveArticle(a)
     def saveArticle(self,article):
         filename=self.articles_dir+os.sep+article.title+'.txt'
-        text=article.title+'\n'+article.intro+'\n'+article.info+'\n'+article.content
+        divider='<$$$$$>'
+        text=divider.join([article.title,article.intro,article.info,article.content])
         self.writeFile(filename,text)
     def writeFile(self,fpath,content):
         f=open(fpath,'wb')
@@ -88,9 +89,10 @@ class Page:
                 pass
         return links
 
-def test1():
+def makeArticles():
     base_url = 'https://www.nfcmag.com'
     url='https://www.nfcmag.com/category/10.html'
     site=Site(base_url)
+
 if __name__=="__main__":
-    test1()
+    makeArticles()
