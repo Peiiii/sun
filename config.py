@@ -15,7 +15,7 @@ admin=Config(
 )
 net=Config(
     ip='0.0.0.0',
-    port=8003,
+    port=80,
     domain='localhost'
 )
 
