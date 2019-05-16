@@ -1,4 +1,4 @@
-import os, time,hashlib,markdown,re,json
+import os, time,hashlib,markdown,re,json,shutil
 import asyncio
 import  utils.spider as spider
 from orm import InfoBody
@@ -96,7 +96,8 @@ def loadText(file):
     else:
         text = ''
     return text
-
+def forceRemoveDir(fpath):
+    shutil.rmtree(fpath)
 
 def formatTime( t):
     t = time.localtime(t)
