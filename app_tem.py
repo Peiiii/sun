@@ -2,23 +2,21 @@ import logging;logging.basicConfig(level=logging.INFO)
 import asyncio,uuid,tools,config
 from framework import Application,jsonResponse,apiError,pageResponse
 from config import net,paths,dirs,pages,other_config
-from models2 import TableOpener,Blog
+from models import Blog,loadBlog,saveBlog,loadBlogs,BlogManger,BlogManager2
 from tools import log
 from aiohttp import web
 
 loop=asyncio.get_event_loop()
 app=Application(loop=loop)
-opener=TableOpener()
-blman=opener.open('../db/blogs','a',Blog)
-
+blman=BlogManager2(path='../db/Myblogs')
 
 base_link='http://127.0.0.1:'+str(net.port)
 quik_links=['/','/manage','/wp']
 ##---------------------Make handlers------------------
 @app.get2(paths.root)
 async def do_root():
-    # await blman.rebuild()
-    blogs=await blman.findAll()
+    await blman.rebuild()
+    blogs=await blman.loadBlogs()
     return pageResponse(template=pages.root,blogs=blogs)
 @app.get2('/wp')
 async def do_wp():
@@ -42,7 +40,7 @@ async def do_search():
     return pageResponse(template=pages.search)
 @app.get2(paths.manage)
 async def do_manage_get():
-    blogs=await blman.findAll()
+    blogs=await blman.loadBlogs()
     return pageResponse(template=pages.manage,blogs=blogs)
 ##----------------------Manage Pages---------------------##
 ## editor
@@ -58,7 +56,7 @@ async def do_editor_post(title,md,html,description,author,info,category,tags,opr
     b=Blog(
         title=title,text=text,html=html,created_at=created_at,category=category,tags=tags,id=id,author=author
     )
-    await blman.insert(b)
+    await blman.saveBlog(b)
     return jsonResponse(success=True,message='上传成功！')
 
 ## alter
@@ -66,13 +64,13 @@ async def do_editor_post(title,md,html,description,author,info,category,tags,opr
 async def do_manage_alter(json,opr_type):
     id=json['id']
     if opr_type=='delete':
-        s=await blman.delete(id)
+        s=await blman.deleteBlog(id)
         if s:
             return jsonResponse(message='删除成功')
         return apiError(message='删除失败')
 @app.post5('/manage/get_blog')
 async def do_get_blog(blog_id):
-    blog=await blman.findByPK(blog_id)
+    blog=await blman.getBlogByID(blog_id)
     if blog:
         return jsonResponse(data=blog.toJson())
     return apiError(message='blog not found.')

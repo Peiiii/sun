@@ -2,9 +2,13 @@ import os, time,hashlib,markdown,re
 import asyncio
 import  utils.spider as spider
 from orm import InfoBody
-from models import  Blog,BlogManager2
-blman=BlogManager2(path='../db/Myblogs')
+# from models import  Blog,BlogManager2
+from models2 import TableOpener,Blog
+# blman=BlogManager2(path='../db/Myblogs')
 articles_dir='data/articles'
+
+opener=TableOpener()
+blman=opener.open('../db/blogs','a',Blog)
 def initTools():
     pass
 
@@ -188,8 +192,12 @@ def loadBlogFromTextFile(f):
 async def addTestBlogs():
     articles=loadTestBlogs()
     for a in articles:
+        if blman._exists(title=a.title):
+            print('blog exists: %s'%a.title)
+            continue
         blog=Blog(title=a.title,description=a.intro,info=a.info,text=a.content,category='Demo',html=textToHTML(a.content),created_at=time.time())
-        await blman.saveBlog(blog,identified_by_title=True)
+        await blman.insert(blog)
+        # await blman.saveBlog(blog,identified_by_title=True)
 def initTest():
     loop = asyncio.get_event_loop()
     loop.run_until_complete(addTestBlogs())

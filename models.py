@@ -69,16 +69,7 @@ class Blog:
             self.id = uuid.uuid4().hex
         else:
             self.id = id
-    def toJson(self):
-        dic=self.__dict__
-        json={}
-        for k in dic:
-            json[k]=self.__getattribute__(k)
-        return json
-    def shortCut(self):
-        return MyDict(
-            title=self.title,id=self.id,archieve=self.archieve,author=self.author,description=self.description
-        )
+
 
 class BlogManager2(Table):
     def __init__(self,path,primary_key=None,searchable_keys=None):
