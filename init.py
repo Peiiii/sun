@@ -6,8 +6,6 @@ from models import TableOpener,Blog
 templates_dir=config.other_config.templates_dir
 env = Environment(loader=PackageLoader(templates_dir,''))
 opener=TableOpener()
-tb=opener.open(config.db_dir_blogs,'a',Blog)
-
 pre_make_dirs=config.pre_make_dirs
 
 
