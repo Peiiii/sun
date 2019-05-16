@@ -4,19 +4,24 @@ from framework import Application,jsonResponse,apiError,pageResponse
 from config import net,paths,dirs,pages,other_config
 from models import Blog,loadBlog,saveBlog,loadBlogs,BlogManger,BlogManager2
 from tools import log
+from aiohttp import web
 
 loop=asyncio.get_event_loop()
 app=Application(loop=loop)
 blman=BlogManager2(path='../db/Myblogs')
 
 base_link='http://127.0.0.1:'+str(net.port)
-quik_links=['/','/manage']
+quik_links=['/','/manage','/wp']
 ##---------------------Make handlers------------------
 @app.get2(paths.root)
 async def do_root():
     await blman.rebuild()
     blogs=await blman.loadBlogs()
     return pageResponse(template=pages.root,blogs=blogs)
+@app.get2('/wp')
+async def do_wp():
+    headers={'location':'http://oneday.red:80'}
+    return web.Response(status=308,headers=headers)
 @app.get2(paths.about)
 async def do_about():
     return pageResponse(template=pages.about)

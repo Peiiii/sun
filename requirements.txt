@@ -4,3 +4,4 @@ aiohttp
 markdown
 requests
 bs4
+piudb

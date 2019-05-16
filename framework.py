@@ -31,7 +31,6 @@ def pageResponse(template,**kws):
     return web.Response(body=page,content_type='text/html')
 def pageError(template=config.pages.error,**kws):
     return pageResponse(template=template,**kws)
-
 class Application(web.Application):
 
     def get2(self,path,wrap=False,cookies=False,headers=False,request=False):  ## 与get1不同，get2的没有对返回值的包装，因此原函数需自己返回一个web.Responce对象

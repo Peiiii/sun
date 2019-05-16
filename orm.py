@@ -10,10 +10,18 @@ class InfoBody(dict):
     def __getattr__(self, key):
         try:
             return self[key]
-        except KeyError:
-            raise AttributeError("'Model' object has no attribute '%s'" % key)
+        except KeyError as k:
+            return None
     def __setattr__(self, key, value):
         self[key]=value
+    def __getstate__(self):
+        return self.__dict__
+
+    def __delattr__(self, key):
+        try:
+            del self[key]
+        except KeyError as k:
+            return None
 
 class Map:
     def __init__(self,path):
@@ -64,7 +72,7 @@ class Map:
             return re
     def exsist(self,key):
         self.load()
-        print(self.dic.keys())
+        # print(self.dic.keys())
         re = self.dic.get(key, 'notfound')
         if re != 'notfound':
             return True
