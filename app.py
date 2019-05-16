@@ -20,7 +20,7 @@ async def do_root():
     return pageResponse(template=pages.root,blogs=blogs)
 @app.get2('/wp')
 async def do_wp():
-    headers={'location':'http://oneday.red:80'}
+    headers={'location':'http://oneday.red:8000'}
     return web.Response(status=308,headers=headers)
 @app.get2(paths.about)
 async def do_about():
