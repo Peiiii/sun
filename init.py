@@ -19,7 +19,7 @@ def getBlogsFromJsonFiles():
     [print(b['title']) for b in blogs.values()]
     return blogs
 def rebuidFromTextFiles():
-    os.remove(config.db_dir_blogs)
+    # os.remove(config.db_dir_blogs)
     tools.loadBlogsFromTextFiles()
 def make_dirs():
     for d in pre_make_dirs:
