@@ -10,8 +10,8 @@ from  jinja2 import  Template,Environment, PackageLoader
 
 
 
-opener=TableOpener()
-blman=opener.open('../db/blogs','a',Blog)
+# opener=TableOpener()
+# blman=opener.open('../db/blogs','a',Blog)
 
 
 def initTools():
@@ -171,18 +171,19 @@ def loadBlogFromTextFile(f):
     blog=InfoBody(title=title,intro=intro,info=info,content=content)
     # print(blog)
     return blog
-async def addTestBlogs():
+async def addTestBlogs(tb,force=False):
     articles=loadTestBlogs()
     for a in articles:
-        if blman._exists(title=a.title):
+        if not force and tb._exists(title=a.title):
             print('blog exists: %s'%a.title)
             continue
         blog=Blog(title=a.title,description=a.intro,info=a.info,text=a.content,category='Demo',html=textToHTML(a.content),created_at=time.time())
-        await blman.insert(blog)
+        await tb.insert(blog)
+        log('insert blog %s and id=%s'%(blog.title,blog.id))
         # await blman.saveBlog(blog,identified_by_title=True)
-def loadBlogsFromTextFiles():
+def loadBlogsFromTextFiles(tb,force=False):
     loop = asyncio.get_event_loop()
-    loop.run_until_complete(addTestBlogs())
+    loop.run_until_complete(addTestBlogs(tb,force))
     loop.close()
 if __name__=="__main__":
     # spider.makeArticles()

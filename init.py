@@ -19,8 +19,9 @@ def getBlogsFromJsonFiles():
     [print(b['title']) for b in blogs.values()]
     return blogs
 def rebuidFromTextFiles():
-    tools.forceRemoveDir(config.db_dir_blogs)
-    tools.loadBlogsFromTextFiles()
+    # tools.forceRemoveDir(config.db_dir_blogs)
+    tb = opener.open(config.db_dir_blogs, 'c', Blog)
+    tools.loadBlogsFromTextFiles(tb,force=True)
     tools.allBlogsToHTML(tb=tb, env=env, path=config.articles_dir, template=config.page_templates.article, force=True)
 def make_dirs():
     for d in pre_make_dirs:
