@@ -1,9 +1,8 @@
 import logging;logging.basicConfig(level=logging.INFO)
-import asyncio,uuid,tools,config
+import asyncio, tools
 from framework import Application,jsonResponse,apiError,pageResponse
-from config import net,paths,dirs,pages,other_config
-from models import Blog,loadBlog,saveBlog,loadBlogs,BlogManger,BlogManager2
-from tools import log
+from config import net,paths, pages,other_config
+from trash.models import Blog, BlogManager2
 from aiohttp import web
 
 loop=asyncio.get_event_loop()

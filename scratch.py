@@ -1,5 +1,5 @@
 import piudb
-from models2 import Blog
+from models import Blog
 opener=piudb.TableOpener()
 tb=opener.open('data/db/blogs','l',Blog)
 a=tb._findAll_()

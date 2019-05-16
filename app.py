@@ -2,9 +2,14 @@ import logging;logging.basicConfig(level=logging.INFO)
 import asyncio,uuid,tools,config
 from framework import Application,jsonResponse,apiError,pageResponse
 from config import net,paths,dirs,pages,other_config
-from models2 import TableOpener,Blog
+from models import TableOpener,Blog
 from tools import log
 from aiohttp import web
+from  jinja2 import  Template,Environment, PackageLoader
+
+
+templates_dir=config.other_config.templates_dir
+env = Environment(loader=PackageLoader(templates_dir,''))
 
 loop=asyncio.get_event_loop()
 app=Application(loop=loop)
@@ -14,6 +19,8 @@ blman=opener.open('../db/blogs','a',Blog)
 
 base_link='http://127.0.0.1:'+str(net.port)
 quik_links=['/','/manage','/wp']
+
+
 ##---------------------Make handlers------------------
 @app.get2(paths.root)
 async def do_root():
@@ -24,6 +31,9 @@ async def do_root():
 async def do_wp():
     headers={'location':'http://oneday.red:8000'}
     return web.Response(status=308,headers=headers)
+# @app.get2(paths.article)
+# async def do_article():
+#     return pageResponse(template=pages.article)
 @app.get2(paths.about)
 async def do_about():
     return pageResponse(template=pages.about)

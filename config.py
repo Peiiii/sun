@@ -7,6 +7,15 @@ class Config(dict):
         except:
             raise AttributeError('No attribute %s'%item)
 
+
+articles_dir='static/p'
+static_path=['static']
+default_article_template='pages/article/article.html'
+db_dir_blogs='../db/blogs'
+json_articles_dir='data/json/articles'
+
+pre_make_dirs=[json_articles_dir,articles_dir]
+
 admin=Config(
     name='top',
     password='password',
@@ -40,10 +49,24 @@ paths=Config(
     search='/search',
     manage='/manage',
     editor='/manage/editor',
+    article='/p'
 )
 
 pages=Config(
     root='pages/home/home.html',
+    article='pages/article/article.html',
+    about='pages/about/about.html',
+    tags='pages/tags/tags.html',
+    categories='pages/categories/categories.html',
+    archieves='pages/archieves/archieves.html',
+    search='pages/search/search.html',
+    manage='pages/manage/manage.html',
+    error='pages/error/error.html'
+)
+
+page_templates=Config(
+    root='pages/home/home.html',
+    article='pages/article/article.html',
     about='pages/about/about.html',
     tags='pages/tags/tags.html',
     categories='pages/categories/categories.html',

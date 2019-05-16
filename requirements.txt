@@ -4,4 +4,4 @@ aiohttp
 markdown
 requests
 bs4
-piudb
+piudb>=0.0.6

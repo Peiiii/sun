@@ -1,4 +1,7 @@
 
+{%extends "lib/html/base.html"%}
+{%block site_body%}
+
 <style>
 
 
@@ -122,8 +125,9 @@ body{
 }
 
 </style>
-
-<div class="col-xs-12 col-md-8 blog" style=""  id="blog-{{blog.id}}">
+<div style="text-align:center">
+    <div style="height:100px;"></div>
+<div class="col-xs-12 col-md-7 blog" style=""  id="blog-{{blog.id}}">
 
                 <div class="wrapper1" style="">
                     <div class="article-head" style="">
@@ -139,6 +143,9 @@ body{
                     </div>
                 </div>
         <div class="fold-ctrl-wrapper">
-        <center class="fold-ctrl switch-fold" easy-switch="true" status="on" on-msg="Pull Up" off-msg="Read All"><span  tar-sel="#{{blog.id}}" folded-height="">Read All</span></center>
+        <center class="fold-ctrl switch-fold" easy-switch="true" status="off" on-msg="Pull Up" off-msg="Read All"><span  tar-sel="#{{blog.id}}" folded-height="">Read All</span></center>
         </div>
     </div>
+</div>
+
+{%endblock%}

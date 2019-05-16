@@ -1,16 +1,68 @@
-import os, time,hashlib,markdown,re
+import os, time,hashlib,markdown,re,json
 import asyncio
 import  utils.spider as spider
 from orm import InfoBody
-# from models import  Blog,BlogManager2
-from models2 import TableOpener,Blog
-# blman=BlogManager2(path='../db/Myblogs')
+from models import TableOpener,Blog
+import config
+from  jinja2 import  Template,Environment, PackageLoader
+
+
+
 articles_dir='data/articles'
 
 opener=TableOpener()
 blman=opener.open('../db/blogs','a',Blog)
+
+
 def initTools():
     pass
+# templates_dir=config.other_config.templates_dir
+# env = Environment(loader=PackageLoader(templates_dir,''))
+
+def templateToHTML(template,env,fpath,**kws):
+    tem=env.get_template(template)
+    tem=tem.render(**kws)
+    writeFile(fpath,tem)
+
+def blogToHTML(blog,template,env,fpath):
+    templateToHTML(template=template,env=env,fpath=fpath,blog=blog)
+
+def allBlogsToHTML(tb,path,env,template=None,force=False):
+    blogs=tb._findAll_()
+    if not os.path.exists(path):
+        os.makedirs(path)
+    for  b in blogs:
+        fpath=path+'/'+b.id+'.html'
+        if template:
+            blogToHTML(blog=b,template=template,fpath=fpath,env=env)
+        else:
+            blogToHTML(blog=b,template=b.default_template,fpath=fpath,env=env)
+##------------------------------------------------------------------------------------##
+def writeJsonFile(obj,fpath):
+    with open(fpath,'w') as f:
+        json.dump(obj,f)
+def loadJsonFile(fpath):
+    with open(fpath,'r') as f:
+        obj=json.load(f)
+    return obj
+def saveBlogsToJsonFiles(tb,dpath):
+    blogs=tb._findAll_()
+    if not os.path.exists(dpath):
+        os.makedirs(dpath)
+    for b in blogs:
+        fpath=dpath+'/'+b.id+'.json'
+        writeJsonFile(b.toJson(),fpath)
+        log('save %s  as %s'%(b.title,fpath))
+def loadBlogsFromJsonFiles(dpath):
+    fns=os.listdir(dpath)
+    ids=[fn.split('.')[0] for fn in fns]
+    fpaths=[dpath+'/'+fn for fn in fns]
+    dic={}
+    for i in range(len(fpaths)):
+        obj=loadJsonFile(fpaths[i])
+        dic[ids[i]]=obj
+        log('load %s from %s'%(obj['title'],fns[i]))
+    return dic
 
 
 ##----------------End Specific Tools----------##
@@ -98,75 +150,6 @@ def renderDocument(text):
     dic=textToDic(head)
     return body,dic
 
-class PathType:
-    def __init__(self):
-        self.F = 'FILE'
-        self.D = 'DIR'
-        self.L = 'LINK'
-        self.M = 'MOUNT'
-
-
-T = PathType()
-
-
-class Path:
-    def __init__(self, path):
-        self.path = path
-        self.epath = self.encodePath()
-        self.name = os.path.basename(path)
-        self.size = os.path.getsize(path)
-        self.atime = formatTime(os.path.getatime(path))
-        self.ctime = formatTime(os.path.getctime(path))
-        self.mtime = formatTime(os.path.getmtime(path))
-        self.type = self.getType()
-
-    def getType(self):
-        if os.path.isdir(self.path):
-            return T.D
-        if os.path.isfile(self.path):
-            return T.F
-        if os.path.islink(self.path):
-            return T.L
-        if os.path.ismount(self.path):
-            return T.M
-
-    def encodePath(self):
-        return self.path.replace('/', '%2F')
-
-    def children(self):
-        if self.type == T.D:
-            list = self.listdir()
-            return [Path(i) for i in list]
-
-    def getContent(self):
-        if self.type == T.F:
-            return loadText(self.path)
-
-    def listdir(self):
-        if self.type == T.D:
-            l = os.listdir(self.path)
-            return [self.path + '/' + i for i in l]
-
-    def fileChildren(self):
-        list = self.children()
-        return [i for i in list if i.type == T.F]
-
-    def dirChildren(self):
-        list = self.children()
-        return [i for i in list if i.type == T.D]
-
-    def linkChildren(self):
-        list = self.children()
-        return [i for i in list if i.type == T.L]
-
-    def mountChildren(self):
-        list = self.children()
-        return [i for i in list if i.type == T.M]
-    def toJson(self):
-        return self.__dict__
-    def addContent(self):
-        self.content=self.getContent()
-
 
 # p=Path('e:/webapp/www/templates')
 # print(p.__dict__)
@@ -198,14 +181,14 @@ async def addTestBlogs():
         blog=Blog(title=a.title,description=a.intro,info=a.info,text=a.content,category='Demo',html=textToHTML(a.content),created_at=time.time())
         await blman.insert(blog)
         # await blman.saveBlog(blog,identified_by_title=True)
-def initTest():
+def addBlogsFromData():
     loop = asyncio.get_event_loop()
     loop.run_until_complete(addTestBlogs())
     loop.close()
 if __name__=="__main__":
     # spider.makeArticles()
-    initTest()
-
+    # initTest()
+    pass
 
 ##----------------------------------------------------------------------------##
 ##----------------------------------------------------------------------------##
