@@ -8,7 +8,7 @@ from  jinja2 import  Template,Environment, PackageLoader
 
 
 
-articles_dir='data/articles'
+
 
 opener=TableOpener()
 blman=opener.open('../db/blogs','a',Blog)
@@ -151,16 +151,14 @@ def renderDocument(text):
     return body,dic
 
 
-# p=Path('e:/webapp/www/templates')
-# print(p.__dict__)
 ##---------------------------------------##
 
 ##-------------------Specific Tools------------##
 def loadTestBlogs():
-    files=os.listdir(articles_dir)
+    files=os.listdir(config.text_articles_dir)
     articles=[]
     for f in files:
-        art=loadBlogFromTextFile(articles_dir+os.sep+f)
+        art=loadBlogFromTextFile(config.text_articles_dir+os.sep+f)
         articles.append(art)
     return articles
 def loadBlogFromTextFile(f):
@@ -181,7 +179,7 @@ async def addTestBlogs():
         blog=Blog(title=a.title,description=a.intro,info=a.info,text=a.content,category='Demo',html=textToHTML(a.content),created_at=time.time())
         await blman.insert(blog)
         # await blman.saveBlog(blog,identified_by_title=True)
-def addBlogsFromData():
+def loadBlogsFromTextFiles():
     loop = asyncio.get_event_loop()
     loop.run_until_complete(addTestBlogs())
     loop.close()

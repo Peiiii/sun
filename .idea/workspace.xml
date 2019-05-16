@@ -2,20 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55766798-c559-4d56-8b78-5c6b69ffb9d3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/init.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/pages/article/article.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trash/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/quif.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_tem.py" beforeDir="false" afterPath="$PROJECT_DIR$/trash/app_tem.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scratch.py" beforeDir="false" afterPath="$PROJECT_DIR$/scratch.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/lib/html/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/lib/html/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/lib/html/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/lib/html/blog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/articles/“零工经济”时代，你在为谁工作？.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/text/articles/“零工经济”时代，你在为谁工作？.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/articles/个体化社会及其未来.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/text/articles/个体化社会及其未来.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/articles/企业的终极形态到来了吗？.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/text/articles/企业的终极形态到来了吗？.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/articles/公务员，普通人.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/text/articles/公务员，普通人.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/articles/听听这个群体的声音.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/text/articles/听听这个群体的声音.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/articles/在西藏当公务员.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/text/articles/在西藏当公务员.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/articles/应对个体化社会的挑战.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/text/articles/应对个体化社会的挑战.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/articles/我不是网红，我是内容生产者.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/text/articles/我不是网红，我是内容生产者.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/articles/扶贫干部的日常.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/text/articles/扶贫干部的日常.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/articles/霓虹灯和月亮的距离.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/text/articles/霓虹灯和月亮的距离.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/init.py" beforeDir="false" afterPath="$PROJECT_DIR$/init.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,8 +28,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tools.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="63" column="41" selection-start-line="63" selection-start-column="41" selection-end-line="63" selection-end-column="41" />
+            <state relative-caret-position="166">
+              <caret line="181" column="26" selection-start-line="181" selection-start-column="26" selection-end-line="181" selection-end-column="26" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -41,8 +40,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/init.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="28" column="8" lean-forward="true" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+            <state relative-caret-position="242">
+              <caret line="31" column="25" lean-forward="true" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
               </folding>
@@ -62,8 +61,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+            <state relative-caret-position="171">
+              <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -235,8 +234,7 @@
               <item name="www" type="b2602c69:ProjectViewProjectNode" />
               <item name="www" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="json" type="462c0819:PsiDirectoryNode" />
-              <item name="articles" type="462c0819:PsiDirectoryNode" />
+              <item name="text" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="www" type="b2602c69:ProjectViewProjectNode" />
@@ -295,11 +293,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\sun\www\data\text" />
       <recent name="E:\sun\www\trash" />
       <recent name="E:\sun\www\templates\lib\html" />
       <recent name="E:\sun\www\templates\lib" />
       <recent name="E:\sun\www\templates\pages\manage" />
-      <recent name="E:\sun\www\templates\pages\home" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\sun\www\templates\pages\manage" />
@@ -708,19 +706,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/articles/在西藏当公务员.txt">
+    <entry file="file://$PROJECT_DIR$/data/text/articles/在西藏当公务员.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/articles/公务员，普通人.txt">
+    <entry file="file://$PROJECT_DIR$/data/text/articles/公务员，普通人.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/articles/企业的终极形态到来了吗？.txt">
+    <entry file="file://$PROJECT_DIR$/data/text/articles/企业的终极形态到来了吗？.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/articles/“零工经济”时代，你在为谁工作？.txt">
+    <entry file="file://$PROJECT_DIR$/data/text/articles/“零工经济”时代，你在为谁工作？.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/articles/听听这个群体的声音.txt">
+    <entry file="file://$PROJECT_DIR$/data/text/articles/听听这个群体的声音.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/spider.py">
@@ -822,13 +820,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/lib/html/blog.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="144" selection-start-line="144" selection-end-line="144" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/lib/html/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1059">
@@ -880,17 +871,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/lib/html/blog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="144" selection-start-line="144" selection-end-line="144" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/config.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+        <state relative-caret-position="171">
+          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tools.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="63" column="41" selection-start-line="63" selection-start-column="41" selection-end-line="63" selection-end-column="41" />
+        <state relative-caret-position="166">
+          <caret line="181" column="26" selection-start-line="181" selection-start-column="26" selection-end-line="181" selection-end-column="26" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
@@ -899,8 +897,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/init.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="28" column="8" lean-forward="true" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+        <state relative-caret-position="242">
+          <caret line="31" column="25" lean-forward="true" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
           </folding>
