@@ -2,7 +2,7 @@ import os, time,hashlib,markdown,re,json,shutil
 import asyncio
 import  utils.spider as spider
 from orm import InfoBody
-from models import TableOpener,Blog
+from models import TableManager,Blog
 import config
 from  jinja2 import  Template,Environment, PackageLoader
 
@@ -178,8 +178,11 @@ async def addTestBlogs(tb,force=False):
             print('blog exists: %s'%a.title)
             continue
         blog=Blog(title=a.title,description=a.intro,info=a.info,text=a.content,category='Demo',html=textToHTML(a.content),created_at=time.time())
+        blog.addDefault()
         await tb.insert(blog)
-        log('insert blog %s and id=%s'%(blog.title,blog.id))
+        blog=await tb.find(title=blog.title)
+        print(blog.__class__)
+        log('insert blog %s and id=%s'%(blog['title'],blog.id))
         # await blman.saveBlog(blog,identified_by_title=True)
 def loadBlogsFromTextFiles(tb,force=False):
     loop = asyncio.get_event_loop()

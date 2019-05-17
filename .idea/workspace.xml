@@ -2,7 +2,349 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55766798-c559-4d56-8b78-5c6b69ffb9d3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/db/blogs/configure.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/db/blogs/mapfile.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/db/logs/configure.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/db/logs/mapfile.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558106465.8129914.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558106465.8179777.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558106465.8209696.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558106465.8229637.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558106465.8249578.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558106465.8269536.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558106465.8399198.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558106465.8439074.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558106465.847898.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558106465.8508894.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558106625.1904821.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558106625.1974623.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558106625.2014518.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558106625.2044442.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558106625.2084336.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558106625.2124228.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558106625.2293797.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558106625.2353628.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558106625.2403476.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558106625.245334.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558106735.1063576.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558106735.113339.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558106735.1203191.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558106735.124309.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558106735.127302.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558106735.131291.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558106735.148246.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558106735.1542284.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558106735.1592157.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558106735.164201.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558106747.1152222.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558106747.1231997.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558106747.1271894.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558106747.13118.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558106747.1351683.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558106747.1391585.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558106747.1491308.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558106747.152123.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558106747.156112.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558106747.1610994.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112425.207443.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112425.2224996.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112425.2313757.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112425.2396688.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112425.2463353.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112425.255314.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112425.2642868.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112425.2713351.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112425.2792506.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112425.2892213.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112508.376625.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112508.390706.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112508.3995943.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112508.4075415.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112508.4155195.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112508.4234984.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112508.4314787.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112508.4384575.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112508.446437.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112508.4545307.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112611.5519674.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112611.5669546.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112611.5719137.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112611.5769477.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112611.5808897.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112611.5848808.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112611.590863.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112611.5948822.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112611.5998397.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112611.6058245.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112652.8618584.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112652.869835.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112652.8738248.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112652.8778143.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112652.881804.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112652.885793.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112652.8898246.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112652.8928099.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112652.8967648.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112652.9017503.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112681.252292.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112681.2631848.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112681.269109.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112681.2750912.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112681.2810764.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112681.2930455.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112681.2991064.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112681.3050137.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112681.3109949.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112681.318977.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112751.8058918.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112751.8168585.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112751.8239226.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112751.8318172.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112751.8368556.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112751.842788.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112751.8487742.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112751.854756.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112751.8627384.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112751.868721.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112967.517185.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112967.5250444.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112967.5300925.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112967.5350184.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112967.5459914.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112967.55104.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112967.5549645.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112967.5591404.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112967.564078.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558112967.57003.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558113030.6758325.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558113030.6845179.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558113030.6924987.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558113030.6974838.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558113030.7025025.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558113030.706707.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558113030.7114475.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558113030.7154827.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558113030.7234159.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558113030.7305145.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558113337.2935529.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558113337.3076189.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558113337.3136115.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558113337.322523.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558113337.328506.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558113337.3395445.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558113337.353441.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558113337.3657203.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558113337.3743834.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558113337.386354.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558114355.721978.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558114397.7533498.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558114414.326995.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558114414.3449454.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558114414.350927.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558114414.3589675.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558114414.3658903.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558114414.3738673.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558114414.3799362.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558114414.3868327.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558114414.391907.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558114414.3988712.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558114480.4243927.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558114480.436323.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558114480.4452977.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558114480.4523907.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558114480.459259.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558114480.4672375.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558114480.474627.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558114480.4817038.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558114480.4895873.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558114480.49657.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558115479.3167412.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558115479.327707.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558115479.3346913.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558115479.34267.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558115479.350674.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558115479.3576295.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558115479.364709.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558115479.372892.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558115479.379785.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/articles/1558115479.3857706.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558106465.8129914.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558106465.8179777.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558106465.8209696.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558106465.8229637.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558106465.8249578.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558106465.8269536.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558106465.8399198.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558106465.8439074.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558106465.847898.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558106465.8508894.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558106625.1904821.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558106625.1974623.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558106625.2014518.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558106625.2044442.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558106625.2084336.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558106625.2124228.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558106625.2293797.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558106625.2353628.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558106625.2403476.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558106625.245334.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558106735.1063576.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558106735.113339.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558106735.1203191.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558106735.124309.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558106735.127302.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558106735.131291.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558106735.148246.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558106735.1542284.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558106735.1592157.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558106735.164201.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558106747.1152222.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558106747.1231997.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558106747.1271894.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558106747.13118.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558106747.1351683.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558106747.1391585.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558106747.1491308.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558106747.152123.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558106747.156112.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558106747.1610994.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112425.207443.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112425.2224996.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112425.2313757.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112425.2396688.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112425.2463353.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112425.255314.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112425.2642868.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112425.2713351.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112425.2792506.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112425.2892213.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112508.376625.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112508.390706.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112508.3995943.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112508.4075415.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112508.4155195.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112508.4234984.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112508.4314787.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112508.4384575.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112508.446437.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112508.4545307.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112611.5519674.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112611.5669546.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112611.5719137.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112611.5769477.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112611.5808897.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112611.5848808.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112611.590863.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112611.5948822.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112611.5998397.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112611.6058245.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112652.8618584.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112652.869835.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112652.8738248.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112652.8778143.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112652.881804.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112652.885793.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112652.8898246.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112652.8928099.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112652.8967648.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112652.9017503.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112681.252292.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112681.2631848.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112681.269109.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112681.2750912.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112681.2810764.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112681.2930455.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112681.2991064.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112681.3050137.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112681.3109949.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112681.318977.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112751.8058918.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112751.8168585.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112751.8239226.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112751.8318172.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112751.8368556.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112751.842788.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112751.8487742.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112751.854756.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112751.8627384.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112751.868721.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112967.517185.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112967.5250444.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112967.5300925.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112967.5350184.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112967.5459914.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112967.55104.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112967.5549645.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112967.5591404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112967.564078.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558112967.57003.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558113030.6758325.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558113030.6845179.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558113030.6924987.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558113030.6974838.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558113030.7025025.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558113030.706707.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558113030.7114475.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558113030.7154827.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558113030.7234159.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558113030.7305145.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558113337.2935529.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558113337.3076189.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558113337.3136115.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558113337.322523.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558113337.328506.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558113337.3395445.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558113337.353441.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558113337.3657203.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558113337.3743834.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558113337.386354.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558114355.721978.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558114397.7533498.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558114414.326995.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558114414.3449454.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558114414.350927.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558114414.3589675.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558114414.3658903.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558114414.3738673.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558114414.3799362.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558114414.3868327.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558114414.391907.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558114414.3988712.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558114480.4243927.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558114480.436323.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558114480.4452977.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558114480.4523907.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558114480.459259.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558114480.4672375.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558114480.474627.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558114480.4817038.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558114480.4895873.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558114480.49657.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558115479.3167412.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558115479.327707.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558115479.3346913.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558115479.34267.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558115479.350674.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558115479.3576295.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558115479.364709.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558115479.372892.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558115479.379785.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p/1558115479.3857706.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/db.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/fields.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/mydb.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aaa.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/init.py" beforeDir="false" afterPath="$PROJECT_DIR$/init.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scratch.py" beforeDir="false" afterPath="$PROJECT_DIR$/scratch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,22 +360,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tools.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="180" column="29" lean-forward="true" selection-start-line="180" selection-start-column="29" selection-end-line="180" selection-end-column="29" />
+            <state relative-caret-position="164">
+              <caret line="180" column="25" selection-start-line="180" selection-start-column="25" selection-end-line="180" selection-end-column="25" />
               <folding>
-                <element signature="e#0#35#0" expanded="true" />
+                <element signature="e#0#47#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/init.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="37">
-              <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+            <state relative-caret-position="152">
+              <caret line="37" column="20" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
               <folding>
-                <element signature="e#0#27#0" expanded="true" />
+                <element signature="e#0#29#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -42,17 +384,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://E:/programs/python/envs/webapp/Lib/site-packages/piudb/classes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-590">
-              <caret line="113" selection-start-line="113" selection-end-line="113" />
+            <state relative-caret-position="190">
+              <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/lib/html/blog.html">
+        <entry file="file://$PROJECT_DIR$/scratch.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="760">
-              <caret line="144" selection-start-line="144" selection-end-line="144" />
+            <state relative-caret-position="399">
+              <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="26" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/init.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+              <folding>
+                <element signature="e#0#27#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -61,7 +421,7 @@
         <entry file="file://$PROJECT_DIR$/config.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="247">
-              <caret line="19" column="13" lean-forward="true" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -69,60 +429,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5">
-              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/lib/html/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1059">
-              <caret line="67" column="24" selection-start-line="67" selection-start-column="24" selection-end-line="67" selection-end-column="24" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/pages/home/home.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="40" column="18" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
-              <folding>
-                <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/pages/article/article.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="129" column="30" selection-start-line="129" selection-start-column="30" selection-end-line="129" selection-end-column="30" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="95">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -143,14 +451,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/app/manage/aler.js" />
-        <option value="$PROJECT_DIR$/templates/html/include.html" />
-        <option value="$PROJECT_DIR$/templates/app/manage/request.js" />
-        <option value="$PROJECT_DIR$/templates/app/manage/alter.js" />
-        <option value="$PROJECT_DIR$/templates/lib/html/poem.html" />
-        <option value="$PROJECT_DIR$/templates/app/manage/alter.html" />
-        <option value="$PROJECT_DIR$/templates/js/message_show.js" />
-        <option value="$PROJECT_DIR$/templates/js/easyJS.js" />
         <option value="$PROJECT_DIR$/templates/js/switch.js" />
         <option value="$PROJECT_DIR$/templates/app/manage/editor.css" />
         <option value="$PROJECT_DIR$/templates/html/manage.html" />
@@ -180,25 +480,34 @@
         <option value="$PROJECT_DIR$/orm.py" />
         <option value="$PROJECT_DIR$/framework.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
-        <option value="$PROJECT_DIR$/scratch.py" />
         <option value="$PROJECT_DIR$/app2.py" />
-        <option value="E:/programs/python/envs/webapp/Lib/site-packages/piudb/classes.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/models2.py" />
         <option value="$PROJECT_DIR$/utils/quif.py" />
         <option value="$PROJECT_DIR$/templates/lib/html/base.html" />
         <option value="$PROJECT_DIR$/templates/lib/html/blog.html" />
         <option value="$PROJECT_DIR$/templates/pages/article/article.html" />
-        <option value="$PROJECT_DIR$/models.py" />
         <option value="$PROJECT_DIR$/config.py" />
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/utils/table.py" />
+        <option value="$PROJECT_DIR$/utils/models.py" />
+        <option value="$PROJECT_DIR$/utils/db.py" />
+        <option value="$PROJECT_DIR$/utils/utils.py" />
+        <option value="$PROJECT_DIR$/utils/fields.py" />
+        <option value="$PROJECT_DIR$/utils/test.py" />
+        <option value="$PROJECT_DIR$/utils/mydb.py" />
+        <option value="$PROJECT_DIR$/scratch.py" />
+        <option value="E:/programs/python/envs/webapp/Lib/site-packages/piudb/classes.py" />
         <option value="$PROJECT_DIR$/app.py" />
-        <option value="$PROJECT_DIR$/tools.py" />
         <option value="$PROJECT_DIR$/init.py" />
+        <option value="$PROJECT_DIR$/models.py" />
+        <option value="$PROJECT_DIR$/tools.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="399" />
+    <option name="x" value="16" />
+    <option name="y" value="240" />
     <option name="width" value="981" />
     <option name="height" value="522" />
   </component>
@@ -227,53 +536,11 @@
               <item name="www" type="b2602c69:ProjectViewProjectNode" />
               <item name="www" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="json" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="www" type="b2602c69:ProjectViewProjectNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="text" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="www" type="b2602c69:ProjectViewProjectNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="www" type="b2602c69:ProjectViewProjectNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="www" type="b2602c69:ProjectViewProjectNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="www" type="b2602c69:ProjectViewProjectNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="article" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="www" type="b2602c69:ProjectViewProjectNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="www" type="b2602c69:ProjectViewProjectNode" />
               <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
-            </path>
-            <path>
-              <item name="www" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
-              <item name="Scratches" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
             </path>
           </expand>
           <select />
@@ -291,19 +558,19 @@
     <property name="two.files.diff.last.used.folder" value="$PROJECT_DIR$/testdb" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\sun\www\data\text" />
-      <recent name="E:\sun\www\trash" />
-      <recent name="E:\sun\www\templates\lib\html" />
-      <recent name="E:\sun\www\templates\lib" />
-      <recent name="E:\sun\www\templates\pages\manage" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\sun\www\templates\pages\manage" />
       <recent name="E:\sun\www\templates\pages\home" />
       <recent name="E:\sun\www\templates\js" />
       <recent name="E:\sun\www\templates\lib" />
       <recent name="E:\sun\www\templates\pages" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\sun\www\utils" />
+      <recent name="E:\sun\www\data\text" />
+      <recent name="E:\sun\www\trash" />
+      <recent name="E:\sun\www\templates\lib\html" />
+      <recent name="E:\sun\www\templates\lib" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -340,7 +607,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="app2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="classes" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="www" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -348,11 +615,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="E:/programs/python/envs/webapp/Lib/site-packages/piudb" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="E:\sun\www\app.py" />
+      <option name="SCRIPT_NAME" value="E:/programs/python/envs/webapp/Lib/site-packages/piudb/classes.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -382,6 +649,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="mydb" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="www" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utils" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/mydb.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="scratch (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="www" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -403,34 +691,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="tools" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="www" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.init" />
         <item itemvalue="Python.app (1)" />
-        <item itemvalue="Python.tools" />
-        <item itemvalue="Python.app2" />
         <item itemvalue="Python.scratch (1)" />
+        <item itemvalue="Python.classes" />
+        <item itemvalue="Python.mydb" />
       </list>
     </recent_temporary>
   </component>
@@ -458,17 +725,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Favorites" order="0" sideWeight="0.5015015" side_tool="true" visible="true" weight="0.18824464" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.4984985" visible="true" weight="0.18824464" />
+      <window_info id="Favorites" order="0" sideWeight="0.5008881" side_tool="true" weight="0.18824464" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.4991119" visible="true" weight="0.24543288" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" weight="0.3285968" />
+      <window_info anchor="bottom" id="Terminal" order="0" weight="0.3090586" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="2" weight="0.22380106" />
+      <window_info anchor="bottom" id="Python Console" order="2" weight="0.35523978" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" weight="0.3285968" />
-      <window_info active="true" anchor="bottom" id="Run" order="5" visible="true" weight="0.40852576" />
+      <window_info anchor="bottom" id="Run" order="5" visible="true" weight="0.3410302" />
       <window_info anchor="bottom" id="Debug" order="6" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
@@ -507,92 +773,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app.py</url>
-          <line>33</line>
+          <line>32</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://E:/programs/python/envs/webapp/Lib/site-packages/piudb/classes.py</url>
+          <line>334</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/trash/app/home/home.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="36" selection-start-line="36" selection-end-line="49" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/trash/css/basic.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="54" column="19" lean-forward="true" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/trash/app/manage/alter.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="84" lean-forward="true" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="84" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#td#1;n#tr#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#1;n#td#1;n#tr#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/trash/app/home/home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/lib/html/article.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-19">
-          <caret line="11" column="66" selection-start-line="11" selection-start-column="66" selection-end-line="11" selection-end-column="66" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/lib/js/easyJS.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/pages/manage/home/home.js" />
-    <entry file="file://$PROJECT_DIR$/templates/pages/manage/request.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/pages/manage/manage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/pages/manage/editor.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/pages/manage/manage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/trash/html/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -757,16 +949,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scratch.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -812,9 +994,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/lib/html/blog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2736">
+          <caret line="144" selection-start-line="144" selection-end-line="144" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/lib/html/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1059">
+        <state relative-caret-position="1273">
           <caret line="67" column="24" selection-start-line="67" selection-start-column="24" selection-end-line="67" selection-end-column="24" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -825,7 +1014,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/pages/home/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
+        <state relative-caret-position="760">
           <caret line="40" column="18" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -840,7 +1029,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/pages/article/article.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
+        <state relative-caret-position="2451">
           <caret line="129" column="30" selection-start-line="129" selection-start-column="30" selection-end-line="129" selection-end-column="30" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
@@ -849,55 +1038,129 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/lib/html/blog.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="144" selection-start-line="144" selection-end-line="144" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
-          <caret line="19" column="13" lean-forward="true" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models.py">
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.3/system/python_stubs/776224141/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="-2779">
+          <caret line="892" column="6" selection-start-line="892" selection-start-column="6" selection-end-line="892" selection-end-column="6" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/fields.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-588">
+          <caret column="22" selection-start-column="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7467">
+          <caret line="462" selection-start-line="462" selection-end-line="462" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="12" lean-forward="true" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/mydb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="29" lean-forward="true" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/programs/python/Lib/asyncio/base_events.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="472" selection-start-line="472" selection-end-line="472" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/db/test_table/records/1558112681.2750912">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/db/test_table/mapfile.map">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="95">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://E:/programs/python/envs/webapp/Lib/site-packages/piudb/classes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-590">
-          <caret line="113" selection-start-line="113" selection-end-line="113" />
+        <state relative-caret-position="190">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scratch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="26" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/db/test_table/records/1558114763.8162172">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="37" column="20" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tools.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="180" column="29" lean-forward="true" selection-start-line="180" selection-start-column="29" selection-end-line="180" selection-end-column="29" />
+        <state relative-caret-position="164">
+          <caret line="180" column="25" selection-start-line="180" selection-start-column="25" selection-end-line="180" selection-end-column="25" />
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#0#47#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/init.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="37">
-          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+        <state relative-caret-position="152">
+          <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
           </folding>

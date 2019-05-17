@@ -1,8 +1,10 @@
 import piudb,uuid,time,config
-from piudb import Model,StringField,TableOpener,TextField,ObjectField,BooleanField,IntegerField,Field,FloatField
-
+from piudb import Model,StringField,TableManager,TextField,ObjectField,BooleanField,IntegerField,Field,FloatField,Piu
 def next_id():
-    return str(time.time())
+    t=time.gmtime()
+    id=str(t.tm_year)+str(t.tm_mon)+str(t.tm_mday)+(uuid.uuid4().hex)
+    return id
+
 class Blog(Model):
 
     id=StringField(primary_key=True,default=next_id)
@@ -16,6 +18,9 @@ class Blog(Model):
     archieve=StringField()
     author=StringField(default='WP')
     created_at=FloatField(default=time.time)
+
+    mood=StringField()
+    status=StringField()
     visible=BooleanField()
     description=StringField()
     length=IntegerField()
@@ -29,6 +34,12 @@ class Blog(Model):
     info=ObjectField()
     default_template=StringField(config.page_templates.article)
 
+    def addDefault(self):
+        self.addID()
+    def addID(self):
+        t = time.gmtime()
+        id = str(t.tm_year) + str(t.tm_mon) + str(t.tm_mday)+self.title
+        self['id'] =id
     def toJson(self):
         dic=self.__fields__
         json={}

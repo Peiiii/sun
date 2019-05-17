@@ -2,7 +2,7 @@ import logging;logging.basicConfig(level=logging.INFO)
 import asyncio,uuid,tools,config
 from framework import Application,jsonResponse,apiError,pageResponse
 from config import net,paths,dirs,pages,other_config
-from models import TableOpener,Blog
+from models import Blog,Piu
 from tools import log
 from aiohttp import web
 from  jinja2 import  Template,Environment, PackageLoader
@@ -13,8 +13,7 @@ env = Environment(loader=PackageLoader(templates_dir,''))
 
 loop=asyncio.get_event_loop()
 app=Application(loop=loop)
-opener=TableOpener()
-blman=opener.open('../db/blogs','a',Blog)
+blman=Piu('../db/blogs',Blog)
 
 
 base_link='http://127.0.0.1:'+str(net.port)
