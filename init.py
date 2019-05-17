@@ -9,6 +9,7 @@ templates_dir=config.other_config.templates_dir
 env = Environment(loader=PackageLoader(templates_dir,''))
 pre_make_dirs=config.pre_make_dirs
 test_blog_dir='data/db/test_table'
+helper=tools.Helper()
 
 def convertBlogs():
     tb=Piu(config.db_dir_blogs,Blog)
@@ -19,11 +20,11 @@ def getBlogsFromJsonFiles():
     [print(b['title']) for b in blogs.values()]
     return blogs
 def rebuidFromTextFiles():
-    # tools.forceRemoveDir(config.db_dir_blogs)
+    tools.forceRemoveDir(config.db_dir_blogs)
     tb=Piu(config.db_dir_blogs,Blog)
     tools.loadBlogsFromTextFiles(tb,force=True)
-    tools.allBlogsToHTML(tb=tb, env=env, path=config.articles_dir, template=config.page_templates.article, force=True)
-    tools.saveBlogsToJsonFiles(tb=tb, dpath=config.json_articles_dir)
+    # tools.allBlogsToHTML(tb=tb, env=env, path=config.articles_dir, template=config.page_templates.article, force=True)
+    # tools.saveBlogsToJsonFiles(tb=tb, dpath=config.json_articles_dir)
     # b=tb._findAll_()
     # print(b)
     showAllBlogs(tb)
@@ -38,8 +39,12 @@ def make_dirs():
             os.makedirs(d)
 
 if __name__=="__main__":
+    make_dirs()
+    tb = Piu(config.db_dir_blogs, Blog)
+
     # rebuild()
     # getBlogsFromJsonFiles()
-    rebuidFromTextFiles()
+    # rebuidFromTextFiles()
     # showAllBlogs()
+    helper.getCategoryNames(tb)
     pass

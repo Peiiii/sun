@@ -2,7 +2,7 @@ import os, time,hashlib,markdown,re,json,shutil
 import asyncio
 import  utils.spider as spider
 from orm import InfoBody
-from models import TableManager,Blog
+from models import Piu,Blog
 import config
 from  jinja2 import  Template,Environment, PackageLoader
 
@@ -10,8 +10,23 @@ from  jinja2 import  Template,Environment, PackageLoader
 
 
 
-# opener=TableOpener()
-# blman=opener.open('../db/blogs','a',Blog)
+
+class Helper:
+
+    def getCategoryNames(self,tb):
+        ibs=tb._select_(['category'])
+        cates=[ib['category'] for ib in ibs]
+        cates=list(set(cates))
+        return cates
+
+
+
+
+
+
+
+
+
 
 
 def initTools():
