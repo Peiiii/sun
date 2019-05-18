@@ -27,6 +27,7 @@ quik_links=['/','/manage','/wp']
 async def do_root():
     # await blman.rebuild()
     blogs=await man.blog_tb.findAll()
+    blogs=models.Collection(blogs).sortBy('created_at')
     return pageResponse(template=pages.root,blogs=blogs)
 @app.get2('/wp')
 async def do_wp():

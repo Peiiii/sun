@@ -1,10 +1,13 @@
-import piudb,uuid,time,config,asyncio
+import piudb,uuid,time,config,asyncio,markdown,bs4
 from piudb import (
     Model,StringField,TableManager,TextField,ObjectField,
     BooleanField,IntegerField,Field,FloatField,Piu,InfoBody,
     Piu
 )
-
+class Collection(list):
+    def sortBy(self,key,reverse=True):
+        li=sorted(self,key=lambda x: x[key] ,reverse=reverse)
+        return li
 def openAll():
     from config import db
     helper=Helper()
@@ -22,6 +25,13 @@ class Helper(InfoBody):
         super().__init__(**kwargs)
     def open(self,name,**kws):
         self[name]=Piu(**kws)
+    def reBuild(self):
+        blogs=self.blog_tb._findAll_()
+        num=self.blog_tb._deleteAll_()
+        print('num: %s'%num)
+        for b in blogs:
+            print('Blog deleted: %s'%b.title)
+            self.blog_tb._insert_(b)
     async def getArchieves(self):
         archs=self.archieve_tb._findAll_()
         archs2=[]
@@ -95,6 +105,8 @@ class Helper(InfoBody):
             tag_names.append(tags)
         tag_names = list(set(tag_names))
         for name in tag_names:
+            if not name or name=='':
+                continue
             self.tag_tb._upsert_(Cluster(name=name))
             # self.tb.raiseError()
     def rectifyArchieves(self):
@@ -141,6 +153,9 @@ class Blog(Model):
     title=StringField()
     text=TextField(searchable=False)
     html=TextField(searchable=False)
+    md=TextField(searchable=False)
+
+    format_used=StringField(default='text/plain')
     content=TextField(searchable=False)
     digest=TextField()
     category=StringField()
@@ -149,6 +164,8 @@ class Blog(Model):
     author=StringField(default='WP')
     created_at=FloatField(default=time.time)
 
+
+    date=StringField()
     keywords=StringField()
     url=StringField()
     mood=StringField()
@@ -157,9 +174,11 @@ class Blog(Model):
     description=StringField()
     length=IntegerField()
     num_words=IntegerField()
+
+
+    rank=IntegerField(default=0)
     views=IntegerField(default=0)
     stars=IntegerField(default=0)
-
     year=IntegerField(default=get_year)
     month=IntegerField(default=get_month)
     day=IntegerField(default=get_mday)
@@ -170,11 +189,16 @@ class Blog(Model):
     def __init__(self,*args,**kwargs):
         super().__init__(*args,**kwargs)
 
-
     def checkDefault(self):
         self.checkAllFieldsByDefault()
         self.addID()
         self.addArchieve()
+        self.addDigest()
+        self.addDate()
+    def addDate(self):
+        if not self.date or self.date=='':
+            t=self.created_at
+            self.date=self.convertDate(t)
     def addArchieve(self):
         if self.archieve=='':
             t=time.gmtime(self.created_at)
@@ -183,6 +207,14 @@ class Blog(Model):
         t = time.gmtime()
         id = str(t.tm_year) + str(t.tm_mon) + str(t.tm_mday)+self.title
         self['id'] =id
+    def addDigest(self):
+        if not self.digest or self.digest == '':
+            text=bs4.BeautifulSoup(self.html).text
+            digest=text[:500] if len(text)>=500 else text
+            self.digest=digest
+    def convertDate(self,t):
+        t=time.strftime('%Y-%m-%d',time.gmtime(t))
+        return t
     def toJson(self):
         dic=self.__fields__
         json={}
