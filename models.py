@@ -38,6 +38,7 @@ class Helper(InfoBody):
         self.rectifyArchieves()
         self.rectifyTags()
         self.rectifyCategories()
+        self.convertBlogsToJsonFiles()
     def _reloadBlogTable(self):
         blogs = self.blog_tb._findAll_()
         num = self.blog_tb._deleteAll_()
