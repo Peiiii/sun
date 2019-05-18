@@ -7,57 +7,97 @@
     <div style="width:100%;height:calc(100% - 1rem);">
         <div status="off" style="border-top:1px solid gray;">
 
-            <div class=" btn-group btn-group-sm f-right" id="edit-toolbar" >
+            <div class=" btn-group btn-group-sm f-right" id="edit-toolbar">
                 <button class="btn btn-primary" id="submit-btn">Submit</button>
-                <button class="switch-doubleview btn btn-success " easy-switch="true" off-msg="Single View" on-msg="Double View"
+                <button class="switch-doubleview btn btn-success " easy-switch="true" off-msg="Single View"
+                        on-msg="Double View"
                         status="on" tar-sel1="#changeable" tar-sel2="#html-input">Exitview
                 </button>
-                 <button id="btn-editable" class="switch-editable btn btn-warning" easy-switch="true" off-msg="Make Uneditable"
+                <button id="btn-editable" class="switch-editable btn btn-warning" easy-switch="true"
+                        off-msg="Make Uneditable"
                         on-msg="Make Editable" status="on" tar-sel1="#text-input" tar-sel2="#html-input">Swicth
                 </button>
                 <button class="bg-primary" id="blog-list-menu-toggle" data-toggle="collapse"
-                    data-target="#more-input-list">
+                        data-target="#more-input-list">
                     <span style="display:inline-block;width:2em;line-height:1px;">
                         <div style="display:inline-block;width:1.5em;height:1px;background:white;margin:0px;"></div>
                         <div style="display:inline-block;width:1.5em;height:1px;background:white;margin:0px;"></div>
                         <div style="display:inline-block;width:1.5em;height:1px;background:white;margin:0px;"></div>
                     </span>
-            </button>
+                </button>
             </div>
-            <div class="" id="info-bar" >
+            <div class="" id="info-bar" info="keys-input-area">
                 <div class="collapse" id="more-input-list">
                     <div class="input-group">
-                        <div class="input-group-prepend"> <span class="input-group-text">Author:</span></div>
-                        <input id="author-input" class=" form-control input" type="text" placeholder="input author..." value="ZERO">
+                        <div class="input-group-prepend"><span class="input-group-text">Author:</span></div>
+                        <input id="author-input" class=" form-control input key-input" key="author" type="text"
+                               placeholder="input author..." value="ZERO">
                     </div>
-                </div>
-                <div class="input-group">
-                    <div class="input-group-prepend"> <span class="input-group-text">Title:</span></div>
-                    <input id="title-input" class=" form-control input" type="text" placeholder="input title...">
-                </div>
-                <div class="input-group">
-                    <div class="input-group-prepend"> <span class="input-group-text">Category:</span></div>
-                    <input id="cate-input" class=" form-control input" type="text" placeholder="input category...">
-                </div>
-                <div class="input-group">
-                    <div class="input-group-prepend"> <span class="input-group-text">Tags</span></div>
-                    <input id="tags-input" class=" form-control input" type="text" placeholder="input tags...">
-                </div>
+                    <div class="input-group">
+                        <div class="input-group-prepend"><span class="input-group-text">Format:</span></div>
+                        <input class=" form-control input key-input" key="format_used" type="text"
+                               placeholder="input author..." value="ZERO">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-prepend"><span class="input-group-text">keywords:</span></div>
+                        <input class=" form-control input key-input" key="keywords" type="text"
+                               placeholder="input author..." value="ZERO">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-prepend"><span class="input-group-text">description:</span></div>
+                        <input class=" form-control input key-input" key="description" type="text"
+                               placeholder="input author..." value="ZERO">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-prepend"><span class="input-group-text">digest:</span></div>
+                        <input class=" form-control input key-input" key="digest" type="text"
+                               placeholder="input author..." value="ZERO">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-prepend"><span class="input-group-text">mood:</span></div>
+                        <input class=" form-control input key-input" key="mood" type="text"
+                               placeholder="input author..." value="ZERO">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-prepend"><span class="input-group-text">status:</span></div>
+                        <input class=" form-control input key-input" key="status" type="text"
+                               placeholder="input author..." value="ZERO">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-prepend"><span class="input-group-text">visible:</span></div>
+                        <input class=" form-control input key-input" key="visible" type="text"
+                               placeholder="input author..." value="ZERO">
+                    </div>
 
-        </div>
-        <div id="changeable" style="width:100%;">
-            <textarea id="text-input" class="form-control" spellcheck="false">/*format=md*/</textarea>
-            <div id="html-input" contenteditable="true"
-                 style="">
-                {%if content%}
-                {{content}}
-                {%endif%}
+                </div>
+                <div class="input-group">
+                    <div class="input-group-prepend"><span class="input-group-text">Title:</span></div>
+                    <input id="title-input" class=" form-control input key-input" key="title" type="text" placeholder="input title...">
+                </div>
+                <div class="input-group">
+                    <div class="input-group-prepend"><span class="input-group-text">Category:</span></div>
+                    <input id="cate-input" class=" form-control input key-input" key="category" type="text" placeholder="input category...">
+                </div>
+                <div class="input-group">
+                    <div class="input-group-prepend"><span class="input-group-text">Tags</span></div>
+                    <input id="tags-input" class=" form-control input key-input" key="tags" type="text" placeholder="input tags...">
+                </div>
             </div>
-            <div class="clear"></div>
+            <div id="changeable" style="width:100%;">
+                <textarea id="text-input" class="form-control key-input" key="text" spellcheck="false">/*format=md*/</textarea>
+                <textarea id="md-input" class="form-control key-input" key="md" style="display:none;" spellcheck="false">/*format=md*/</textarea>
+                <div id="html-input" contenteditable="true" class="key-input html-input" key="html"
+                     style="">
+                    {%if content%}
+                    {{content}}
+                    {%endif%}
+                </div>
+                <div class="clear"></div>
 
+            </div>
         </div>
     </div>
 </div>
-<script src="/js/marked.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-<script>{%include "pages/manage/editor.js"%}</script>
+    <script src="/js/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>{%include "pages/manage/editor.js"%}</script>

@@ -70,30 +70,53 @@ class Editor{
         var el=$(selector);
         this.selector=selector;
         this.el=el;
-        this.text_input=el.find('#text-input');
-        this.html_input=el.find('#html-input');
-        this.title_input=el.find('#title-input');
-        this.cate_input=el.find('#cate-input');
-        this.tags_input=el.find('#tags-input');
-        this.author_input=el.find('#author-input');
+        this.keys_input_area=el.find('#info-bar');
+        this.key_inputs=el.find('.key-input');
+//        this.text_input=el.find('#text-input');
+//        this.html_input=el.find('#html-input');
+//        this.title_input=el.find('#title-input');
+//        this.cate_input=el.find('#cate-input');
+//        this.tags_input=el.find('#tags-input');
+//        this.author_input=el.find('#author-input');
         this.msg_box=$('.msg-box-tem');
         this.mode='create';this.submit_url='/manage/editor';
-        this.defaultCate='demo';
+        this.default_values={
+            category:'demo',author:'WP'
+        };
+        this.no_empty_list=['title','category','tags','format_used'];
+        this.keys=['title','category','tags','format_used','keywords','description',
+                    'digest','author','visible','mood','status','text','html','md'];
+
+    }
+    fillInput(key,value){
+        var input=this.input(key);
+        if( ['input','textarea','select'].indexOf(input[0].tagName.toLowerCase())>-1){input.val(value);return}
+        else input.html(value);
     }
     editBlog(blog,mode='alter'){
         this.mode=mode;
-        this.text_input.val(blog.text);
-        this.html_input.html(blog.html);
-        this.title_input.val(blog.title);
-        this.cate_input.val(blog.category);
-        this.tags_input.val(blog.tags.join(';'));
-        this.author_input.val(blog.author);
-        this.blog_id=blog.id;
+        log(blog)
+        for(var i=0;i<this.keys.length;i++){
+            this.fillInput(this.keys[i],blog[this.keys[i]]);
+        }
         this.fillDefault();
         this.display();
     }
+    input(key){
+        return this.getKeyInputArea(key);
+    }
+    getKeyInputArea(key){
+        for(var i=0;i<this.key_inputs.length;i++){
+            if($(this.key_inputs[i]).attr('key')==key) return $(this.key_inputs[i]);
+        }
+    }
+    fillIfEmpty(key,value){
+        var input=this.input(key);
+        if(input.val().trim()=='')input.val(value);
+    }
     fillDefault(){
-        if(this.cate_input.val().trim()=='')this.cate_input.val(this.defaultCate);
+         this.fillIfEmpty('category',this.default_values.category);
+         this.fillIfEmpty('author',this.default_values.author);
     }
     display(){
         location.href=this.selector;
@@ -106,23 +129,31 @@ class Editor{
             else {json.opr_type='create';json.id=null;}
             var re=$.post({url:this.submit_url,async:false,data:JSON.stringify(json)}).responseJSON;
             var msg=re.message;
-            showMsg(this.msg_box,msg);
+            this.showMsg(msg);
             if(re.success)location.reload();
         }
     }
+    showMsg(msg){
+        showMsg(this.msg_box,msg);
+    }
     prepareInfo(){
-        var title=this.title_input.val();
-        var cate=this.cate_input.val();
-        var tags=this.tags_input.val().split(';');
-        var md=this.text_input.val();
-        var author=this.author_input.val();
-        if(title.trim()==''){showMsg(this.msg_box,'标题不能为空！');return false;}
-        if(cate.trim()==''){showMsg(this.msg_box,'目录不能为空！');return false;}
-        if(md.trim()==''){showMsg(this.msg_box,'文章不能为空');return false;}
-        var json={
-            title:title,category:cate,tags:tags,md:md,
-            author:author
-        };
+
+        var json={};
+        for(var i=0;i<this.key_inputs.length;i++){
+            var input=$(this.key_inputs[i]);
+            var key=input.attr('key');
+            var value;
+            if(input.hasClass('html-input'))value=input.html();
+            else value=input.val().trim();
+            if(this.no_empty_list.indexOf(key)>-1){
+                if(value ==''){ this.showMsg(key+' can not  be empty.');return false;}
+            }
+            json[key]=value;
+        }
+        json.tags=json.tags.split(';');
+        if(json.format_used=='plain-text'){null}
+        else if(json.format_used=='markdown')json.md=json.text;
+        else if(json.format_used=='html')json.html=json.text;
         return json;
     }
 

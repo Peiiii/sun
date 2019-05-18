@@ -62,12 +62,17 @@ import  time
 async def do_editor_get():
     return pageResponse(template=pages.editor)
 @app.post5(paths.editor)
-async def do_editor_post(title,md,html,description,author,info,category,tags,opr_type,id):
+async def do_editor_post(
+        opr_type,title,text,md,html,description,author,info,category,tags,id,
+        digest,keywords,fields,format_used,mood,status,visible
+):
+    # 数据检查和处理
     created_at=time.time()
-    text=md
-    html=tools.textToHTML(text)
     b=Blog(
-        title=title,text=text,html=html,created_at=created_at,category=category,tags=tags,id=id,author=author
+        title=title,text=text,md=md,format_used=format_used,html=html,
+        created_at=created_at,category=category,tags=tags,id=id,author=author,
+        description=description,info=info,digest=digest,keywords=keywords,fields=fields,
+        mood=mood,status=status,visible=visible
     )
     await man.upsertBlogSafe(b)
     return jsonResponse(success=True,message='上传成功！')

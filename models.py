@@ -1,6 +1,7 @@
 import piudb,uuid,time,config,asyncio,markdown,bs4,os,jinja2
-from utils.dofiles import writeJsonFile,loadJsonFile,writeTextFile,loadTextFile
+from utils.btools import writeJsonFile,loadJsonFile,writeTextFile,loadTextFile
 from  jinja2 import  Template,Environment, PackageLoader
+import utils.btools as btools
 
 
 from piudb import (
@@ -213,7 +214,7 @@ class Blog(Model):
     html=TextField(searchable=False)
     md=TextField(searchable=False)
 
-    format_used=StringField(default='text/plain')
+    format_used=StringField(default='plain-text')
     content=TextField(searchable=False)
     digest=TextField()
     category=StringField()
@@ -228,7 +229,7 @@ class Blog(Model):
     url=StringField()
     mood=StringField()
     status=StringField()
-    visible=BooleanField()
+    visible=BooleanField(default=True)
     description=StringField()
     length=IntegerField()
     num_words=IntegerField()
@@ -253,6 +254,16 @@ class Blog(Model):
         self.addArchieve()
         self.addDigest()
         self.addDate()
+        self.addHtml()
+    def addHtml(self):
+        if not self.html or self.html=='':
+            if self.format_used=='plain-text':
+                self.html=btools.textToHTML(self.text)
+            elif self.format_used=='markdown':
+                self.html=btools.mdToHTML(self.md)
+            elif self.format_used=='html':
+                self.html=self.text
+
     def addDate(self):
         if not self.date or self.date=='':
             t=self.created_at
