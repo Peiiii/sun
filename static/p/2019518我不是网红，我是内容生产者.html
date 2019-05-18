@@ -578,7 +578,7 @@ $(document).ready(()=>{
     padding-top:7em;
 }
 .blog-mask{
-    max-height:20em;
+    height:10em;
     overflow:hidden;
 }
 .fold-ctrl{
@@ -711,7 +711,7 @@ $(document).ready(()=>{
 <div class="root" style="min-height:400px;">
     <header class="fixed-top " id="home-header-wrapper">
         <div class="nav-header text-align-center">
-            <h4 class="d-inline-block">Welcome Friend!</h4>
+            <h4 class="d-inline-block" style="text-transform:uppercase;">Welcome Friend</h4>
             <button class="f-left list-btn" id="nav-menu-open" onclick="changeVisibility($('#nav-page'))">
                     <span class="list-icon">
                         <span class="i"></span>
@@ -745,15 +745,15 @@ $(document).ready(()=>{
                     src="/imgs/icons/close4.png"></span></div>
             <div class="link-box">
                 <div class="dark-page-item"><a href="/">Home</a></div>
-                <div class="dark-page-item"><a href="/">About</a></div>
-                <div class="dark-page-item"><a href="/">Tags</a></div>
-                <div class="dark-page-item"><a href="/">Archieve</a></div>
-                <div class="dark-page-item"><a href="/">Category</a></div>
+                <div class="dark-page-item"><a href="/about">About</a></div>
+                <div class="dark-page-item"><a href="/tags">Tags</a></div>
+                <div class="dark-page-item"><a href="/archieves">Archieve</a></div>
+                <div class="dark-page-item"><a href="/categories">Category</a></div>
             </div>
         </div>
     </div>
 
-    <div class="page-body">
+    <div class="page-body" style="min-height:470px;">
         
 
 <style>
@@ -876,6 +876,35 @@ body{
  .blog{
 
  }
+}
+
+.dark-page{
+    z-index:1;
+    background: rgba(14,16,15,0.95);
+    text-align:center;
+}
+.dark-page .link-box{
+    width:100%;
+    position:absolute;
+    top:30%;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+}
+.dark-page-item{
+    font-size:1.6em;
+    font-weight:100;
+    padding:0.2em 0.3em;
+    border:solid white 1px;
+    border:none;
+    border-radius:0.8em;
+    margin:0.2em 1em;
+}
+.dark-page .close-icon{
+    position:fixed;
+    top:20%;
+    display:inline-block;
+    right:10%;
 }
 
 </style>
