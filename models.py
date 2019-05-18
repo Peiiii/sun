@@ -80,6 +80,7 @@ class Helper(InfoBody):
 
     async def getCategories(self):
         cs = self.cate_tb._findAll_()
+        print('get_cates:',cs)
         cates = []
         for c in cs:
             cate = self.getCluster(cluster_name=c.name, category=c.name)
@@ -93,6 +94,7 @@ class Helper(InfoBody):
         self.rectifyArchieves()
     def rectifyCategories(self):
         cates=self.getCategoryNames()
+        print('get cate names:',cates)
         for name in cates:
             self.cate_tb._upsert_(Category(name=name))
             # self.tb.raiseError()
@@ -114,7 +116,7 @@ class Helper(InfoBody):
         print('rtf archieves:',archs)
         for a in archs:
             arch=Cluster(name=a)
-            self.archieve_tb._insert_(arch)
+            self.archieve_tb._upsert_(arch)
 
 class Category(Model):
     name=StringField(primary_key=True)

@@ -43,7 +43,7 @@ async def do_tags():
 @app.get2(paths.categories)
 async def do_categories():
     cates=await man.getCategories()
-    return pageResponse(template=pages.categories,categories=cates)
+    return pageResponse(template=pages.categories,cluster=cates)
 @app.get2(paths.archieves)
 async def do_archieves():
     archieves=await man.getArchieves()
