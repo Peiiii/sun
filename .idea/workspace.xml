@@ -2,401 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55766798-c559-4d56-8b78-5c6b69ffb9d3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/utils/operations.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/lib/html/blog_cluster.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/pages/archieves/archieves.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/pages/tags/tags.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/072ae4cbc0f54e41902d516f5a2e1330.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558106465.8129914.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558106465.8179777.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558106465.8209696.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558106465.8229637.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558106465.8249578.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558106465.8269536.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558106465.8399198.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558106465.8439074.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558106465.847898.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558106465.8508894.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558106625.1904821.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558106625.1974623.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558106625.2014518.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558106625.2044442.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558106625.2084336.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558106625.2124228.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558106625.2293797.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558106625.2353628.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558106625.2403476.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558106625.245334.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558106735.1063576.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558106735.113339.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558106735.1203191.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558106735.124309.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558106735.127302.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558106735.131291.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558106735.148246.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558106735.1542284.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558106735.1592157.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558106735.164201.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558106747.1152222.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558106747.1231997.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558106747.1271894.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558106747.13118.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558106747.1351683.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558106747.1391585.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558106747.1491308.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558106747.152123.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558106747.156112.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558106747.1610994.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112425.207443.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112425.2224996.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112425.2313757.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112425.2396688.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112425.2463353.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112425.255314.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112425.2642868.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112425.2713351.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112425.2792506.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112425.2892213.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112508.376625.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112508.390706.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112508.3995943.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112508.4075415.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112508.4155195.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112508.4234984.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112508.4314787.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112508.4384575.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112508.446437.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112508.4545307.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112611.5519674.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112611.5669546.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112611.5719137.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112611.5769477.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112611.5808897.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112611.5848808.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112611.590863.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112611.5948822.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112611.5998397.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112611.6058245.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112652.8618584.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112652.869835.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112652.8738248.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112652.8778143.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112652.881804.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112652.885793.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112652.8898246.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112652.8928099.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112652.8967648.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112652.9017503.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112681.252292.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112681.2631848.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112681.269109.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112681.2750912.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112681.2810764.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112681.2930455.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112681.2991064.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112681.3050137.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112681.3109949.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112681.318977.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112751.8058918.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112751.8168585.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112751.8239226.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112751.8318172.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112751.8368556.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112751.842788.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112751.8487742.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112751.854756.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112751.8627384.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112751.868721.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112967.517185.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112967.5250444.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112967.5300925.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112967.5350184.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112967.5459914.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112967.55104.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112967.5549645.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112967.5591404.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112967.564078.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558112967.57003.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558113030.6758325.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558113030.6845179.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558113030.6924987.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558113030.6974838.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558113030.7025025.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558113030.706707.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558113030.7114475.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558113030.7154827.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558113030.7234159.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558113030.7305145.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558113337.2935529.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558113337.3076189.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558113337.3136115.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558113337.322523.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558113337.328506.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558113337.3395445.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558113337.353441.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558113337.3657203.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558113337.3743834.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558113337.386354.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558114355.721978.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558114397.7533498.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558114414.326995.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558114414.3449454.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558114414.350927.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558114414.3589675.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558114414.3658903.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558114414.3738673.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558114414.3799362.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558114414.3868327.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558114414.391907.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558114414.3988712.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558114480.4243927.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558114480.436323.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558114480.4452977.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558114480.4523907.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558114480.459259.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558114480.4672375.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558114480.474627.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558114480.4817038.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558114480.4895873.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558114480.49657.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558115479.3167412.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558115479.327707.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558115479.3346913.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558115479.34267.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558115479.350674.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558115479.3576295.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558115479.364709.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558115479.372892.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558115479.379785.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1558115479.3857706.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/1686099c472a46d09acfcf7a7c358a4e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/2019517“零工经济”时代，你在为谁工作？.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/2019517个体化社会及其未来.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/2019517企业的终极形态到来了吗？.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/2019517公务员，普通人.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/2019517听听这个群体的声音.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/2019517在西藏当公务员.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/2019517应对个体化社会的挑战.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/2019517我不是网红，我是内容生产者.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/2019517扶贫干部的日常.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/2019517霓虹灯和月亮的距离.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/581918b4c5d742bfb221f05ff3b65d2e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/762029acbae342499f509990531ab4f9.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/87f67a2ef1a34cf9b17d53b5cb190444.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/a367d82be3db4d6d979fc477a483ee86.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/bae00b8e28084ffea109c859a7e67946.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/c61cbbc726064835a611a5d79d962db9.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/c8fd5a64fe7c4e6f97304a2832f6d87b.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/articles/f92e3dfdb6354cca8410176990eeefad.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/init.py" beforeDir="false" afterPath="$PROJECT_DIR$/init.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/072ae4cbc0f54e41902d516f5a2e1330.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558015478.597505.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558015478.5995011.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558015478.6034896.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558015478.6054835.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558015478.60648.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558015478.6084754.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558015478.6174526.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558015478.618449.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558015478.6204426.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558015478.62144.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558015652.7712424.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558015652.7732365.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558015652.7782235.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558015652.780218.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558015652.7812154.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558015652.783211.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558015652.786207.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558015652.7871997.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558015652.7891939.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558015652.791192.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558106465.8129914.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558106465.8179777.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558106465.8209696.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558106465.8229637.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558106465.8249578.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558106465.8269536.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558106465.8399198.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558106465.8439074.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558106465.847898.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558106465.8508894.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558106625.1904821.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558106625.1974623.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558106625.2014518.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558106625.2044442.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558106625.2084336.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558106625.2124228.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558106625.2293797.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558106625.2353628.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558106625.2403476.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558106625.245334.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558106735.1063576.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558106735.113339.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558106735.1203191.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558106735.124309.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558106735.127302.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558106735.131291.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558106735.148246.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558106735.1542284.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558106735.1592157.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558106735.164201.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558106747.1152222.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558106747.1231997.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558106747.1271894.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558106747.13118.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558106747.1351683.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558106747.1391585.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558106747.1491308.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558106747.152123.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558106747.156112.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558106747.1610994.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112425.207443.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112425.2224996.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112425.2313757.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112425.2396688.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112425.2463353.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112425.255314.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112425.2642868.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112425.2713351.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112425.2792506.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112425.2892213.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112508.376625.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112508.390706.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112508.3995943.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112508.4075415.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112508.4155195.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112508.4234984.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112508.4314787.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112508.4384575.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112508.446437.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112508.4545307.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112611.5519674.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112611.5669546.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112611.5719137.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112611.5769477.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112611.5808897.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112611.5848808.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112611.590863.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112611.5948822.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112611.5998397.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112611.6058245.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112652.8618584.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112652.869835.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112652.8738248.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112652.8778143.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112652.881804.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112652.885793.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112652.8898246.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112652.8928099.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112652.8967648.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112652.9017503.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112681.252292.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112681.2631848.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112681.269109.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112681.2750912.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112681.2810764.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112681.2930455.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112681.2991064.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112681.3050137.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112681.3109949.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112681.318977.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112751.8058918.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112751.8168585.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112751.8239226.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112751.8318172.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112751.8368556.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112751.842788.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112751.8487742.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112751.854756.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112751.8627384.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112751.868721.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112967.517185.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112967.5250444.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112967.5300925.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112967.5350184.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112967.5459914.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112967.55104.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112967.5549645.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112967.5591404.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112967.564078.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558112967.57003.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558113030.6758325.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558113030.6845179.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558113030.6924987.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558113030.6974838.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558113030.7025025.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558113030.706707.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558113030.7114475.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558113030.7154827.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558113030.7234159.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558113030.7305145.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558113337.2935529.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558113337.3076189.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558113337.3136115.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558113337.322523.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558113337.328506.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558113337.3395445.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558113337.353441.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558113337.3657203.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558113337.3743834.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558113337.386354.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558114355.721978.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558114397.7533498.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558114414.326995.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558114414.3449454.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558114414.350927.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558114414.3589675.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558114414.3658903.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558114414.3738673.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558114414.3799362.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558114414.3868327.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558114414.391907.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558114414.3988712.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558114480.4243927.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558114480.436323.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558114480.4452977.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558114480.4523907.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558114480.459259.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558114480.4672375.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558114480.474627.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558114480.4817038.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558114480.4895873.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558114480.49657.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558115479.3167412.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558115479.327707.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558115479.3346913.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558115479.34267.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558115479.350674.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558115479.3576295.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558115479.364709.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558115479.372892.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558115479.379785.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1558115479.3857706.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/1686099c472a46d09acfcf7a7c358a4e.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/2019517“零工经济”时代，你在为谁工作？.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/2019517个体化社会及其未来.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/2019517企业的终极形态到来了吗？.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/2019517公务员，普通人.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/2019517听听这个群体的声音.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/2019517在西藏当公务员.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/2019517应对个体化社会的挑战.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/2019517我不是网红，我是内容生产者.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/2019517扶贫干部的日常.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/2019517霓虹灯和月亮的距离.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/581918b4c5d742bfb221f05ff3b65d2e.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/762029acbae342499f509990531ab4f9.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/87f67a2ef1a34cf9b17d53b5cb190444.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/a367d82be3db4d6d979fc477a483ee86.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/bae00b8e28084ffea109c859a7e67946.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/c61cbbc726064835a611a5d79d962db9.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/c8fd5a64fe7c4e6f97304a2832f6d87b.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/p/f92e3dfdb6354cca8410176990eeefad.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/lib/html/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/lib/html/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/categories/categories.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/categories/categories.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/home/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/home/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/db.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/fields.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/mydb.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/utils.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -412,22 +28,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tools.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+            <state relative-caret-position="67">
+              <caret line="189" column="47" selection-start-line="189" selection-start-column="47" selection-end-line="189" selection-end-column="47" />
               <folding>
                 <element signature="e#0#47#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/init.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="48" column="4" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
-              <folding>
-                <element signature="e#0#27#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -436,8 +40,85 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
-              <caret line="82" column="22" lean-forward="true" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="22" />
+            <state relative-caret-position="105">
+              <caret line="46" column="31" lean-forward="true" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/lib/html/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="94">
+              <caret line="65" selection-start-line="65" selection-end-line="65" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/lib/html/blog_cluster.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="179">
+              <caret line="14" column="75" selection-start-line="14" selection-start-column="75" selection-end-line="14" selection-end-column="75" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="312">
+              <caret line="69" column="20" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/init.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
+              <folding>
+                <element signature="e#0#27#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/pages/categories/categories.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="16" column="13" selection-end-line="29" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://E:/programs/python/envs/webapp/Lib/site-packages/piudb/classes.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1622">
+              <caret line="710" column="52" selection-start-line="710" selection-start-column="52" selection-end-line="710" selection-end-column="52" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -454,58 +135,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="37" column="20" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
-              <folding>
-                <element signature="e#0#29#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://E:/programs/python/envs/webapp/Lib/site-packages/piudb/classes.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2405">
-              <caret line="545" column="19" lean-forward="true" selection-end-line="805" selection-end-column="38" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scratch.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="26" selection-end-column="26" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -515,9 +151,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/app/manage/editor.css" />
-        <option value="$PROJECT_DIR$/templates/html/manage.html" />
-        <option value="$PROJECT_DIR$/templates/app/manage/manage.css" />
         <option value="$PROJECT_DIR$/templates/app/manage/editor.js" />
         <option value="$PROJECT_DIR$/templates/app/manage/editor.html" />
         <option value="$PROJECT_DIR$/templates/app/manage/manage.js" />
@@ -535,8 +168,6 @@
         <option value="$PROJECT_DIR$/templates/pages/home/home.js" />
         <option value="$PROJECT_DIR$/templates/pages/manage/editor.js" />
         <option value="$PROJECT_DIR$/templates/pages/home/home.css" />
-        <option value="$PROJECT_DIR$/templates/pages/home/home.html" />
-        <option value="$PROJECT_DIR$/templates/pages/categories/categories.html" />
         <option value="$PROJECT_DIR$/templates/pages/categories/categories.css" />
         <option value="$PROJECT_DIR$/utils/sipder.py" />
         <option value="$PROJECT_DIR$/utils/spider.py" />
@@ -547,7 +178,6 @@
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/models2.py" />
         <option value="$PROJECT_DIR$/utils/quif.py" />
-        <option value="$PROJECT_DIR$/templates/lib/html/base.html" />
         <option value="$PROJECT_DIR$/templates/lib/html/blog.html" />
         <option value="$PROJECT_DIR$/templates/pages/article/article.html" />
         <option value="$PROJECT_DIR$/config.py" />
@@ -560,20 +190,26 @@
         <option value="$PROJECT_DIR$/utils/test.py" />
         <option value="$PROJECT_DIR$/utils/mydb.py" />
         <option value="$PROJECT_DIR$/scratch.py" />
-        <option value="$PROJECT_DIR$/models.py" />
         <option value="$PROJECT_DIR$/utils/operations.py" />
-        <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/templates/lib/html/base.html" />
+        <option value="$PROJECT_DIR$/templates/pages/categories/categories.html" />
+        <option value="$PROJECT_DIR$/templates/pages/home/home.html" />
+        <option value="$PROJECT_DIR$/templates/pages/tags/tags.html" />
         <option value="E:/programs/python/envs/webapp/Lib/site-packages/piudb/classes.py" />
         <option value="$PROJECT_DIR$/tools.py" />
+        <option value="E:/programs/python/envs/webapp/Lib/site-packages/piudb/supported_classes.py" />
+        <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/templates/lib/html/blog_cluster.html" />
+        <option value="$PROJECT_DIR$/models.py" />
         <option value="$PROJECT_DIR$/init.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="16" />
-    <option name="y" value="240" />
+    <option name="x" value="15" />
+    <option name="y" value="132" />
     <option name="width" value="981" />
-    <option name="height" value="522" />
+    <option name="height" value="630" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -599,7 +235,26 @@
             <path>
               <item name="www" type="b2602c69:ProjectViewProjectNode" />
               <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="www" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="www" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="www" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="tags" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="www" type="b2602c69:ProjectViewProjectNode" />
@@ -621,18 +276,18 @@
     <property name="two.files.diff.last.used.folder" value="$PROJECT_DIR$/testdb" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\sun\www\templates\pages\manage" />
-      <recent name="E:\sun\www\templates\pages\home" />
-      <recent name="E:\sun\www\templates\js" />
-      <recent name="E:\sun\www\templates\lib" />
-      <recent name="E:\sun\www\templates\pages" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\sun\www\utils" />
       <recent name="E:\sun\www\data\text" />
       <recent name="E:\sun\www\trash" />
       <recent name="E:\sun\www\templates\lib\html" />
+      <recent name="E:\sun\www\templates\lib" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\sun\www\templates\pages\archieves" />
+      <recent name="E:\sun\www\templates\pages\manage" />
+      <recent name="E:\sun\www\templates\pages\home" />
+      <recent name="E:\sun\www\templates\js" />
       <recent name="E:\sun\www\templates\lib" />
     </key>
   </component>
@@ -648,7 +303,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.init">
+  <component name="RunManager" selected="Python.app (1)">
     <configuration name="app (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="www" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -712,7 +367,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="mydb" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="models" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="www" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -720,11 +375,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utils" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/mydb.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/models.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -756,11 +411,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.init" />
         <item itemvalue="Python.app (1)" />
+        <item itemvalue="Python.init" />
+        <item itemvalue="Python.models" />
         <item itemvalue="Python.scratch (1)" />
         <item itemvalue="Python.classes" />
-        <item itemvalue="Python.mydb" />
       </list>
     </recent_temporary>
   </component>
@@ -790,15 +445,15 @@
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" order="0" sideWeight="0.5008881" side_tool="true" weight="0.18824464" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.4991119" visible="true" weight="0.24543288" />
+      <window_info id="Favorites" order="0" sideWeight="0.50406504" side_tool="true" visible="true" weight="0.24543288" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49593496" visible="true" weight="0.24543288" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.3090586" />
-      <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="2" weight="0.35523978" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="1" sideWeight="0.35663226" side_tool="true" visible="true" weight="0.3445826" />
+      <window_info anchor="bottom" id="Python Console" order="2" sideWeight="0.49960285" weight="0.37655416" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" weight="0.3285968" />
-      <window_info active="true" anchor="bottom" id="Run" order="5" visible="true" weight="0.43339255" />
+      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.64336777" visible="true" weight="0.3445826" />
       <window_info anchor="bottom" id="Debug" order="6" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
@@ -808,25 +463,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.15965052" />
-      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" weight="0.3285968" />
-      <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="2" visible="true" weight="0.94671404" />
-      <window_info anchor="bottom" id="Message" order="3" />
-      <window_info anchor="bottom" id="Find" order="4" weight="0.3285968" />
-      <window_info anchor="bottom" id="Run" order="5" weight="0.3463588" />
-      <window_info anchor="bottom" id="Debug" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3285968" />
-      <window_info anchor="bottom" id="TODO" order="10" weight="0.3285968" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout-to-restore>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -837,58 +473,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app.py</url>
-          <line>32</line>
+          <line>38</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://E:/programs/python/envs/webapp/Lib/site-packages/piudb/classes.py</url>
-          <line>380</line>
+          <line>408</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/lib/js/switch.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/pages/home/home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/pages/manage/editor.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#button#3;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#span#0;n#button#3;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#span#0;n#button#3;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#span#0;n#button#3;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/pages/manage/alter.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/pages/manage/alter.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/pages/manage/editor.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4256">
@@ -910,18 +506,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="117">
           <caret line="429" selection-start-line="429" selection-end-line="429" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/pages/categories/categories.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="49" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1036,32 +620,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/lib/html/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1273">
-          <caret line="67" column="24" selection-start-line="67" selection-start-column="24" selection-end-line="67" selection-end-column="24" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/pages/home/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="40" column="18" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/pages/article/article.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2451">
@@ -1073,13 +631,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharmCE2018.3/system/python_stubs/776224141/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2779">
@@ -1087,64 +638,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/fields.py">
+    <entry file="file://$PROJECT_DIR$/utils/fields.py" />
+    <entry file="file://$PROJECT_DIR$/utils/db.py" />
+    <entry file="file://$PROJECT_DIR$/utils/test.py" />
+    <entry file="file://$PROJECT_DIR$/utils/mydb.py" />
+    <entry file="file://$PROJECT_DIR$/utils/utils.py" />
+    <entry file="file://$PROJECT_DIR$/utils/models.py" />
+    <entry file="file://$PROJECT_DIR$/data/db/test_table/records/1558112681.2750912" />
+    <entry file="file://$PROJECT_DIR$/data/db/test_table/mapfile.map" />
+    <entry file="file://$PROJECT_DIR$/data/db/test_table/records/1558114763.8162172" />
+    <entry file="file://$PROJECT_DIR$/utils/operations.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-588">
-          <caret column="22" selection-start-column="22" selection-end-column="22" />
+        <state relative-caret-position="38">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7467">
-          <caret line="462" selection-start-line="462" selection-end-line="462" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="12" lean-forward="true" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/mydb.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="29" lean-forward="true" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/programs/python/Lib/asyncio/base_events.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="472" selection-start-line="472" selection-end-line="472" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/db/test_table/records/1558112681.2750912">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/db/test_table/mapfile.map">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/scratch.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
+        <state relative-caret-position="437">
           <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="26" selection-end-column="26" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
@@ -1152,13 +664,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/db/test_table/records/1558114763.8162172">
+    <entry file="file://$PROJECT_DIR$/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/programs/python/envs/webapp/Lib/site-packages/jinja2/lexer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="682" selection-start-line="682" selection-end-line="682" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pages/home/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="538">
+          <caret line="59" column="54" selection-start-line="59" selection-start-column="54" selection-end-line="59" selection-end-column="54" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pages/archieves/archieves.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/operations.py">
+    <entry file="file://$PROJECT_DIR$/templates/pages/tags/tags.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state>
+          <caret column="41" selection-start-column="41" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/programs/python/Lib/asyncio/base_events.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="436">
+          <caret line="472" selection-start-line="472" selection-end-line="472" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/programs/python/envs/webapp/Lib/site-packages/piudb/supported_classes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="189" column="47" selection-start-line="189" selection-start-column="47" selection-end-line="189" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1172,47 +737,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="37" column="20" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="82" column="22" lean-forward="true" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://E:/programs/python/envs/webapp/Lib/site-packages/piudb/classes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2405">
-          <caret line="545" column="19" lean-forward="true" selection-end-line="805" selection-end-column="38" />
+        <state relative-caret-position="1622">
+          <caret line="710" column="52" selection-start-line="710" selection-start-column="52" selection-end-line="710" selection-end-column="52" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pages/categories/categories.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="16" column="13" selection-end-line="29" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/lib/html/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/lib/html/blog_cluster.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="14" column="75" selection-start-line="14" selection-start-column="75" selection-end-line="14" selection-end-column="75" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="46" column="31" lean-forward="true" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="69" column="20" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/init.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="48" column="4" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
+        <state relative-caret-position="110">
+          <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
           </folding>

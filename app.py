@@ -1,8 +1,8 @@
 import logging;logging.basicConfig(level=logging.INFO)
-import asyncio,uuid,tools,config
+import asyncio,uuid,tools,config,models
 from framework import Application,jsonResponse,apiError,pageResponse
 from config import net,paths,dirs,pages,other_config
-from models import Blog,Piu
+from models import Blog,Piu,Helper,Category
 from tools import log
 from aiohttp import web
 from  jinja2 import  Template,Environment, PackageLoader
@@ -13,8 +13,14 @@ env = Environment(loader=PackageLoader(templates_dir,''))
 
 loop=asyncio.get_event_loop()
 app=Application(loop=loop)
-blman=Piu('../db/blogs',Blog)
-
+blman=Piu('../db/blogs',Blog,auto_update_fields=True,overwrite_fields=True)
+cate_tb=Piu('../db/categories',Category,auto_update_fields=True,overwrite_fields=True)
+tag_tb=Piu('../db/tags',models.Cluster,auto_update_fields=True,overwrite_fields=True)
+tag_tb=Piu('../db/archieves',models.Cluster,auto_update_fields=True,overwrite_fields=True)
+helper=Helper(
+    blman,cate_tb=cate_tb,tag_tb=tag_tb
+)
+helper.fixAll()
 
 base_link='http://127.0.0.1:'+str(net.port)
 quik_links=['/','/manage','/wp']
@@ -38,10 +44,11 @@ async def do_about():
     return pageResponse(template=pages.about)
 @app.get2(paths.tags)
 async def do_tags():
-    return pageResponse(template=pages.tags)
+    tags=await helper.getTags()
+    return pageResponse(template=pages.tags,cluster=tags)
 @app.get2(paths.categories)
 async def do_categories():
-    cates=await blman.getCategories()
+    cates=await helper.getCategories()
     return pageResponse(template=pages.categories,categories=cates)
 @app.get2(paths.archieves)
 async def do_archieves():
@@ -67,7 +74,6 @@ async def do_editor_post(title,md,html,description,author,info,category,tags,opr
     b=Blog(
         title=title,text=text,html=html,created_at=created_at,category=category,tags=tags,id=id,author=author
     )
-    b.addDefault()
     await blman.insert(b)
     return jsonResponse(success=True,message='上传成功！')
 
@@ -80,6 +86,12 @@ async def do_manage_alter(json,opr_type):
         if s:
             return jsonResponse(message='删除成功')
         return apiError(message='删除失败')
+    if opr_type=='add_category':
+        cate=Category(name=json['name'])
+        s = await helper.cate_tb.insert(cate)
+        if s:
+            return jsonResponse(message='操作成功')
+        return apiError(message='操作失败')
 @app.post5('/manage/get_blog')
 async def do_get_blog(blog_id):
     blog=await blman.findByPK(blog_id)
@@ -87,6 +99,7 @@ async def do_get_blog(blog_id):
         return jsonResponse(data=blog.toJson())
     return apiError(message='blog not found.')
 ##------------------Make Handlers Details----------------##
+
 
 ##---------------------End Make Handlers---------------------------##
 app.router.add_static('/', 'static', show_index=other_config.show_index)

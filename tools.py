@@ -11,13 +11,7 @@ from  jinja2 import  Template,Environment, PackageLoader
 
 
 
-class Helper:
 
-    def getCategoryNames(self,tb):
-        ibs=tb._select_(['category'])
-        cates=[ib['category'] for ib in ibs]
-        cates=list(set(cates))
-        return cates
 
 
 
@@ -193,7 +187,7 @@ async def addTestBlogs(tb,force=False):
             print('blog exists: %s'%a.title)
             continue
         blog=Blog(title=a.title,description=a.intro,info=a.info,text=a.content,category='Demo',html=textToHTML(a.content),created_at=time.time())
-        blog.addDefault()
+        # print('Blog __dict__:',Blog.__dict__)
         await tb.insert(blog)
         blog=await tb.find(title=blog.title)
         print(blog.__class__)
