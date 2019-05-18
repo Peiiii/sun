@@ -39,6 +39,7 @@ class Helper(InfoBody):
         self.rectifyTags()
         self.rectifyCategories()
         self.convertBlogsToJsonFiles()
+        self.saveAllBlogsToHtmlFile()
     def _reloadBlogTable(self):
         blogs = self.blog_tb._findAll_()
         num = self.blog_tb._deleteAll_()
@@ -71,6 +72,9 @@ class Helper(InfoBody):
         fpath=self.html_articles_dir+'/'+b.id+'.html'
         html=self.getArticleHtml(b)
         writeTextFile(fpath,html)
+    def saveAllBlogsToHtmlFile(self):
+        for b in self.blog_tb._findAll_():
+            self.saveBlogToHtmlFile(b)
     def saveBlogToJsonFile(self,b):
         fpath = self.json_articles_dir + '/' + b.id + '.json'
         writeJsonFile(b.toJson(), fpath)
