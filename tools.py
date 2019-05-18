@@ -186,7 +186,10 @@ async def addTestBlogs(tb,force=False):
         if not force and tb._exists(title=a.title):
             print('blog exists: %s'%a.title)
             continue
-        blog=Blog(title=a.title,description=a.intro,info=a.info,text=a.content,category='Demo',html=textToHTML(a.content),created_at=time.time())
+        blog=Blog(title=a.title,description=a.intro,info=a.info,text=a.content,
+                  category='Demo',html=textToHTML(a.content),created_at=time.time(),
+                  tags=['demo']
+                  )
         # print('Blog __dict__:',Blog.__dict__)
         await tb.insert(blog)
         blog=await tb.find(title=blog.title)

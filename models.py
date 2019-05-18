@@ -5,12 +5,30 @@ from piudb import (
     Piu
 )
 
+def openAll():
+    from config import db
+    helper=Helper()
+    helper.blog_tb=Piu(db.path.blogs, Blog, auto_update_fields=True, overwrite_fields=True)
+    helper.cate_tb=Piu(db.path.categories, Category, auto_update_fields=True, overwrite_fields=True)
+    helper.tag_tb=Piu(db.path.tags, Cluster, auto_update_fields=True, overwrite_fields=True)
+    helper.archieve_tb=Piu(db.path.archieves, Cluster, auto_update_fields=True, overwrite_fields=True)
+    return helper
 class Helper(InfoBody):
-    def __init__(self,blog_tb,**kwargs):
-        self.blog_tb=blog_tb
-        self.tb=blog_tb
-        assert isinstance(blog_tb,Piu)
+    def __init__(self,blog_tb=None,**kwargs):
+        if blog_tb:
+            self.blog_tb=blog_tb
+            self.tb=blog_tb
+            assert isinstance(blog_tb,Piu)
         super().__init__(**kwargs)
+    def open(self,name,**kws):
+        self[name]=Piu(**kws)
+    async def getArchieves(self):
+        archs=self.archieve_tb._findAll_()
+        archs2=[]
+        for a in archs:
+            archs2.append(self.getCluster(cluster_name=a.name,archieve=a.name))
+        return archs2
+
     def getCategoryNames(self):
         return self.getAllFieldValues('category')
     def getAllFieldValues(self,key,list_item=False):
@@ -33,16 +51,7 @@ class Helper(InfoBody):
         blogs=self.blog_tb._findAll_(**kws)
         length=len(blogs)
         return Cluster(name=cluster_name,blogs=blogs,length=length)
-    def rectifyTags(self):
-        tags_lists=self.getAllFieldValues('tags',list_item=True)
-        tag_names=[]
-        for tags in tags_lists:
-            print('tags:',tags)
-            tag_names.append(tags)
-        tag_names=list(set(tag_names))
-        for name in tag_names:
-            self.tag_tb._upsert_(Cluster(name=name))
-            # self.tb.raiseError()
+
     async def getTags(self):
         assert isinstance(self.tag_tb,Piu)
         tags=self.tag_tb._findAll_()
@@ -71,13 +80,29 @@ class Helper(InfoBody):
     def fixAll(self):
         self.rectifyCategories()
         self.rectifyTags()
+        self.rectifyArchieves()
     def rectifyCategories(self):
         cates=self.getCategoryNames()
         for name in cates:
             self.cate_tb._upsert_(Category(name=name))
             # self.tb.raiseError()
 
-
+    def rectifyTags(self):
+        tags_lists = self.getAllFieldValues('tags', list_item=True)
+        tag_names = []
+        for tags in tags_lists:
+            print('tags:', tags)
+            tag_names.append(tags)
+        tag_names = list(set(tag_names))
+        for name in tag_names:
+            self.tag_tb._upsert_(Cluster(name=name))
+            # self.tb.raiseError()
+    def rectifyArchieves(self):
+        archs = self.getAllFieldValues('archieve')
+        print('rtf archieves:',archs)
+        for a in archs:
+            arch=Cluster(name=a)
+            self.archieve_tb._insert_(arch)
 
 class Category(Model):
     name=StringField(primary_key=True)
@@ -92,6 +117,8 @@ class Cluster(Model):
     length=IntegerField()
     blogs=ObjectField(default=[])
 
+    def __init__(self,**kws):
+        super().__init__(**kws)
     def getLength(self):
         self.length=len(self.blogs)
 
@@ -149,7 +176,7 @@ class Blog(Model):
         self.addID()
         self.addArchieve()
     def addArchieve(self):
-        if not self.archieve=='':
+        if self.archieve=='':
             t=time.gmtime(self.created_at)
             self.archieve=str(self.year)+'年'+str(self.month)+'月'
     def addID(self):

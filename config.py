@@ -28,7 +28,14 @@ net=Config(
     port=80,
     domain='localhost'
 )
-
+db=Config(
+    path=Config(
+        blogs='../db/blogs',
+        categories='../db/categories',
+        tags='../db/tags',
+        archieves='../db/archieves'
+    )
+)
 dirs=Config(
     blogs='../blogs'
 )

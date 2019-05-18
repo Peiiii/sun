@@ -10,16 +10,11 @@ env = Environment(loader=PackageLoader(templates_dir,''))
 pre_make_dirs=config.pre_make_dirs
 test_blog_dir='data/db/test_table'
 
-blman=Piu('../db/blogs',Blog,auto_update_fields=True,overwrite_fields=True)
-cate_tb=Piu('../db/categories',models.Category,auto_update_fields=True,overwrite_fields=True)
-tag_tb=Piu('../db/tags',models.Cluster,auto_update_fields=True,overwrite_fields=True)
-tag_tb=Piu('../db/archieves',models.Cluster,auto_update_fields=True,overwrite_fields=True)
-helper=models.Helper(
-    blman,cate_tb=cate_tb,tag_tb=tag_tb
-)
+helper=models.openAll()
 
 def convertBlogs():
-    tb=Piu(config.db_dir_blogs,Blog)
+    # tb=Piu(config.db_dir_blogs,Blog)
+    tb=helper.tb
     tools.allBlogsToHTML(tb=tb,env=env,path=config.articles_dir,template=config.page_templates.article,force=True)
     tools.saveBlogsToJsonFiles(tb=tb,dpath=config.json_articles_dir)
 def getBlogsFromJsonFiles():
@@ -28,13 +23,13 @@ def getBlogsFromJsonFiles():
     return blogs
 def rebuidFromTextFiles():
     # tools.forceRemoveDir(config.db_dir_blogs)
-    tb=Piu(config.db_dir_blogs,Blog)
-    tools.loadBlogsFromTextFiles(tb,force=True)
-    # tools.allBlogsToHTML(tb=tb, env=env, path=config.articles_dir, template=config.page_templates.article, force=True)
-    # tools.saveBlogsToJsonFiles(tb=tb, dpath=config.json_articles_dir)
+    # tb=Piu(config.db_dir_blogs,Blog)
+    tools.loadBlogsFromTextFiles(helper.blog_tb,force=True)
+    tools.allBlogsToHTML(tb=helper.blog_tb, env=env, path=config.articles_dir, template=config.page_templates.article, force=True)
+    tools.saveBlogsToJsonFiles(tb=helper.blog_tb, dpath=config.json_articles_dir)
     # b=tb._findAll_()
     # print(b)
-    showAllBlogs(tb)
+    # showAllBlogs(helper.blog_tb)
 def showAllBlogs(tb=None):
     if not tb:
         tb=Piu(test_blog_dir,Blog)
@@ -47,7 +42,6 @@ def make_dirs():
 
 if __name__=="__main__":
     make_dirs()
-    tb = Piu(config.db_dir_blogs, Blog)
 
     # rebuild()
     # getBlogsFromJsonFiles()
