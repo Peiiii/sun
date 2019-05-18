@@ -270,7 +270,7 @@ class Blog(Model):
             self.date=self.convertDate(t)
     def addArchieve(self):
         if self.archieve=='':
-            t=time.gmtime(self.created_at)
+            t=time.localtime(self.created_at)
             self.archieve=str(self.year)+'年'+str(self.month)+'月'
     def addID(self):
         t = time.gmtime()
@@ -282,7 +282,7 @@ class Blog(Model):
             digest=text[:500] if len(text)>=500 else text
             self.digest=digest
     def convertDate(self,t):
-        t=time.strftime('%Y-%m-%d',time.gmtime(t))
+        t=time.strftime('%Y-%m-%d',time.localtime(t))
         return t
     def toJson(self):
         dic=self.__fields__
