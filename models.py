@@ -1,4 +1,8 @@
-import piudb,uuid,time,config,asyncio,markdown,bs4
+import piudb,uuid,time,config,asyncio,markdown,bs4,os,jinja2
+from utils.dofiles import writeJsonFile,loadJsonFile,writeTextFile,loadTextFile
+from  jinja2 import  Template,Environment, PackageLoader
+
+
 from piudb import (
     Model,StringField,TableManager,TextField,ObjectField,
     BooleanField,IntegerField,Field,FloatField,Piu,InfoBody,
@@ -15,6 +19,10 @@ def openAll():
     helper.cate_tb=Piu(db.path.categories, Category, auto_update_fields=True, overwrite_fields=True)
     helper.tag_tb=Piu(db.path.tags, Cluster, auto_update_fields=True, overwrite_fields=True)
     helper.archieve_tb=Piu(db.path.archieves, Cluster, auto_update_fields=True, overwrite_fields=True)
+    helper.env=Environment(loader=PackageLoader(config.other_config.templates_dir,''))
+    helper.json_articles_dir=config.json_articles_dir
+    helper.html_articles_dir=config.articles_dir
+    helper.article_template=config.page_templates.article
     return helper
 class Helper(InfoBody):
     def __init__(self,blog_tb=None,**kwargs):
@@ -26,12 +34,55 @@ class Helper(InfoBody):
     def open(self,name,**kws):
         self[name]=Piu(**kws)
     def reBuild(self):
-        blogs=self.blog_tb._findAll_()
-        num=self.blog_tb._deleteAll_()
-        print('num: %s'%num)
+        self._reloadBlogTable()
+        self.rectifyArchieves()
+        self.rectifyTags()
+        self.rectifyCategories()
+    def _reloadBlogTable(self):
+        blogs = self.blog_tb._findAll_()
+        num = self.blog_tb._deleteAll_()
+        print('num: %s' % num)
         for b in blogs:
-            print('Blog deleted: %s'%b.title)
+            print('Blog deleted: %s' % b.title)
             self.blog_tb._insert_(b)
+    async def upsertBlogSafe(self,blog):
+        blog.checkDefault()
+        blog_ret=self.blog_tb._upsert_(blog)
+        archieve=blog_ret['archieve']
+        tags=blog_ret['tags']
+        tags=list(set(tags))
+        category=blog_ret['category']
+        self.archieve_tb._upsert_(Cluster(name=archieve))
+        for tag in tags:
+            if not tag or tag=='':
+                continue
+            self.tag_tb._upsert_(Cluster(name=tag))
+        self.cate_tb._upsert_(Cluster(name=category))
+        blog.checkDefault()
+        self.saveBlogToJsonFile(blog)
+        self.saveBlogToHtmlFile(blog)
+    def getArticleHtml(self,blog):
+        template=self.article_template
+        tem = self.env.get_template(template)
+        tem = tem.render(blog=blog)
+        return tem
+    def saveBlogToHtmlFile(self,b):
+        fpath=self.html_articles_dir+'/'+b.id+'.html'
+        html=self.getArticleHtml(b)
+        writeTextFile(fpath,html)
+    def saveBlogToJsonFile(self,b):
+        fpath = self.json_articles_dir + '/' + b.id + '.json'
+        writeJsonFile(b.toJson(), fpath)
+        print('save %s  as %s' % (b.title, fpath))
+    def convertBlogsToJsonFiles(self):
+        dpath=self.json_articles_dir
+        blogs = self.blog_tb._findAll_()
+        if not os.path.exists(dpath):
+            os.makedirs(dpath)
+        for b in blogs:
+            fpath = dpath + '/' + b.id + '.json'
+            writeJsonFile(b.toJson(), fpath)
+            print('save %s  as %s' % (b.title, fpath))
     async def getArchieves(self):
         archs=self.archieve_tb._findAll_()
         archs2=[]

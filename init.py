@@ -30,6 +30,8 @@ def rebuidFromTextFiles():
     # b=tb._findAll_()
     # print(b)
     # showAllBlogs(helper.blog_tb)
+def reBuildFromDB():
+    helper.reBuild()
 def showAllBlogs(tb=None):
     if not tb:
         tb=Piu(test_blog_dir,Blog)
@@ -45,7 +47,8 @@ if __name__=="__main__":
 
     # rebuild()
     # getBlogsFromJsonFiles()
-    rebuidFromTextFiles()
+    # rebuidFromTextFiles()
     # showAllBlogs()
     # helper.getCategoryNames()
+    reBuildFromDB()
     pass
