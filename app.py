@@ -6,7 +6,7 @@ from models import Blog,Piu,Helper,Category
 from tools import log
 from aiohttp import web
 from  jinja2 import  Template,Environment, PackageLoader
-
+TEST_MODE=True
 
 templates_dir=config.other_config.templates_dir
 env = Environment(loader=PackageLoader(templates_dir,''))

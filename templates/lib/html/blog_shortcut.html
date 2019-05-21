@@ -98,6 +98,7 @@ body{
 
 
      }
+
 .blog .title{
     font-size:1.2em;
     font-weight:700;
@@ -111,6 +112,7 @@ body{
     font-size:1em;
     font-weight:normal;
 }
+.blog .a{cursor:pointer;}
 .article-body h1,.article-body h2{font-size:1.2em;}
 .article-body h3,.article-body h4,.article-body h5,.article-body h6,{font-size:1.1em;}
 
@@ -120,13 +122,21 @@ body{
 
  }
 }
+.blog .headline a{
+    font-weight:normal;
+    font-style:normal;
+    font-family:none;
+    cursor:pointer;
+    color:black;
+}
+
 
 </style>
 
 <div class="col-xs-12 col-md-8 blog" style=""  id="blog-{{blog.id}}">
 
                 <div class="wrapper1" style="">
-                    <div class="article-head" style="">
+                    <div class="article-head headline" style="">
                         <p class="title" >
                             <a href="/p/{{blog.id}}.html">{{blog.title}}</a>
                         </p>

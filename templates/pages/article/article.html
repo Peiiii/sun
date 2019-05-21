@@ -152,7 +152,16 @@ body{
     display:inline-block;
     right:10%;
 }
-
+.blog .article-head a{color:black;}
+.blog .title{font-size:1.25em;
+font-weight:bold;
+text-transform:capitalize;
+}
+.blog .title-description{
+font-size:0.9em;
+float:none;
+margin-bottom:0px;
+}
 </style>
 <div style="text-align:center;">
     <div style="height:100px;"></div>
@@ -163,9 +172,9 @@ body{
                         <p class="title" >
                             <a href="/p/{{blog.id}}.html">{{blog.title}}</a>
                         </p>
-                        <p class="title-description" >{{blog.author}}</p>
-
+                        <p class="title-description" >{{blog.author}}|{{blog.date}}</p>
                     </div>
+
                     <hr style="">
                     <div class="article-body" style="">
                         {{blog.html}}
