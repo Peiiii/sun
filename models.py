@@ -255,6 +255,8 @@ class Blog(Model):
         self.addDigest()
         self.addDate()
         self.addHtml()
+        self.addKeywords()
+        self.addDescription()
     def addHtml(self):
         if not self.html or self.html=='':
             if self.format_used=='plain-text':
@@ -281,6 +283,19 @@ class Blog(Model):
             text=bs4.BeautifulSoup(self.html).text
             digest=text[:500] if len(text)>=500 else text
             self.digest=digest
+    def addKeywords(self):
+        if self.isEmpty(self.keywords):
+            keywords=self.digest.split()
+            if len(keywords)>=5:
+                self.keywords=';'.join(keywords[:5])
+            self.keywords=';'.join(keywords)
+    def addDescription(self):
+        if self.isEmpty(self.description):
+            self.description=self.digest[:200] if len(self.digest)>=200 else self.digest
+    def isEmpty(self,s):
+        if not s or s.strip()=='':
+                return True
+        return False
     def convertDate(self,t):
         t=time.strftime('%Y-%m-%d',time.localtime(t))
         return t

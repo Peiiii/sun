@@ -123,6 +123,7 @@ body{
  }
 }
 .blog .headline a{
+    text-transform:capitalize;
     font-weight:normal;
     font-style:normal;
     font-family:none;
@@ -140,16 +141,15 @@ body{
                         <p class="title" >
                             <a href="/p/{{blog.id}}.html">{{blog.title}}</a>
                         </p>
-                        <p class="title-description" >{{blog.author}}</p>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <p class="title-description" >{{blog.date}}</p>
+                        <p class="title-description" >{{blog.author}}|{{blog.date}}</p>
 
                     </div>
                     <hr style="">
                     <div class="article-body" style="">
-                        {{blog.html}}
+                        {{blog.digest}}
                     </div>
                 </div>
         <div class="fold-ctrl-wrapper">
-        <center class="fold-ctrl switch-fold" easy-switch="true" status="on" on-msg="Pull Up" off-msg="Read All"><span  tar-sel="#{{blog.id}}" folded-height="">Read All</span></center>
+        <center class="fold-ctrl switch-fold" easy-switch="true" status="on" on-msg="Pull Up" off-msg="Read All"><span  tar-sel="#{{blog.id}}" folded-height="">Read More</span></center>
         </div>
     </div>
