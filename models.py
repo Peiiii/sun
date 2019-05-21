@@ -229,11 +229,11 @@ class Blog(Model):
     url=StringField()
     mood=StringField()
     status=StringField()
-    visible=BooleanField(default=True)
+    visible=StringField(default='true')
     description=StringField()
     length=IntegerField()
     num_words=IntegerField()
-
+    public=BooleanField(default=True)
 
     rank=IntegerField(default=0)
     views=IntegerField(default=0)
