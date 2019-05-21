@@ -130,8 +130,13 @@ body{
     cursor:pointer;
     color:black;
 }
-.blog .title-description{float:none;margin-bottom:0px;}
-
+.blog .title-description{
+float:none;margin-bottom:0px;
+display:block;
+}
+.blog .article-body::first-letter{
+    font-size:1.6em;
+}
 </style>
 
 <div class="col-xs-12 col-md-8 blog" style=""  id="blog-{{blog.id}}">
