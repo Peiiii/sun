@@ -26,12 +26,13 @@ def openAll():
     helper.article_template=config.page_templates.article
     return helper
 class Helper(InfoBody):
-    def __init__(self,blog_tb=None,**kwargs):
+    def __init__(self,blog_tb=None,visible_only=True,**kwargs):
         if blog_tb:
             self.blog_tb=blog_tb
             self.tb=blog_tb
             assert isinstance(blog_tb,Piu)
         super().__init__(**kwargs)
+        self.visible_only=visible_only
     def open(self,name,**kws):
         self[name]=Piu(**kws)
     def reBuild(self):
@@ -93,7 +94,7 @@ class Helper(InfoBody):
         archs=self.archieve_tb._findAll_()
         archs2=[]
         for a in archs:
-            archs2.append(self.getCluster(cluster_name=a.name,archieve=a.name))
+            archs2.append(self.getCluster(cluster_name=a.name,visible_only=self.visible_only,archieve=a.name))
         return archs2
 
     def getCategoryNames(self):
@@ -112,10 +113,15 @@ class Helper(InfoBody):
         return vs
     def quikInsert(self,blog):
         self.blog_tb._insert_(blog)
-    def getCluster(self,cluster_name,checker=None,**kws):
+    def getCluster(self,cluster_name,checker=None,visible_only=True,**kws):
         if checker and callable(checker):
             kws['__checker__']=checker
+        if visible_only:
+            kws['visible']='true'
+            print(kws)
         blogs=self.blog_tb._findAll_(**kws)
+        for b in blogs:
+            print('test:visible:',b.visible)
         length=len(blogs)
         return Cluster(name=cluster_name,blogs=blogs,length=length)
 
@@ -129,7 +135,7 @@ class Helper(InfoBody):
                     return True
                 else:
                     return False
-            tag=self.getCluster(cluster_name=t.name,checker=checker)
+            tag=self.getCluster(cluster_name=t.name,visible_only=self.visible_only,checker=checker)
             if not tag.length:
                 continue
             new_tags.append(tag)
@@ -140,7 +146,7 @@ class Helper(InfoBody):
         print('get_cates:',cs)
         cates = []
         for c in cs:
-            cate = self.getCluster(cluster_name=c.name, category=c.name)
+            cate = self.getCluster(cluster_name=c.name,visible_only=self.visible_only, category=c.name)
             if not cate.length:
                 continue
             cates.append(cate)

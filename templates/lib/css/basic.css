@@ -52,7 +52,7 @@
 /*position*/
 .fixed-fillscreen{position:fixed;top:0rem;bottom:0rem;left:0rem;right:0rem;}
 /*other*/
-.clear{clear:both;}
+.clear,clearfix{clear:both;}
 
 
 /*临时添加*/
