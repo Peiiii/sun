@@ -28,6 +28,7 @@ querier=new WordQuerier();
 $(document).ready(()=>{
     var blogs=$('.blog');
     var msg_box=$('.msg-box');
+    var test_div=$('.test-div');
     blogs.map((n,b)=>{
         b=$(b);
         b.click(()=>{
@@ -36,6 +37,7 @@ $(document).ready(()=>{
             slog(text);
             var text=querier.query(text);
             showMsg(msg_box,text);
+            test_div.html(text);
         })
     })
 
