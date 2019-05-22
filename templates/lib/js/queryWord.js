@@ -23,6 +23,7 @@ class WordQuerier{
        return html;
     }
 }
+
 flag('query opend');
 querier=new WordQuerier();
 $(document).ready(()=>{
@@ -32,8 +33,10 @@ $(document).ready(()=>{
     blogs.map((n,b)=>{
         b=$(b);
         b.click(()=>{
+            test_div.html('clicked');
             var text=window.getSelection().toString();
             if(text.trim()=='')return hideMsg(msg_box);
+            test_div.html('text is:'+text);
             slog(text);
             var text=querier.query(text);
             showMsg(msg_box,text);
