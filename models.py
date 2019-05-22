@@ -228,6 +228,7 @@ class Blog(Model):
     archieve=StringField()
     author=StringField(default='WP')
     created_at=FloatField(default=time.time)
+    location=StringField(default='')
 
 
     date=StringField()
