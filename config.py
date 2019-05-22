@@ -14,9 +14,11 @@ default_article_template='pages/article/article.html'
 db_dir_blogs='../db/blogs'
 json_articles_dir='data/json/articles'
 text_articles_dir='data/text/articles'
-
 pre_make_dirs=[json_articles_dir,articles_dir]
 
+site=Config(
+    site_name='WP部落格'
+)
 admin=Config(
     name='top',
     password='password',
