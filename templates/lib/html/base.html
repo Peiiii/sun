@@ -2,19 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home!</title>
+    <title>部落格</title>
     <meta name="keywors" content="">
     <meta name="description" content="">
     {%include "lib/html/include.html"%}
 
     <style>{%include "pages/home/home.css"%}</style>
     <script>{%include "pages/home/home.js"%}</script>
+    <style>{%include "lib/css/more_style.css"%}</style>
 </head>
 <body>
 <div class="root" style="min-height:400px;">
     <header class="fixed-top " id="home-header-wrapper">
         <div class="nav-header text-align-center">
-            <h4 class="d-inline-block" style="text-transform:uppercase;">Welcome Friend</h4>
+            <!--<h4 class="d-inline-block" style="text-transform:uppercase;">Welcome Friend</h4>-->
+            <img src="/imgs/logo.png" class="site-logo-english-corner">
             <button class="f-left list-btn" id="nav-menu-open" onclick="changeVisibility($('#nav-page'))">
                     <span class="list-icon">
                         <span class="i"></span>
