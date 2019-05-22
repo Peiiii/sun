@@ -35,8 +35,9 @@ $(document).ready(()=>{
         b.click(()=>{
             test_div.html('clicked');
             var text=window.getSelection().toString();
+            test_div.html('text selected:'+text);
             if(text.trim()=='')return hideMsg(msg_box);
-            test_div.html('text is:'+text);
+            test_div.html('text selected:'+text);
             slog(text);
             var text=querier.query(text);
             showMsg(msg_box,text);
