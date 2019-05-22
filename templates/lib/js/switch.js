@@ -3,10 +3,15 @@
 // 需定义button属性：status:默认状态，on:表示开启状态的信息，off:表示关闭状态的信息。
 //-----------Easy Switch--------------//
 
-
+TEST_MODE=true
 
 //base: jquery, easyJS(show and hide)
-
+if(screen.width<=500){smartphone=true;pc=false;}
+if(screen.width>500){pc=true;smartphone=false;}
+if(TEST_MODE){
+    if(smartphone)slog('smartphone');
+    if(pc)slog('pc');
+}
 function showMsg(msg_box,msg){
     show(msg_box);
     msg_box.html(msg);

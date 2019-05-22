@@ -29,19 +29,20 @@ querier=new WordQuerier();
 $(document).ready(()=>{
     var blogs=$('.blog');
     var msg_box=$('.msg-box');
-    var test_div=$('.test-msg-box');
+//    var test_div=$('.test-msg-box');
+    if(smartphone)return slog('smartphone : not execute this.');
     blogs.map((n,b)=>{
         b=$(b);
         b.click(()=>{
-            test_div.html('clicked');
+//            test_div.html('clicked');
             var text=window.getSelection().toString();
-            test_div.html('text selected:'+text);
+//            test_div.html('text selected:'+text);
             if(text.trim()=='')return hideMsg(msg_box);
-            test_div.html('text selected:'+text);
+//            test_div.html('text selected:'+text);
             slog(text);
             var text=querier.query(text);
             showMsg(msg_box,text);
-            test_div.html(text);
+//            test_div.html(text);
         })
     })
 })
