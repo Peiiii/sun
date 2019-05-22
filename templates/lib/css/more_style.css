@@ -1,0 +1,24 @@
+.msg-box-wrapper{
+width:100%;
+position:fixed;
+top:100px;
+padding:0;
+margin:0 auto;
+z-index:20;
+text-align:center;
+}
+.msg-box-wrapper2{
+    display:inline-block;
+    width:100%;
+    max-width:600px;
+}
+        .msg-box{
+padding:20px;
+background:rgba(0,0,0,0.8);
+color:white;
+        }
+        .test-msg-box{
+padding:20px;
+background:rgba(0,0,0,0.8);
+color:white;
+        }

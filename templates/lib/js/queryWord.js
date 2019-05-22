@@ -28,7 +28,7 @@ querier=new WordQuerier();
 $(document).ready(()=>{
     var blogs=$('.blog');
     var msg_box=$('.msg-box');
-    var test_div=$('.test-div');
+    var test_div=$('.test-msg-box');
     blogs.map((n,b)=>{
         b=$(b);
         b.click(()=>{
@@ -40,53 +40,7 @@ $(document).ready(()=>{
             test_div.html(text);
         })
     })
-
 })
 
 
 
-(function($){
-    $.fn.extend({
-        "selectText":function(value){
-            value=$.extend({
-                "delays":300
-                },value);
-
-            var $this = $(this);
-
-            //鼠标抬起进，获取选择文字的字数。并根据字数，是否显示弹出层
-            $this.mouseup(function(event){
-
-                //IE和火狐兼容性的处理函数。
-                function selectText(){
-                    if(document.selection){
-                        return document.selection.createRange().text;// IE
-                    }else{
-                        return  window.getSelection().toString(); //标准
-                    }
-                }
-
-                var str = selectText();
-
-                var l = event.clientX;
-                var t = event.clientY;
-
-                if(str.length > 0){
-                    $this.next("div").html(str).css({"top":t+10,"left":l+10}).delay(value.delays).fadeIn();
-                }
-            });
-
-            //点击文档任何位置，让显示的层消失
-            $(document).click(function(){
-                $this.next("div").fadeOut();
-            })
-
-            //阻止冒泡，防止第一次选中文字时，由于冒泡，而触发了$(document).click事件
-            $this.click(function(event){
-                event.stopPropagation();
-            });
-
-            return $this;
-        }
-    })
-})(jQuery)
