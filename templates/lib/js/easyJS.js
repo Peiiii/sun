@@ -118,3 +118,6 @@ function slog(text,str='',num=10){
     console.log(text);
     console.log('*'.mul(num));
 }
+function flag(text){
+    slog('Hi,this is a flag. '+text);
+}

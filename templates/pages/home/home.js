@@ -22,6 +22,7 @@ function initBlog(blog){
     var unfold=blog.find('.switch-fold');
     if(mask.height()>300){new SwitchFold(unfold,mask);show(unfold);}
     else{hide(unfold);}
+
 }
 function initHome(){
     home.blogs=$('.blog');

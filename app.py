@@ -28,11 +28,17 @@ async def do_root():
     # await blman.rebuild()
     blogs=await man.blog_tb.findAll(visible='true')
     blogs=models.Collection(blogs).sortBy('created_at')
-    return pageResponse(template=pages.root,blogs=blogs)
+    return pageResponse(template=pages.root,blogs=blogs,config=config.site)
 @app.get2('/wp')
 async def do_wp():
     headers={'location':'http://oneday.red:8000'}
     return web.Response(status=308,headers=headers)
+@app.post5('/proxy/get',wrap=False)
+async def do_proxy_get(json):
+    import requests
+    url=json['url']
+    re=requests.get(url).text
+    return web.Response(body=re.encode('utf-8'),content_type='text/html')
 @app.get2(paths.about)
 async def do_about():
     return pageResponse(template=pages.about)

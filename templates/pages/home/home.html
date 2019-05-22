@@ -2,19 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>WP的博客空间</title>
+    <title>{{config.site_name}}</title>
     <meta name="keywords" content="博客，WP,English Digest,英语文摘">
     <meta name="description" content="WP的个人博客">
     {%include "lib/html/include.html"%}
 
     <style>{%include "pages/home/home.css"%}</style>
     <script>{%include "pages/home/home.js"%}</script>
+    <style>
+.msg-box-wrapper{
+width:100%;
+position:fixed;
+top:100px;
+padding:0;
+margin:0 auto;
+z-index:20;
+text-align:center;
+}
+.msg-box-wrapper2{
+    display:inline-block;
+    width:100%;
+    max-width:600px;
+}
+        .msg-box{
+padding:20px;
+background:rgba(0,0,0,0.8);
+color:white;
+        }
+
+    </style>
 </head>
 <body>
+<div class="msg-box-wrapper" style=""><div class="msg-box-wrapper2"><div class="msg-box" hide-when="click-anywhere"></div></div></div>
 <div class="home" style="min-height:500px;">
     <header class="fixed-top " id="home-header-wrapper">
         <div class="nav-header text-align-center">
-            <h4 class="d-inline-block" style="text-transform:uppercase;">WP</h4>
+            <h4 class="d-inline-block" style="text-transform:uppercase;">{{config.site_name}}</h4>
             <button class="f-left list-btn" id="nav-menu-open" onclick="changeVisibility($('#nav-page'))">
                     <span class="list-icon">
                         <span class="i"></span>

@@ -14,16 +14,24 @@ function showMsg(msg_box,msg){
 function hideMsg(msg_box){
     hide(msg_box);
 }
-function initMessageShow(){
-    var boxes=$('.msg-box-tem');
+
+function initMessageShow(sel){
+    var boxes=$(sel);
     boxes.map((n,box)=>{
         var box=$(box);
         box.click(()=>{hide(box);});
         box.click();
+        var hide_when=box.attr('hide-when');
+        if(hide_when=='click-anywhere'){
+            $(window).click(()=>{
+//                if(!box.hasClass('hidden'))hideMsg(box);
+            })
+        }
     })
 }
 $(document).ready(()=>{
-    initMessageShow();
+    initMessageShow('.msg-box-tem');
+    initMessageShow('.msg-box');
 })
 //--------------------Easy-to-use api which act like switches------------//
 function changeVisibility(el){
