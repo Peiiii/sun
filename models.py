@@ -9,6 +9,8 @@ from piudb import (
     BooleanField,IntegerField,Field,FloatField,Piu,InfoBody,
     Piu
 )
+def flag():
+    print('*'*20,'FLAG HERE','*'*20)
 class Collection(list):
     def sortBy(self,key,reverse=True):
         li=sorted(self,key=lambda x: x[key] ,reverse=reverse)
@@ -42,6 +44,7 @@ class Helper(InfoBody):
         self.rectifyCategories()
         self.convertBlogsToJsonFiles()
         self.saveAllBlogsToHtmlFile()
+
     def _reloadBlogTable(self):
         blogs = self.blog_tb._findAll_()
         num = self.blog_tb._deleteAll_()

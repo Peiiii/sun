@@ -32,7 +32,7 @@ async def do_root():
 @app.get2('/wp')
 async def do_wp():
     headers={'location':'http://oneday.red:8000'}
-    return web.Response(status=308,headers=headers)
+    return web.Response(status=308,headers=headers,config=config.site)
 @app.post5('/proxy/get',wrap=False)
 async def do_proxy_get(json):
     import requests
@@ -41,32 +41,32 @@ async def do_proxy_get(json):
     return web.Response(body=re.encode('utf-8'),content_type='text/html')
 @app.get2(paths.about)
 async def do_about():
-    return pageResponse(template=pages.about)
+    return pageResponse(template=pages.about,config=config.site)
 @app.get2(paths.tags)
 async def do_tags():
     tags=await man.getTags()
-    return pageResponse(template=pages.tags,cluster=tags)
+    return pageResponse(template=pages.tags,cluster=tags,config=config.site)
 @app.get2(paths.categories)
 async def do_categories():
     cates=await man.getCategories()
-    return pageResponse(template=pages.categories,cluster=cates)
+    return pageResponse(template=pages.categories,cluster=cates,config=config.site)
 @app.get2(paths.archieves)
 async def do_archieves():
     archieves=await man.getArchieves()
-    return pageResponse(template=pages.archieves,cluster=archieves)
+    return pageResponse(template=pages.archieves,cluster=archieves,config=config.site)
 @app.get2(paths.search)
 async def do_search():
-    return pageResponse(template=pages.search)
+    return pageResponse(template=pages.search,config=config.site)
 @app.get2(paths.manage)
 async def do_manage_get():
     blogs=await man.blog_tb.findAll()
-    return pageResponse(template=pages.manage,blogs=blogs)
+    return pageResponse(template=pages.manage,blogs=blogs,config=config.site)
 ##----------------------Manage Pages---------------------##
 ## editor
 import  time
 @app.get2(paths.editor)
 async def do_editor_get():
-    return pageResponse(template=pages.editor)
+    return pageResponse(template=pages.editor,config=config.site)
 @app.post5(paths.editor)
 async def do_editor_post(
         opr_type,title,text,md,html,description,author,info,category,tags,id,
