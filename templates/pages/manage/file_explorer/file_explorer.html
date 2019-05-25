@@ -1,13 +1,14 @@
 <!--<style>{%include "pages/manage/file_explorer/file_explorer.css"%}</style>-->
 <div class="msg-box" style="position:fixed;top:200px;left:40%;width:20%;right:40%;"></div>
 <div style="height:80px;"></div>
-<div id="file_explorer" class="running-app-box" ref="app">
+
+<div id="file_explorer" class="running-app-box " ref="app">
     <div class="light-padding-box">
         <div class="hidden filename-box"><%path.path%></div>
     </div>
     <div class="divider"></div>
-
-    <div class="app-backdrop">
+ <i class="fa fa-chevron-down" data-toggle="collapse" data-target="#app-backdrop">文件资源管理器</i>
+    <div class="app-backdrop collapse" id="app-backdrop">
         <div class="app-content-area centor-block drop-white">
             <div class="message-box alert alert-info" style=" display:none;"></div>
             <div rows="10" class="centor-block  app-content">
