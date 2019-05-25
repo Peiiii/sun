@@ -1,13 +1,16 @@
 import logging;logging.basicConfig(level=logging.INFO)
-import asyncio,uuid,tools,config,models
+import asyncio,uuid,tools,config,models,utils.qpath as qpath
 from framework import Application,jsonResponse,apiError,pageResponse
 from config import net,paths,dirs,pages,other_config
 from models import Blog,Piu,Helper,Category
 from tools import log
 from aiohttp import web
 from  jinja2 import  Template,Environment, PackageLoader
-TEST_MODE=True
+from utils.qpath import MyOS,Qpath
 
+
+##---------------------Initialization-------------------------------
+TEST_MODE=True
 templates_dir=config.other_config.templates_dir
 env = Environment(loader=PackageLoader(templates_dir,''))
 
@@ -18,9 +21,11 @@ man=models.openAll()
 man.fixAll()
 blog_tb=man.blog_tb
 
+mos=MyOS()
+
 base_link='http://127.0.0.1:'+str(net.port)
 quik_links=['/','/manage','/wp']
-
+##----------------------------End Initialization------------------------------------
 
 ##---------------------Make handlers------------------
 @app.get2(paths.root)
@@ -32,7 +37,7 @@ async def do_root():
 @app.get2('/wp')
 async def do_wp():
     headers={'location':'http://oneday.red:8000'}
-    return web.Response(status=308,headers=headers,config=config.site)
+    return web.Response(status=308,headers=headers)
 @app.post5('/proxy/get',wrap=False)
 async def do_proxy_get(json):
     import requests
@@ -104,6 +109,15 @@ async def do_get_blog(blog_id):
     if blog:
         return jsonResponse(data=blog.toJson())
     return apiError(message='blog not found.')
+@app.post5('/manage/fs',timer=True)
+async def do_fs(json,optype,file_data):
+    if optype=='upload':
+        json['path']='./static/upload'
+        json['file_data']=file_data
+        json['optype']='upload'
+    # print(file_data)
+    resp=mos.do(json)
+    return web.json_response(data=resp)
 ##------------------Make Handlers Details----------------##
 
 

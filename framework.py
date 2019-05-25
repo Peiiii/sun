@@ -1,4 +1,4 @@
-import functools,inspect,chardet
+import functools,inspect,chardet,time,os
 import aiohttp,asyncio,jinja2,config
 import logging;logging.basicConfig(level=logging.INFO)
 from aiohttp import web
@@ -164,16 +164,21 @@ class Application(web.Application):
             self.router.add_route('POST',path,wrapper)
             return wrapper
         return decorator
-    def post5(self,path,request=False,json=False,form=False,cookies=False,headers=False,wrap=False): ##最新版功能强大
+    def post5(self,path,request=False,json=False,form=False,cookies=False,headers=False,wrap=False,timer=False): ##最新版功能强大
         def decorator(func):
             args1=inspect.getargspec(func).args  ##获取原函数参数            @functools.wraps(func)
             async def wrapper(req):
+                if timer:
+                    start=time.time()
                 logging.info('run %s'%func.__name__)
                 args=args1.copy()
                 ## gather data
                 data={}
                 fdata=await req.post()
-                jdata=await req.json()
+                try:
+                    jdata=await req.json()
+                except:
+                    jdata={}
                 cdata=req.cookies
                 hdata=req.headers
                 if headers:
@@ -204,6 +209,9 @@ class Application(web.Application):
                 ret = await func(*params)
                 if wrap: ##函数返回值还需进行包装
                     ret=self.wrapAsResponse(ret)
+                if timer:
+                    end = time.time()
+                    print('Time consumed:%s'%(end - start))
                 return ret
             self.router.add_route('POST',path,wrapper)
             return wrapper

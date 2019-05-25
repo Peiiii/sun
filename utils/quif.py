@@ -1,3 +1,4 @@
+import os
 class PathType:
     def __init__(self):
         self.F = 'FILE'

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    {%include "lib/html/include.html"%}
+    {%include "pages/manage/include.html"%}
     <style>{%include "pages/manage/manage.css"%}</style>
     <script>{%include "pages/manage/manage.js"%}</script>
     <script>{%include "pages/manage/request.js"%}</script>
@@ -19,6 +19,8 @@
                     <li class="list-group-item"><h1 class="">Ablog</h1></li>
                     <li class="list-group-item"><a href="#editor"> Editor</a></li>
                     <li class="list-group-item"><a href="#alter"> Alter</a></li>
+                    <li class="list-group-item"><a href="#resources"> Resources</a></li>
+                    <li class="list-group-item"><a href="#file_explorer"> File Explorer</a></li>
                     <li class="list-group-item"><a href="/"> Home</a></li>
                 </ul>
             </div>
@@ -35,9 +37,11 @@
             <div class="clear"></div>
         </div>
         <div id="app-box">
-            {%include "pages/manage/home.html"%}
+            {%include "pages/manage/file_explorer/file_explorer.html"%}
+            {%include "pages/manage/resources/resources.html"%}
             {%include "pages/manage/editor.html"%}
             {%include "pages/manage/alter.html"%}
+            {%include "pages/manage/home.html"%}
         </div>
     </div>
 </div>

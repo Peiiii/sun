@@ -1,0 +1,17 @@
+<hr>
+<style>{%include "/pages/manage/resources/resources.css"%}</style>
+<div style="height:20px;"></div>
+<div class="file-area" style="padding:20px;">
+    <div class="f-left" data-toggle="collapse" data-target="#file-input-area"><i class="fa fa-hand-o-down"></i>文件上传</div>
+    <hr class="clearfix">
+    <div class="collapse" id="file-input-area">
+        <input id="file-input" type="file" class="file" data-preview-file-type="text">
+    </div>
+</div>
+<div id="resources" class="text-align-left">
+    <div class="text-align-left"><h1>Resources</h1></div>
+    <div class="fs-view">
+        {%include "pages/manage/resources/fs-table.html"%}
+    </div>
+</div>
+<script>{%include "/pages/manage/resources/resources.js"%}</script>
