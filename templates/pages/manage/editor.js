@@ -220,8 +220,8 @@ function initSwitchTest(){
     initSwitch();
 }
 function initEditor(){
-    var editor_app=new Editor('#editor');
-    var fman=new FaceManager('#editor');
+    editor_app=new Editor('#editor');
+    fman=new FaceManager('#editor');
     var editor=$('#editor');
     var app=editor_app;
     var b=$('body');
