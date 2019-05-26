@@ -1,10 +1,12 @@
 
-.page-background{
+.page-bg-sm,.page-bg-pc{
     position:fixed;
     top:0px;
     width:100%;
-    bottom:0px;
     z-index:-100;
+}
+.page-bg-sm{
+    border-bottom:20px solid #212121;
 }
 .header-wrapper{
     width:100%;
@@ -96,4 +98,11 @@
     margin-top:20%;
     transform:rotate(720deg);
   }
+}
+
+@media(max-width:500px){
+ .page-bg-pc{display:none;}
+}
+@media(min-width:500px){
+ .page-bg-sm{display:none;}
 }

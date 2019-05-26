@@ -62,14 +62,38 @@ function getHead(text){
 function copyText(src,tar){
     var text=src.val();
     text=renderText(text);
-    tar.html(text);
+    tar.text(text);
+}
+function getInnerContent(el){
+    var tagName=el[0].tagName.toLowerCase();
+    var inputTags=['input','select','textarea'];
+    if(inputTags.indexOf(tagName)>-1){
+        var value=el.val();
+    }
+    else{
+        var value=el.html();
+    }
+    return value;
+}
+function setInnerContent(el,value){
+    var tagName=el[0].tagName.toLowerCase();
+    var inputTags=['input','select','textarea'];
+    if(inputTags.indexOf(tagName)>-1){
+        return el.val(value);
+    }
+    else{
+        return el.html(value);
+    }
+    return value;
 }
 //---------Class Editor----------------//
 class Editor{
     constructor(selector){
+        log('Hi, editor is initializing');
         var el=$(selector);
         this.selector=selector;
         this.el=el;
+        this.init();
         this.keys_input_area=el.find('#info-bar');
         this.key_inputs=el.find('.key-input');
         this.msg_box=$('.msg-box-tem');
@@ -81,6 +105,32 @@ class Editor{
         this.keys=['title','category','tags','format_used','keywords','description',
                     'digest','author','visible','mood','status','text','html','md'];
 
+    }
+    init(){
+        this.componentsDict={
+            'text_input':'#text-input',
+            'md_preview_box':'.md-preview-box'
+        }
+        this.componentsList=['text_input','md_preview_box'];
+        this.findComponents();
+        this.preProcessComponents();
+        this.bindEventListeners();
+    }
+    findComponents(){
+        var dict=this.componentsDict;var list=this.componentsList
+        for(var i=0 ;i<=list.length;i++){
+            var comp=list[i];this[comp]=$(dict[comp]);
+        }
+    }
+    preProcessComponents(){
+        var text=this.text_input.html();
+        if(text.trim()==''){
+            this.text_input.html('<p contenteditable="false"></p><p contenteditable="true">&nbsp;</p>');
+            this.text_input.html('');
+        }
+    }
+    bindEventListeners(){
+        var self=this;console.log(this);
     }
     fillInput(key,value){
         var input=this.input(key);
@@ -125,13 +175,18 @@ class Editor{
             var msg=re.message;
             this.showMsg(msg);
             if(re.success){
-                var msg=`保存成功，<a href="/manage#editor">刷新本页？</a>或者${re}`
-                showMsg(msg_box,)
+                var msg=`保存成功，<a href="/manage#editor">刷新本页？</a>或者${re}`;
+                showMsg(msg_box,);
             };
         }
     }
     showMsg(msg){
         showMsg(this.msg_box,msg);
+    }
+    log(){
+        var json=this.prepareInfo();
+        log('info hrer:');
+        console.log(json);
     }
     prepareInfo(){
 
@@ -140,7 +195,7 @@ class Editor{
             var input=$(this.key_inputs[i]);
             var key=input.attr('key');
             var value;
-            if(input.hasClass('html-input'))value=input.html();
+            if(input.hasClass('html-input'))value=this.md_preview_box.html();
             else value=input.val().trim();
             if(this.no_empty_list.indexOf(key)>-1){
                 if(value ==''){ this.showMsg(key+' can not  be empty.');return false;}
@@ -148,9 +203,9 @@ class Editor{
             json[key]=value;
         }
         json.tags=json.tags.split(';');
-        if(json.format_used=='plain-text'){null}
-        else if(json.format_used=='markdown')json.md=json.text;
-        else if(json.format_used=='html')json.html=json.text;
+        if(json.format_used=='text/plain'){null}
+        else if(json.format_used=='text/markdown')json.md=json.text;
+        else if(json.format_used=='text/html')json.html=json.text;
         return json;
     }
 
@@ -232,10 +287,14 @@ function initEditor(){
     var html_input=$('#html-input');
     var sw=$('#exitview-switch');
     var msg_box=$('.msg-box-tem');
+    var md_preview_box=editor.find('.md-preview-box');
     initSwitchTest();
     initMarked();
     copyText(text_input,html_input);
     text_input.unbind().on("propertychange focus input",()=>{
+        var content=getInnerContent(text_input);
+        content=myMarked(content);
+        setInnerContent(md_preview_box,content);
         copyText(text_input,html_input);
     });
     html_input.unbind().on("propertychange focus input",()=>{

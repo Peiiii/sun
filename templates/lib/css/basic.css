@@ -53,7 +53,9 @@
 .fixed-fillscreen{position:fixed;top:0rem;bottom:0rem;left:0rem;right:0rem;}
 /*other*/
 .clear,clearfix{clear:both;}
-
+.hidden{
+    display:none;
+}
 
 /*临时添加*/
 blockquote{
