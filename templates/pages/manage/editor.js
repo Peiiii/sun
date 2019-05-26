@@ -72,12 +72,6 @@ class Editor{
         this.el=el;
         this.keys_input_area=el.find('#info-bar');
         this.key_inputs=el.find('.key-input');
-//        this.text_input=el.find('#text-input');
-//        this.html_input=el.find('#html-input');
-//        this.title_input=el.find('#title-input');
-//        this.cate_input=el.find('#cate-input');
-//        this.tags_input=el.find('#tags-input');
-//        this.author_input=el.find('#author-input');
         this.msg_box=$('.msg-box-tem');
         this.mode='create';this.submit_url='/manage/editor';
         this.default_values={
@@ -130,7 +124,10 @@ class Editor{
             var re=$.post({url:this.submit_url,async:false,data:JSON.stringify(json)}).responseJSON;
             var msg=re.message;
             this.showMsg(msg);
-            if(re.success)location.reload();
+            if(re.success){
+                var msg=`保存成功，<a href="/manage#editor">刷新本页？</a>或者${re}`
+                showMsg(msg_box,)
+            };
         }
     }
     showMsg(msg){
@@ -223,12 +220,14 @@ function initSwitchTest(){
     initSwitch();
 }
 function initEditor(){
-    editor_app=new Editor('#editor');
-    fman=new FaceManager('#editor');
+    var editor_app=new Editor('#editor');
+    var fman=new FaceManager('#editor');
+    var editor=$('#editor');
     var app=editor_app;
     var b=$('body');
     var chg=$('#changeable');
     var sub=$('#submit-btn');
+    var btn_save=editor.find('.btn-save');
     var text_input=$('#text-input');
     var html_input=$('#html-input');
     var sw=$('#exitview-switch');
@@ -243,6 +242,9 @@ function initEditor(){
         copyHtml(html_input,text_input);
     });
     sub.click((e)=>{
+        editor_app.submit();
+    });
+    btn_save.click((e)=>{
         editor_app.submit();
     });
     text_input.keydown((e)=>{

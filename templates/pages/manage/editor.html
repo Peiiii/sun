@@ -19,6 +19,7 @@
                         off-msg="Make Uneditable"
                         on-msg="Make Editable" status="on" tar-sel1="#text-input" tar-sel2="#html-input">Swicth
                 </button>
+                <button class="btn-save"><i class="fa fa-floppy-o" title="保存"></i> </button>
                 <button class="bg-primary" id="blog-list-menu-toggle" data-toggle="collapse"
                         data-target="#more-input-list">
                     <span style="display:inline-block;width:2em;line-height:1px;">
@@ -39,38 +40,45 @@
                     </div>
                     <div class="input-group">
                         <div class="input-group-prepend"><span class="input-group-text">Format:</span></div>
-                        <input class=" form-control input key-input" key="format_used" type="text"
-                               placeholder="input author..." value="ZERO">
+                        <select class=" form-control input key-input" key="format_used" type="text"
+                               placeholder="input author..." value="">
+                            <option value="text/markdown" selected="true">text/markdwon</option>
+                            <option value="text/plain">text/html</option>
+                            <option value="text/html">text/plain</option>
+                        </select>
                     </div>
                     <div class="input-group">
                         <div class="input-group-prepend"><span class="input-group-text">keywords:</span></div>
                         <input class=" form-control input key-input" key="keywords" type="text"
-                               placeholder="input author..." value="ZERO">
+                               placeholder="input author..." >
                     </div>
                     <div class="input-group">
                         <div class="input-group-prepend"><span class="input-group-text">description:</span></div>
                         <input class=" form-control input key-input" key="description" type="text"
-                               placeholder="input author..." value="ZERO">
+                               placeholder="input author..." >
                     </div>
                     <div class="input-group">
                         <div class="input-group-prepend"><span class="input-group-text">digest:</span></div>
                         <input class=" form-control input key-input" key="digest" type="text"
-                               placeholder="input author..." value="ZERO">
+                               placeholder="input author..." >
                     </div>
                     <div class="input-group">
                         <div class="input-group-prepend"><span class="input-group-text">mood:</span></div>
                         <input class=" form-control input key-input" key="mood" type="text"
-                               placeholder="input author..." value="ZERO">
+                               placeholder="input author..." >
                     </div>
                     <div class="input-group">
                         <div class="input-group-prepend"><span class="input-group-text">status:</span></div>
                         <input class=" form-control input key-input" key="status" type="text"
-                               placeholder="input author..." value="ZERO">
+                               placeholder="input author...">
                     </div>
                     <div class="input-group">
                         <div class="input-group-prepend"><span class="input-group-text">visible:</span></div>
-                        <input class=" form-control input key-input" key="visible" type="text"
-                               placeholder="input author..." value="ZERO">
+                        <select class=" form-control input key-input" key="visible" type="text"
+                                placeholder="input author..." >
+                            <option value="true" selected="true">true</option>
+                            <option value="false">false</option>
+                        </select>
                     </div>
 
                 </div>
