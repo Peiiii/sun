@@ -28,7 +28,7 @@ quik_links=['/','/manage','/wp']
 ##----------------------------End Initialization------------------------------------
 
 ##---------------------Make handlers------------------
-@app.get2(paths.root)
+@app.get2(paths.root,timer=True)
 async def do_root():
     # await blman.rebuild()
     blogs=await man.blog_tb.findAll(visible='true')
@@ -44,7 +44,7 @@ async def do_proxy_get(json):
     url=json['url']
     re=requests.get(url).text
     return web.Response(body=re.encode('utf-8'),content_type='text/html')
-@app.get2(paths.about)
+@app.get2(paths.about,timer=True)
 async def do_about():
     return pageResponse(template=pages.about,config=config.site)
 @app.get2(paths.tags)

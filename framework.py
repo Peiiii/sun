@@ -33,11 +33,13 @@ def pageError(template=config.pages.error,**kws):
     return pageResponse(template=template,**kws)
 class Application(web.Application):
 
-    def get2(self,path,wrap=False,cookies=False,headers=False,request=False):  ## 与get1不同，get2的没有对返回值的包装，因此原函数需自己返回一个web.Responce对象
+    def get2(self,path,wrap=False,cookies=False,headers=False,request=False,timer=False):  ## 与get1不同，get2的没有对返回值的包装，因此原函数需自己返回一个web.Responce对象
         def decorator(func):
             args=inspect.getargspec(func).args
             @functools.wraps(func)
             async def wrapper(req):
+                if timer:
+                    start=time.time()
                 logging.info('run %s' % func.__name__)
                 args2=args.copy()
                 if request:
@@ -67,16 +69,20 @@ class Application(web.Application):
                 response =await func(*params)
                 if wrap:
                     response=self.wrapAsResponse(response)
+                if timer:
+                    end=time.time()
+                    print('Time consumed:%s'%(end -start))
                 return response
             self.router.add_route('GET',path,wrapper)
             return wrapper
         return decorator
-    def get3(self,path,wrap=False,cookies=False,headers=False,request=False):  ## 与get1不同，get2的没有对返回值的包装，因此原函数需自己返回一个web.Responce对象
+    def get3(self,path,wrap=False,cookies=False,headers=False,request=False,timer=False):  ## 与get1不同，get2的没有对返回值的包装，因此原函数需自己返回一个web.Responce对象
         def decorator(func):
             args=inspect.getargspec(func).args
             @functools.wraps(func)
             async def wrapper(req):
-
+                if timer:
+                    start=time.time()
                 logging.info('run %s' % func.__name__)
                 args2=args.copy()
                 data = {}
@@ -108,6 +114,9 @@ class Application(web.Application):
                 ret = await func(*params)
                 if wrap:  ##函数返回值还需进行包装
                     ret = self.wrapAsResponse(ret)
+                if timer:
+                    end=time.time()
+                    print('Time consumed:%s'%(end -start))
                 return ret
             self.router.add_route('GET',path,wrapper)
             return wrapper
