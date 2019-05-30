@@ -33,7 +33,7 @@ async def do_root():
     # await blman.rebuild()
     blogs=await man.blog_tb.findAll(visible='true')
     blogs=models.Collection(blogs).sortBy('created_at')
-    return pageResponse(template=pages.root,blogs=blogs,config=config.site)
+    return pageResponse(template=config.page_templates.root,blogs=blogs,config=config.site)
 @app.get2('/wp')
 async def do_wp():
     headers={'location':'http://oneday.red:8000'}
@@ -120,7 +120,9 @@ async def do_fs(json,optype,file_data):
     return web.json_response(data=resp)
 ##------------------Make Handlers Details----------------##
 
-
+@app.get2('/quit')
+async def do_quit():
+	exit();
 ##---------------------End Make Handlers---------------------------##
 app.router.add_static('/', 'static', show_index=other_config.show_index)
 async def init(loop):

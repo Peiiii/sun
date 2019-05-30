@@ -29,9 +29,11 @@
     height:36px;
 }
 .nav-icon-bars{margin:-5px 15px 0px 10px;}
+
+
 @media(max-width:500px){
-.nav-list{display:none;}
+.sm-hidden{display:none ! important;}
 }
 @media(min-width:500px){
-.nav-icon-bars{display:none;}
+.pc-hidden{display:none ! important;}
 }

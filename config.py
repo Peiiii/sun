@@ -18,7 +18,7 @@ upload_dirs=['static/upload/imgs','static/upload/txts','static/upload/htmls','st
 pre_make_dirs=[json_articles_dir,articles_dir]+upload_dirs
 
 site=Config(
-    site_name='WP部落格'
+    site_name='王培的博客'
 )
 admin=Config(
     name='top',
@@ -76,7 +76,7 @@ pages=Config(
 )
 
 page_templates=Config(
-    root='pages/home/home.html',
+    root='lib/page/home/home1/home.html',
     article='pages/article/article.html',
     about='pages/about/about.html',
     tags='pages/tags/tags.html',
