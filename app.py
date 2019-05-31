@@ -26,6 +26,15 @@ mos=MyOS()
 base_link='http://127.0.0.1:'+str(net.port)
 quik_links=['/','/manage','/wp']
 ##----------------------------End Initialization------------------------------------
+##--------------------Permanent links-----------------------
+for k,v in config.permanent_links.items():
+    @app.get3(k)
+    async def handler():
+        blogs=await man.blog_tb.findAll(visible='true')
+        blogs=models.Collection(blogs).sortBy('created_at')
+        return pageResponse(template=v,config=config,blogs=blogs)
+
+##--------------------End Permanent links-----------------------
 
 ##---------------------Make handlers------------------
 @app.get2(paths.root,timer=True)

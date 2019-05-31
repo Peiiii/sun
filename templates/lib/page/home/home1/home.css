@@ -10,15 +10,13 @@
     width:100%;
     background:#175199;
     color:white;
-    padding-top:1em;
-    padding-bottom:0.5em;
+    padding-top:0em;
+    padding-bottom:1em;
     -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.7);
     -moz-box-shadow:0 0 10px rgba(0,0,0,0.7);
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
-#nav-menu{
-    margin-top:4.2em;
-}
+
 #blog-list-menu{
     background:#175199;
     color:white;

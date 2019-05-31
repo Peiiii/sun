@@ -91,6 +91,7 @@ class Editor{
     constructor(selector){
         log('Hi, editor is initializing');
         var el=$(selector);
+        this.testMode=true;
         this.selector=selector;
         this.el=el;
         this.init();
@@ -101,7 +102,7 @@ class Editor{
         this.default_values={
             category:'demo',author:'WP'
         };
-        this.no_empty_list=['title','category','tags','format_used'];
+        this.no_empty_list=['title','category','format_used'];
         this.keys=['title','category','tags','format_used','keywords','description',
                     'digest','author','visible','mood','status','text','html','md'];
 
@@ -109,9 +110,10 @@ class Editor{
     init(){
         this.componentsDict={
             'text_input':'#text-input',
-            'md_preview_box':'.md-preview-box'
+            'md_preview_box':'.md-preview-box',
+            'md_input':'.md-input'
         }
-        this.componentsList=['text_input','md_preview_box'];
+        this.componentsList=['text_input','md_preview_box','md_input'];
         this.findComponents();
         this.preProcessComponents();
         this.bindEventListeners();
@@ -131,6 +133,11 @@ class Editor{
     }
     bindEventListeners(){
         var self=this;console.log(this);
+        this.md_input.on('focus propertychange input',()=>{
+            var text=getInnerContent(self.md_input);
+            var md=myMarked(text);
+            setInnerContent(this.md_preview_box,md);
+        })
     }
     fillInput(key,value){
         var input=this.input(key);
@@ -139,7 +146,7 @@ class Editor{
     }
     editBlog(blog,mode='alter'){
         this.mode=mode;
-        log(blog)
+        log(blog);
         for(var i=0;i<this.keys.length;i++){
             this.fillInput(this.keys[i],blog[this.keys[i]]);
         }
@@ -175,8 +182,8 @@ class Editor{
             var msg=re.message;
             this.showMsg(msg);
             if(re.success){
-                var msg=`保存成功，<a href="/manage#editor">刷新本页？</a>或者${re}`;
-                showMsg(msg_box,);
+                var msg=`保存成功，<a href="/manage">刷新本页？</a>`;
+                this.showMsg(msg);
             };
         }
     }
@@ -185,23 +192,23 @@ class Editor{
     }
     log(){
         var json=this.prepareInfo();
-        log('info hrer:');
+        log('info here:');
         console.log(json);
     }
+    
     prepareInfo(){
 
         var json={};
         for(var i=0;i<this.key_inputs.length;i++){
             var input=$(this.key_inputs[i]);
             var key=input.attr('key');
-            var value;
-            if(input.hasClass('html-input'))value=this.md_preview_box.html();
-            else value=input.val().trim();
+            var value=getInnerContent(this.getKeyInputArea(key)).trim();
             if(this.no_empty_list.indexOf(key)>-1){
                 if(value ==''){ this.showMsg(key+' can not  be empty.');return false;}
             }
             json[key]=value;
         }
+        log('info:');console.log(json);
         json.tags=json.tags.split(';');
         if(json.format_used=='text/plain'){null}
         else if(json.format_used=='text/markdown')json.md=json.text;

@@ -5,9 +5,9 @@
     <title>{{config.site_name}}</title>
     <meta name="keywords" content="wp">
     <meta name="description" content="WP">
-    {%include "lib/includes/poor_include.html"%}
+    {%include "lib/includes/power_include.html"%}
 
-    <style>{%include "lib/page/home/home1/home.css"%}</style>
+    <!-- <style>{%include "lib/page/about/about1/about.css"%}</style> -->
 <style>
 .page-footer{
 	padding:0px;background:#175199;font-weight:200;color:white;width:100%;
@@ -64,6 +64,12 @@
 .head-photo:hover{
 	tansform:rotate(180deg);
 }
+.head-photo-wrapper{
+	background:url(imgs/photos/girl.png) center no-repeat;
+	width:60px;
+	height:60px;
+	background-size:100% 100%;
+}
 .three-line{
 	line-height:15px;
 	background:black;
@@ -73,6 +79,7 @@
 .center-row{
 	text-align:center;
 }
+.row-item{display:inline-block;}
 .heighter-25{
 	height:25px;
 }
@@ -87,7 +94,7 @@
 		
 		<div class="layer1" style="">
 				<div class="heighter-25"></div>
-			<div class="center-row"><div class="avatar-wrapper head-photo" style="background:url(imgs/photos/girl.png) center no-repeat;"></div> </div>
+			<div class="center-row"><div class="head-photo-wrapper row-item avatar-wrapper" style=""></div> </div>
 				<div class="heighter-25"></div>
 			<div class="center-row"><div class="avatar-wrapper"><i class="fa fa-envelope-o fa-2x"></i></div></div> 
 				<div class="heighter-25"></div>
@@ -105,6 +112,9 @@
 		hi
 	</div>
 </div>
-
+<div class="hidden links">
+<a href="/about">about</a>
+<a href="/blogs">blogs</a>
+</div>
 </body>
 </html>

@@ -105,16 +105,18 @@
                     <!--<div id="text-input" class="form-control key-input" key="text" spellcheck="false">/*format=md*/-->
                     <!--</div>-->
                     <div class="" style="min-height:200px;max-height:800px;width:100%;overflow-y:auto;">
-                        <div class="col bg-info input f-left key-input" key="text" id="text-input" contenteditable="true" spellcheck="false" info="md输入"
+                        <div class="col hidden bg-info input f-left key-input" key="text" id="text-input" contenteditable="true" spellcheck="false" info="md输入"
                              style="height:100%;width:50%;min-height:400px;max-height:450px;overflow-y:auto;">{%if blog%}{{blog.content}}{%endif%}
                         </div>
+
+                        <textarea id="md-input" style="width:50%;min-height:400px;max-height:450px;"  class="f-left md-input form-control key-input" key="md"
+                              spellcheck="false"></textarea>
                         <div class="col bg-warning content-area f-left md-preview-box" id="md-preview-box" info="md预览"
                              style="height:100%;width:50%;min-height:400px;max-height:450px;overflow-y:auto;">
                         </div>
                         <div class="clearfix"></div>
                     </div>
-                    <textarea id="md-input" class="form-control key-input hidden" key="md" style="display:none;"
-                              spellcheck="false">/*format=md*/</textarea>
+                    
                     <div id="html-input hidden" contenteditable="true" class="key-input html-input" key="html"
                          style="">
                         {%if content%}

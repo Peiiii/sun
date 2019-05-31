@@ -16,9 +16,13 @@ json_articles_dir='data/json/articles'
 text_articles_dir='data/text/articles'
 upload_dirs=['static/upload/imgs','static/upload/txts','static/upload/htmls','static/upload/mds']
 pre_make_dirs=[json_articles_dir,articles_dir]+upload_dirs
+permanent_links={
+    '/blogs':'pages/home/home.html'
+}
 
 site=Config(
-    site_name='王培的博客'
+    site_name='王培的博客',
+    site_logo='/imgs/logo.png'
 )
 admin=Config(
     name='top',
@@ -76,7 +80,7 @@ pages=Config(
 )
 
 page_templates=Config(
-    root='lib/page/home/home1/home.html',
+    root='defaults/homes/home1/home.html',
     article='pages/article/article.html',
     about='lib/page/about/about1/about.html',
     tags='pages/tags/tags.html',
