@@ -17,7 +17,7 @@ text_articles_dir='data/text/articles'
 upload_dirs=['static/upload/imgs','static/upload/txts','static/upload/htmls','static/upload/mds']
 pre_make_dirs=[json_articles_dir,articles_dir]+upload_dirs
 permanent_links={
-    '/blogs':'pages/home/home.html'
+    '/blogs':'lib/page/home/home3/home.html'
 }
 
 site=Config(
